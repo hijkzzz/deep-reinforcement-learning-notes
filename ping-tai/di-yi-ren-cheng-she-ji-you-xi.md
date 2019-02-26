@@ -10,5 +10,11 @@
 
 # DeepMind Lab
 
+> [DeepMind Lab](https://arxiv.org/pdf/1612.03801.pdf)
 
+DeepMind Lab是第一人称3D游戏平台，专为研究和开发通用人工智能和机器学习系统而设计。 DeepMind Lab可用于研究自主人工代理如何在大型，部分观察和视觉多样化的世界中学习复杂的任务。 DeepMind Lab具有简单灵活的API，可以创建任务设计和新颖的AI设计，以便进行探索和快速迭代。 它由快速且广泛认可的游戏引擎提供支持，并为研究社区的有效使用量身定制。
+
+
+
+![](/assets/deepmind_lab.png)
 
