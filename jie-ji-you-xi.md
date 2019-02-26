@@ -10,7 +10,7 @@ ALE为数百个Atari 2600游戏环境提供了一个界面，每个环境都是�
 
 > [Playing SNES in the Retro Learning Environment](https://arxiv.org/pdf/1611.02205.pdf)
 
-经典街机游戏的另一个平台是RLE，它目前包含了为超级任天堂娱乐系统\(SNES\)发布的几款游戏。这些游戏都有3D图形，控制器允许720多种动作组合。因此SNESgames比Atari 2600游戏更加复杂和现实，但RLE却没有ALE那么受欢迎。
+经典街机游戏的另一个平台是RLE，它目前包含了为超级任天堂娱乐系统\(SNES\)发布的几款游戏。这些游戏都有3D图形，控制器允许720多种动作组合。因此SNES游戏比Atari 2600游戏更加复杂和现实，但RLE却没有ALE那么受欢迎。
 
 ![](/assets/rle.png)
 
