@@ -3,7 +3,7 @@
 ## 平台
 
 * [街机游戏](jie-ji-you-xi.md)
-* 竞速游戏
+* [竞速游戏](jing-su-you-xi.md)
 * 第一人称射击游戏
 * 即时战略游戏
 * [开放世界游戏](kai-fang-shi-jie-you-xi.md)
