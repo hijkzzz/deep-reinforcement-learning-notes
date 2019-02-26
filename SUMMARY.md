@@ -34,6 +34,7 @@
 * [像人类一样玩游戏](tiao-zhan/xiang-ren-lei-yi-yang-wan-you-xi.md)
 * [可调节的性能等级](tiao-zhan/ke-diao-jie-de-xing-neng-deng-ji.md)
 * [处理巨大的状态空间](tiao-zhan/chu-li-ju-da-de-zhuang-tai-kong-jian.md)
+* 工业界应用
 * 交互式游戏开发
 * 创造新的游戏
 * 学习游戏的模型
