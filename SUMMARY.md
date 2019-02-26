@@ -1,10 +1,9 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [介绍](README.md)
 
 ## 前言
 
-* [介绍](qian-yan/readme.md)
 * [神经网络模型](qian-yan/shen-jing-wang-luo-mo-xing.md)
 * [神经网络学习算法](qian-yan/shen-jing-wang-luo-xue-xi-suan-fa.md)
 

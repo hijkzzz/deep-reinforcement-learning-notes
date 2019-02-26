@@ -1,4 +1,4 @@
-# Introduction
+# 介绍
 
 > [Deep Learning for Video Game Playing](http://arxiv.org/pdf/1708.07902)
 
