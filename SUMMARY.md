@@ -1,5 +1,9 @@
 # Summary
 
+## 前言
+
+* [介绍](README.md)
+
 ## 平台
 
 * [街机游戏](jie-ji-you-xi.md)
@@ -25,12 +29,11 @@
 
 * [游戏通用性](tiao-zhan/you-xi-tong-yong-xing.md)
 * [稀疏、延迟、欺骗性的回报](xi-shu-3001-yan-chi-3001-qi-pian-xing-de-hui-bao.md)
-* 多智能体
+* [多智能体](tiao-zhan/duo-zhi-neng-ti.md)
 * [终身适应](tiao-zhan/kuai-su-shi-ying.md)
-* 像人类一样玩游戏
-* 可调节的性能等级
-* 处理巨大的状态空间
-* [工业界应用](README.md)
+* [像人类一样玩游戏](tiao-zhan/xiang-ren-lei-yi-yang-wan-you-xi.md)
+* [可调节的性能等级](tiao-zhan/ke-diao-jie-de-xing-neng-deng-ji.md)
+* [处理巨大的状态空间](tiao-zhan/chu-li-ju-da-de-zhuang-tai-kong-jian.md)
 * 交互式游戏开发
 * 创造新的游戏
 * 学习游戏的模型
