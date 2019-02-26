@@ -1,4 +1,4 @@
-# [^1]深度学习在视频游戏中的应用
+# 深度学习在视频游戏中的应用
 
 > [Deep Learning for Video Game Playing](http://arxiv.org/pdf/1708.07902)
 
