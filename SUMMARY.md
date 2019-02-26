@@ -13,7 +13,7 @@
 * [开放世界游戏](kai-fang-shi-jie-you-xi.md)
 * [团队体育游戏](tuan-dui-ti-yu-you-xi.md)
 * [文字冒险游戏](wen-zi-mao-xian-you-xi.md)
-* OpenAI Gym & Universe
+* [OpenAI Gym & Universe](openai-gym-and-universe.md)
 
 ## 方法
 
