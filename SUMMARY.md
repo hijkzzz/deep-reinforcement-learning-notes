@@ -6,14 +6,14 @@
 
 ## 平台
 
-* [街机游戏](jie-ji-you-xi.md)
-* [竞速游戏](jing-su-you-xi.md)
+* [街机游戏](ping-tai/jie-ji-you-xi.md)
+* [竞速游戏](ping-tai/jing-su-you-xi.md)
 * 第一人称射击游戏
 * 即时战略游戏
-* [开放世界游戏](kai-fang-shi-jie-you-xi.md)
-* [团队体育游戏](tuan-dui-ti-yu-you-xi.md)
-* [文字冒险游戏](wen-zi-mao-xian-you-xi.md)
-* [OpenAI Gym & Universe](openai-gym-and-universe.md)
+* [开放世界游戏](ping-tai/kai-fang-shi-jie-you-xi.md)
+* [团队体育游戏](ping-tai/tuan-dui-ti-yu-you-xi.md)
+* [文字冒险游戏](ping-tai/wen-zi-mao-xian-you-xi.md)
+* [OpenAI Gym & Universe](ping-tai/openai-gym-and-universe.md)
 
 ## 方法
 
@@ -39,6 +39,4 @@
 * 创造新的游戏
 * 学习游戏的模型
 * 计算资源
-
-
 
