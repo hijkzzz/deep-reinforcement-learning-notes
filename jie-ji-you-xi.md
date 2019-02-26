@@ -18,6 +18,8 @@ RLE可以在超级任天堂娱乐系统（SNES），Sega Genesis和其他几款�
 
 # General Video Game AI framework
 
+> [ Deep Reinforcement Learning for General Video Game AI](https://arxiv.org/pdf/1806.02448.pdf)
+
 通用电子游戏AI \(GVGAI\)竞赛及其相关软件框架为大量使用特定领域描述语言编写的游戏提供了一种对AI算法进行基准测试的方法。尽管人们对这项竞赛很感兴趣，但迄今为止，它一直专注于在线规划，提供一种允许使用蒙特卡洛树搜索等算法的正向模型。
 
 在本文中，我们描述了如何将GVGAI接口到OpenAI Gym环境，这是一种广泛使用的连接代理到强学习问题的方法。使用这个接口，我们描述了几种深度强化学习算法的广泛应用在许多GVGAI游戏中的表现。我们进一步分析结果，以提供第一个指标，描述这些游戏的相对难度，包括ALE中的游戏。
