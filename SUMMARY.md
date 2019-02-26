@@ -30,5 +30,6 @@
 * [游戏通用性](tiao-zhan/you-xi-tong-yong-xing.md)
 * 多智能体
 * [稀疏、延迟、欺骗性的回报](xi-shu-3001-yan-chi-3001-qi-pian-xing-de-hui-bao.md)
-* 快速适应
+* [终身适应](tiao-zhan/kuai-su-shi-ying.md)
+* 像人类一样玩游戏
 
