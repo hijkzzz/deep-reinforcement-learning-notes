@@ -28,7 +28,7 @@
 ## 挑战
 
 * [游戏通用性](tiao-zhan/you-xi-tong-yong-xing.md)
-* [稀疏、延迟、欺骗性的回报](xi-shu-3001-yan-chi-3001-qi-pian-xing-de-hui-bao.md)
+* [稀疏、延迟、欺骗性的回报](tiao-zhan/xi-shu-3001-yan-chi-3001-qi-pian-xing-de-hui-bao.md)
 * [多智能体](tiao-zhan/duo-zhi-neng-ti.md)
 * [终身适应](tiao-zhan/kuai-su-shi-ying.md)
 * [像人类一样玩游戏](tiao-zhan/xiang-ren-lei-yi-yang-wan-you-xi.md)
