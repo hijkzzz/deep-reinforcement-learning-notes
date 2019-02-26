@@ -8,8 +8,8 @@
 
 * [街机游戏](ping-tai/jie-ji-you-xi.md)
 * [竞速游戏](ping-tai/jing-su-you-xi.md)
-* 第一人称射击游戏
-* 即时战略游戏
+* [第一人称射击游戏](ping-tai/di-yi-ren-cheng-she-ji-you-xi.md)
+* [即时战略游戏](ping-tai/ji-shi-zhan-lve-you-xi.md)
 * [开放世界游戏](ping-tai/kai-fang-shi-jie-you-xi.md)
 * [团队体育游戏](ping-tai/tuan-dui-ti-yu-you-xi.md)
 * [文字冒险游戏](ping-tai/wen-zi-mao-xian-you-xi.md)
@@ -18,12 +18,12 @@
 ## 方法
 
 * [街机游戏](fang-fa/jie-ji-you-xi.md)
-* 竞速游戏
-* 第一人称射击游戏
-* 即时战略游戏
-* 开放世界游戏
-* 团队体育游戏
-* 文字冒险游戏
+* [竞速游戏](fang-fa/jing-su-you-xi.md)
+* [第一人称射击游戏](fang-fa/di-yi-ren-cheng-she-ji-you-xi.md)
+* [即时战略游戏](fang-fa/ji-shi-zhan-lve-you-xi.md)
+* [开放世界游戏](fang-fa/kai-fang-shi-jie-you-xi.md)
+* [团队体育游戏](fang-fa/tuan-dui-ti-yu-you-xi.md)
+* [文字冒险游戏](fang-fa/wen-zi-mao-xian-you-xi.md)
 
 ## 挑战
 
@@ -34,9 +34,9 @@
 * [像人类一样玩游戏](tiao-zhan/xiang-ren-lei-yi-yang-wan-you-xi.md)
 * [可调节的性能等级](tiao-zhan/ke-diao-jie-de-xing-neng-deng-ji.md)
 * [处理巨大的状态空间](tiao-zhan/chu-li-ju-da-de-zhuang-tai-kong-jian.md)
-* 工业界应用
-* 交互式游戏开发
-* 创造新的游戏
-* 学习游戏的模型
-* 计算资源
+* [工业界应用](tiao-zhan/gong-ye-jie-ying-yong.md)
+* [交互式游戏开发](tiao-zhan/jiao-hu-shi-you-xi-kai-fa.md)
+* [创造新的游戏](tiao-zhan/chuang-zao-xin-de-you-xi.md)
+* [学习游戏的模型](tiao-zhan/xue-xi-you-xi-de-mo-xing.md)
+* [计算资源](tiao-zhan/ji-suan-zi-yuan.md)
 
