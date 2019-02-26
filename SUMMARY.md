@@ -1,5 +1,7 @@
 # Summary
 
+## 前言
+
 ## 平台
 
 * [街机游戏](README.md)
