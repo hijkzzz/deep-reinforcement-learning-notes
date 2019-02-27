@@ -25,6 +25,7 @@
   * [Double Deep Q-Learning](fang-fa/jie-ji-you-xi/double-deep-q-learning.md)
   * [Prioritized Experience Replay](fang-fa/jie-ji-you-xi/prioritized-experience-replay.md)
   * [Dueling Deep Q-Network](fang-fa/jie-ji-you-xi/dueling-deep-q-network.md)
+  * [Bootstrapped Deep Q-Network](fang-fa/jie-ji-you-xi/bootstrapped-deep-q-network.md)
 * [蒙特祖玛的复仇](fang-fa/ment-te-zu-ma-de-fu-chou.md)
 * [第一人称射击游戏](fang-fa/di-yi-ren-cheng-she-ji-you-xi.md)
 * [开放世界游戏](fang-fa/kai-fang-shi-jie-you-xi.md)
