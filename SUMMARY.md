@@ -22,6 +22,7 @@
   * [Deep Q-Network](fang-fa/jie-ji-you-xi/deep-q-network.md)
   * [Deep Recurrent  Q-Learning](fang-fa/jie-ji-you-xi/deep-recurrent-q-learning.md)
   * [Distributed Deep Q-Learning](fang-fa/jie-ji-you-xi/distributed-deep-q-learning.md)
+  * [Double Deep Q-Learning](fang-fa/jie-ji-you-xi/double-deep-q-learning.md)
 * [竞速游戏](fang-fa/jing-su-you-xi.md)
 * [第一人称射击游戏](fang-fa/di-yi-ren-cheng-she-ji-you-xi.md)
 * [开放世界游戏](fang-fa/kai-fang-shi-jie-you-xi.md)
