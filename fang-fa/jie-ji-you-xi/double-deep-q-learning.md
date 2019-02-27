@@ -28,19 +28,19 @@ $$Y_{t}^{\text { Double } Q} \equiv R_{t+1}+\gamma Q\left(S_{t+1}, \operatorname
 
 ### 由于估计误差导致的过度乐观
 
-![](../../.gitbook/assets/image%20%2810%29.png)
+![](../../.gitbook/assets/image%20%2813%29.png)
 
 请注意，我们不需要假设不同动作的估计误差是独立的。这个定理表明，即使估计值平均正确，任何的估计误差都可以推动估计值远离真正的最优值。
 
 定理1的下界随着动作的数量而减少， 这是考虑下限的假象。更典型的是，过度乐观随着动作的数量而增加，如图1所示。
 
-![](../../.gitbook/assets/image%20%286%29.png)
+![](../../.gitbook/assets/image%20%288%29.png)
 
 Q学习的过估计的确会随着行动的增多而增加，而双Q学习是不偏不倚的。
 
-![](../../.gitbook/assets/image%20%285%29.png)
+![](../../.gitbook/assets/image%20%287%29.png)
 
-![](../../.gitbook/assets/image%20%281%29.png)
+![](../../.gitbook/assets/image%20%282%29.png)
 
 ### Double DQN
 
