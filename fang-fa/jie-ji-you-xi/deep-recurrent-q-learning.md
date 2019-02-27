@@ -1,4 +1,4 @@
-# Deep Recurrent  Q-Learning
+# Deep Recurrent  Q-Network
 
 ## 介绍
 
