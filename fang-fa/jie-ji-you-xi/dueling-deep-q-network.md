@@ -14,7 +14,7 @@
 
 为了实现这一目标，我们设计了一个单一的Q网络架构，如图1所示，它们更像是dueling网络。 与最初的DQN一样，dueling网络的较低层是卷积。 然而，我们不是使用单个完全连接层序列跟随卷积层，而是使用完全连接层的两个序列（或流）。 构造两个流使得它们具有提供价值和优势函数的单独估计的能力
 
-![](../../.gitbook/assets/image%20%2815%29.png)
+![](../../.gitbook/assets/image%20%2816%29.png)
 
 利用下式，我们可以在DQN算法中使用该网络结构
 
@@ -28,5 +28,5 @@ $$\begin{array}{c}{Q(s, a ; \theta, \alpha, \beta)=V(s ; \theta, \beta)+} \\ {\l
 
 这样设计的原因是
 
-![](../../.gitbook/assets/image%20%2811%29.png)
+![](../../.gitbook/assets/image%20%2812%29.png)
 
