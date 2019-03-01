@@ -29,6 +29,7 @@
   * [Multiagent Deep Q-Network](fang-fa/jie-ji-you-xi/multiagent-deep-q-network.md)
   * [Asynchronous Deep Reinforcement Learning](fang-fa/jie-ji-you-xi/asynchronous-deep-reinforcement-learning.md)
   * [Actor-Critic with Experience Replay](fang-fa/jie-ji-you-xi/actor-critic-with-experience-replay.md)
+  * [Progressive  Neural Networks](fang-fa/jie-ji-you-xi/progressive-neural-networks.md)
 * [蒙特祖玛的复仇](fang-fa/ment-te-zu-ma-de-fu-chou.md)
 * [第一人称射击游戏](fang-fa/di-yi-ren-cheng-she-ji-you-xi.md)
 * [开放世界游戏](fang-fa/kai-fang-shi-jie-you-xi.md)
