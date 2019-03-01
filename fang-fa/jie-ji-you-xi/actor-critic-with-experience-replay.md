@@ -30,7 +30,7 @@ $$
 
 [Degris等人](https://arxiv.org/pdf/1205.4839.pdf)使用 $$λ-return: R_{t}^{\lambda}=r_{t}+(1-\lambda) \gamma V\left(x_{t+1}\right)+\lambda \gamma \rho_{t+1} R_{t+1}^{\lambda}$$ （即资格迹方法）估计 $$Q^π$$。这个估计要求我们知道如何提前选择 $$λ$$ 来权衡偏差和方差。此外，当使用小值 $$λ$$的来减少方差时，偶尔的大重要性权重仍然会导致不稳定性。
 
-在下面的小节中，我们采用了Munos等人的 $$Retrace$$ 算法估计$$Q^π$$。随后，我们提出了一种重要性权重截断技术，以提高[Degris等人](https://arxiv.org/pdf/1205.4839.pdf)的off-policy actor critic的稳定性。并为策略优化引入计算有效的信任区域方案。
+在下面的小节中，我们采用了Munos等人的 $$Retrace$$ [算法](http://arxiv.org/abs/1606.02647)估计$$Q^π$$。随后，我们提出了一种重要性权重截断技术，以提高[Degris等人](https://arxiv.org/pdf/1205.4839.pdf)的off-policy actor critic的稳定性。并为策略优化引入计算有效的信任区域方案。
 
 #### **MULTI-STEP ESTIMATION OF THE STATE-ACTION VALUE FUNCTION**
 
@@ -40,9 +40,11 @@ $$
 Q^{\mathrm{ret}}\left(x_{t}, a_{t}\right)=r_{t}+\gamma \overline{\rho}_{t+1}\left[Q^{\mathrm{ret}}\left(x_{t+1}, a_{t+1}\right)-Q\left(x_{t+1}, a_{t+1}\right)\right]+\gamma V\left(x_{t+1}\right)
 $$
 
-$$\overline{\rho}_{t}$$ 是截断的重要性采样，即 $$\overline{\rho}_{t}=\min \left\{c, \rho_{t}\right\} \text { with } \rho_{t}=\frac{\pi\left(a_{t} | x_{t}\right)}{\mu\left(a_{t} | x_{t}\right)}$$ 
+$$\overline{\rho}_{t}$$ 是截断的重要性采样系数，即 $$\overline{\rho}_{t}=\min \left\{c, \rho_{t}\right\} \text { with } \rho_{t}=\frac{\pi\left(a_{t} | x_{t}\right)}{\mu\left(a_{t} | x_{t}\right)}$$ ， $$Q$$ 是 $$Q_π$$ 的当前值估计，并且 $$V(x)=\mathbb{E}_{a \sim \pi} Q(x, a)$$ 
 
-$$Retrace$$ 是一种off-policy、基于回报的算法，并具有低方差，[被证明](https://arxiv.org/abs/1605.09128)\(在表格中\)收敛于任何行为策略的目标策略的值函数。
+递归 $$Retrace$$ 方程需要估计 $$Q$$。为了计算它，在离散动作空间中，我们采用具有“双头”的卷积神经网络，其输出估计 $$Q_{θv}(x_t, a_t)$$ ，以及策略 $$\pi_θ(a_t | x_t)$$ 。
+
+$$Retrace$$ 是一种off-policy、基于回报的[算法](http://arxiv.org/abs/1606.02647)，并具有低方差，被证明\(在表格中\)收敛于任何行为策略的目标策略的值函数。
 
 为了近似策略梯度 $$g^{\mathrm{marg}}$$ ， $$ACER$$ 使用 $$Q^{\mathrm{ret}}$$ 估计 $$Q^{\pi}$$ 。由于Retrace使用多步回报，它可以显著减少策略梯度估计中的偏差。
 
@@ -63,21 +65,27 @@ g^{\operatorname{marg}}=\mathbb{E}_{x_{t} a_{t}}\left[\rho_{t} \nabla_{\theta} \
 =\mathbb{E}_{x_{t}}\left[\mathbb{E}_{a_{t}}\left[\overline{\rho}_{t} \nabla_{\theta} \log \pi_{\theta}\left(a_{t} | x_{t}\right) Q^{\pi}\left(x_{t}, a_{t}\right)\right]+\mathbb{E}_{a \sim \pi}\left(\left[\frac{\rho_{t}(a)-c}{\rho_{t}(a)}\right]_{+} \nabla_{\theta} \log \pi_{\theta}(a | x_{t}) Q^{\pi}\left(x_{t}, a\right)\right)\right]
 $$
 
-其中 $$\overline{\rho}_{t}=\min \left\{c, \rho_{t}\right\} \text { with } \rho_{t}=\frac{\pi\left(a_{t} | x_{t}\right)}{\mu\left(a_{t} | x_{t}\right)}$$ ，并且 $$[x]_{+}=x \text { if } x>0$$ 其他情况取0。左起第一项为截断权重，第二项为校正项。
+其中 $$\overline{\rho}_{t}=\min \left\{c, \rho_{t}\right\} \text { with } \rho_{t}=\frac{\pi\left(a_{t} | x_{t}\right)}{\mu\left(a_{t} | x_{t}\right)}$$ ，并且 $$[x]_{+}=x \text { if } x>0$$ 其他情况取0。左起第一项为截断权重，第二项为校正项。我们提醒读者，上述期望是关于行为策略下的极限状态分布: $$x_{t} \sim \beta$$ 和 $$a_{t} \sim \mu$$ 。
 
-我们用神经网络 $$Q_{θ_v}(x_t,a_t)$$ 拟合逼近校正项中的 $$Q_π(x_t,a)$$ ，这种修改导致我们称之为偏置校正技巧的截断，在这种情况下应用于函数 $$\nabla_{\theta} \log \pi_{\theta}\left(a_{t} | x_{t}\right) Q^{\pi}\left(x_{t}, a_{t}\right) $$ 
+我们用神经网络 $$Q_{θ_v}(x_t,a_t)$$ 拟合逼近校正项中的 $$Q^π(x_t,a)$$ ，这种修改我们称之为truncation with bias correction trick，在这种情况下应用于函数 $$\nabla_{\theta} \log \pi_{\theta}\left(a_{t} | x_{t}\right) Q^{\pi}\left(x_{t}, a_{t}\right) $$ ：
 
  $$\widehat{g}^{\operatorname{marg}}= \mathbb{E}_{x_{t}}\left[\mathbb{E}_{a_{t}}\left[\overline{\rho}_{t} \nabla_{\theta} \log \pi_{\theta}\left(a_{t} | x_{t}\right) Q^{r e t}\left(x_{t}, a_{t}\right)\right]+\mathbb{E}_{a \sim \pi}\left(\left[\frac{\rho_{t}(a)-c}{\rho_{t}(a)}\right]_{+}^{ } \nabla_{\theta} \log \pi_{\theta}(a | x_{t}) Q_{\theta_{v}}\left(x_{t}, a\right)\right)\right]$$
 
- 利用行为策略采样的轨迹 $$\left\{x_{0}, a_{0}, r_{0}, \mu(\cdot | x_{0}), \cdots, x_{k}, a_{k}, r_{k}, \mu(\cdot | x_{k})\right\}$$ ，可以近似得到 off-policy ACER梯度:
+利用行为策略 $$\mu$$ 采样的样本轨迹 $$\left\{x_{0}, a_{0}, r_{0}, \mu(\cdot | x_{0}), \cdots, x_{k}, a_{k}, r_{k}, \mu(\cdot | x_{k})\right\}$$ ，可以近似得到 off-policy ACER梯度:
 
 $$
 \widehat{g}_{t}^{\operatorname{acer}}=\overline{\rho}_{t} \nabla_{\theta} \log \pi_{\theta}\left(a_{t} | x_{t}\right)\left[Q^{\mathrm{ret}}\left(x_{t}, a_{t}\right)-V_{\theta_{v}}\left(x_{t}\right)\right]
+\\
++\underset{a \sim \pi}{\mathbb{E}}\left(\left[\frac{\rho_{t}(a)-c}{\rho_{t}(a)}\right]_{+} \nabla_{\theta} \log \pi_{\theta}(a | x_{t})\left[Q_{\theta_{v}}\left(x_{t}, a\right)-V_{\theta_{v}}\left(x_{t}\right)\right]\right)
 $$
+
+在上述表达式中，我们减去了经典的基线 $$V_{θ_v}(x_t )$$ 以减少方差。
 
 #### **EFFICIENT TRUST REGION POLICY OPTIMIZATION**
 
 Actor-Critic的策略更新经常表现出很大的方差。因此，为了确保稳定，我们必须限制策略的每一步变化。仅仅使用较小的学习速率是不够的，因为他们不能在保持期望的学习速度的同时防止偶尔的大规模更新。信任区域政策优化\( TRPO \) 提供了更完善的解决方案。
+
+尽管TRPO方法有效，但每次更新都需要重复计算Fisher向量乘积。这在大规模问题下被证明是非常费时的。
 
 在本节中，我们将介绍一种新的信任域策略优化方法，该方法可以很好地扩展到大规模问题。 我们建议维护一个average policy network代表过去策略的运行平均值，并强制更新的策略不偏离这一平均水平，而不是将更新后的策略限制在接近当前策略（如TRPO）。
 
@@ -107,17 +115,53 @@ $$
 
 信任区域步骤在分布的统计空间中执行，而不是在策略参数的空间中执行。这样做是故意的，以避免通过策略网络进行额外的反向传播。
 
+ACER算法源于上述想法的组合，所以想要深入理解原理，需参阅上面引用的论文。
+
 ### CONTINUOUS ACTOR CRITIC WITH EXPERIENCE REPLAY
 
-Retrace需要估计Q和V，但是我们不能轻易地将Q导出V整合到连续的动作空间中。 在本节中，我们以RL的新颖表示形式提出了这个问题的解决方案，以及信任区域更新所需的修改。
+Retrace需要估计Q和V，但是我们不能轻易连续的动作空间中利用积分求解Q和V。 在本节中，我们以RL的新颖表示形式提出了这个问题的解决方案，以及信任区域更新所需的修改。
 
-TODO:
+#### POLICY EVALUATION
+
+![](../../.gitbook/assets/image%20%287%29.png)
+
+我们提出了一个SDN网络（借鉴Dueling Deep-Q Network）解决这个问题，在每个时间步，SDN输出 $$Q_π$$ 的随机估计 $$\widetilde{Q}_{\theta_{v}}$$ 和 $$V_π$$ 的确定性估计 $$V_θ$$ ，使得
+
+$$
+\widetilde{Q}_{\theta_{v}}\left(x_{t}, a_{t}\right) \sim V_{\theta_{v}}\left(x_{t}\right)+A_{\theta_{v}}\left(x_{t}, a_{t}\right)-\frac{1}{n} \sum_{i=1}^{n} A_{\theta_{v}}\left(x_{t}, u_{i}\right), \text { and } u_{i} \sim \pi_{\theta}(\cdot | x_{t})
+$$
+
+然而，除了SDN之外，我们还构建了以下用于估计的新目标
+
+$$
+V^{\text {target}}\left(x_{t}\right)=\min \left\{1, \frac{\pi\left(a_{t} | x_{t}\right)}{\mu\left(a_{t} | x_{t}\right)}\right\}\left(Q^{\mathrm{ret}}\left(x_{t}, a_{t}\right)-Q_{\theta_{v}}\left(x_{t}, a_{t}\right)\right)+V_{\theta_{v}}\left(x_{t}\right)
+$$
+
+最后，当估计在连续域估计 $$Q^{\mathrm{ret}}$$时，我们实现了一个稍微不同的截断重要性权重公式， $$\overline{\rho}_{t}=\min \left\{1,\left(\frac{\pi\left(a_{t} | x_{t}\right)}{\mu\left(a_{t} | x_{t}\right)}\right)^{\frac{1}{d}}\right\} $$ ，d是动作空间的维度。虽然不是必需的，但我们发现这种配方可以加快学习速度。
+
+#### TRUST REGION UPDATING
+
+对于分布 $$f $$ ，我们选择具有固定对角协方差和均值的高斯分布 $$\phi_{\theta}(x) $$ 
+
+考虑关于随机Deuling Network的ACER策略梯度
+
+$$
+\begin{aligned} g_{t}^{\text { acer }}=& \mathbb{E}_{x_{t}}\left[\mathbb{E}_{a_{t}}\left[\overline{\rho}_{t} \nabla_{\phi_{\theta}\left(x_{t}\right)} \log f\left(a_{t} | \phi_{\theta}\left(x_{t}\right)\right)\left(Q^{\mathrm{opc}}\left(x_{t}, a_{t}\right)-V_{\theta_{v}}\left(x_{t}\right)\right)\right]\right.\\ &+\underset{a \sim \pi}{\mathbb{E}}\left(\left[\frac{\rho_{t}(a)-c}{\rho_{t}(a)}\right]_{+}\left(\widetilde{Q}_{\theta_{v}}\left(x_{t}, a\right)-V_{\theta_{v}}\left(x_{t}\right)\right) \nabla_{\phi_{\theta}\left(x_{t}\right)} \log f(a | \phi_{\theta}\left(x_{t}\right))\right) ] \end{aligned}
+$$
+
+这里，我们使用 $$Q^{\mathrm{opc}}$$ 代替 $$Q^{\mathrm{ret}}$$ ， $$Q^{\mathrm{opc}}\left(x_{t}, a_{t}\right)$$ 与Retrace相同，但截断的重要性比率替换为1。给定状态 $$x_t$$ ，可以从 $$a_{t}^{\prime} \sim \pi_{\theta}(\cdot | x_{t})$$ 采样通过蒙特卡洛近似得到：
+
+$$
+\begin{aligned} \hat{g}_{t}^{\text { acer }}=& \overline{\rho}_{t} \nabla_{\phi_{\theta}\left(x_{t}\right)} \log f\left(a_{t} | \phi_{\theta}\left(x_{t}\right)\right)\left(Q^{\mathrm{opc}}\left(x_{t}, a_{t}\right)-V_{\theta_{v}}\left(x_{t}\right)\right) \\ &+\left[\frac{\rho_{t}\left(a_{t}^{\prime}\right)-c}{\rho_{t}\left(a_{t}^{\prime}\right)}\right]\left(\widetilde{Q}_{\theta_{v}}\left(x_{t}, a_{t}^{\prime}\right)-V_{\theta_{v}}\left(x_{t}\right)\right) \nabla_{\phi_{\theta}\left(x_{t}\right)} \log f\left(a_{t}^{\prime} | \phi_{\theta}\left(x_{t}\right)\right) \end{aligned}
+$$
+
+接下来就和离散的情况一样了。
 
 ## 伪代码
 
-![](../../.gitbook/assets/image%20%2829%29.png)
+![](../../.gitbook/assets/image%20%2830%29.png)
 
-![](../../.gitbook/assets/image%20%2832%29.png)
+![](../../.gitbook/assets/image%20%2833%29.png)
 
 ![](../../.gitbook/assets/image%20%281%29.png)
 
@@ -129,5 +173,5 @@ TODO:
 
 #### MuJoCo
 
-![](../../.gitbook/assets/image%20%2821%29.png)
+![](../../.gitbook/assets/image%20%2822%29.png)
 
