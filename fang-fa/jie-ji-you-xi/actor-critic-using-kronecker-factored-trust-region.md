@@ -30,6 +30,8 @@ $$\operatorname{vec}(\Delta W)=\hat{F}_{\ell}^{-1} \operatorname{vec}\left\{\nab
 
 有关K-FAC的证明请参阅：[Optimizing Neural Networks with Kronecker-factored Approximate Curvature](https://arxiv.org/pdf/1503.05671.pdf)
 
+从流形的角度理解自然梯度：[https://www.cnblogs.com/tiny-player/p/3323973.html](https://www.cnblogs.com/tiny-player/p/3323973.html)
+
 ### Natural gradient in actor-critic
 
 本节介绍如何将自然梯度引入 actor-critic 算法中。actor网络的费雪信息矩阵如下：
