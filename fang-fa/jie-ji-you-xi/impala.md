@@ -78,5 +78,11 @@ $$-\nabla_{\omega} \sum \pi_{\omega}(a | x_{s}) \log \pi_{\omega}(a | x_{s})$$
 
 ## 实验
 
+### 训练性能
+
 ![](../../.gitbook/assets/image%20%2811%29.png)
+
+### 游戏测试
+
+![](../../.gitbook/assets/image%20%2844%29.png)
 
