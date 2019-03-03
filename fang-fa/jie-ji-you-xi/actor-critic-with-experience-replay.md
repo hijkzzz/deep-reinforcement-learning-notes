@@ -159,9 +159,9 @@ $$
 
 ## 伪代码
 
-![](../../.gitbook/assets/image%20%2837%29.png)
+![](../../.gitbook/assets/image%20%2839%29.png)
 
-![](../../.gitbook/assets/image%20%2842%29.png)
+![](../../.gitbook/assets/image%20%2844%29.png)
 
 ![](../../.gitbook/assets/image%20%281%29.png)
 
@@ -173,5 +173,5 @@ $$
 
 #### MuJoCo
 
-![](../../.gitbook/assets/image%20%2828%29.png)
+![](../../.gitbook/assets/image%20%2830%29.png)
 
