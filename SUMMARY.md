@@ -28,6 +28,7 @@
   * [Bootstrapped Deep Q-Network](fang-fa/jie-ji-you-xi/bootstrapped-deep-q-network.md)
   * [Multiagent Deep Q-Network](fang-fa/jie-ji-you-xi/multiagent-deep-q-network.md)
   * [Asynchronous Deep Reinforcement Learning](fang-fa/jie-ji-you-xi/asynchronous-deep-reinforcement-learning.md)
+  * [Off-Policy Actor-Critic](fang-fa/jie-ji-you-xi/off-policy-actor-critic.md)
   * [Actor-Critic with Experience Replay](fang-fa/jie-ji-you-xi/actor-critic-with-experience-replay.md)
   * [Progressive  Neural Networks](fang-fa/jie-ji-you-xi/progressive-neural-networks.md)
   * [Actor Critic using Kronecker-Factored Trust Region](fang-fa/jie-ji-you-xi/actor-critic-using-kronecker-factored-trust-region.md)

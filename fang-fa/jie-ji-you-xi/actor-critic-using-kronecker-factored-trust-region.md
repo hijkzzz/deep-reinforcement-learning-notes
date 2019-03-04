@@ -12,7 +12,7 @@
 
 假设神经网络输出一个分布 $$f(\theta)$$ ，为了最小化该分布相关的目标函数 $$\mathcal{J}(\theta)$$ ，最速下降法在有约束 $$\|\Delta \theta\|_{B}<1$$ 的情况下计算一个 $$\Delta \theta$$ 使得 $$\mathcal{J}(\theta+\Delta \theta)$$ 具有最小，其中 $$\|\cdot\| B$$ 是一个范数，即 $$\|x\|_{B}=\left(x^{T} B x\right)^{\frac{1}{2}}$$ （ $$B$$ 是一个半正定矩阵）。可以得到这个问题的解是： $$\Delta \theta \propto-B^{-1} \nabla_{\theta} \mathcal{J}$$ 。当$$B$$ 是单位矩阵 $$I$$ （即欧式范数）时，此方法又被称为梯度下降。然而这种欧式范数是依赖于参数 $$\theta$$ 的，即它体现的不是分布的距离而是参数 $$\theta$$ 的距离，如下图：
 
-![](../../.gitbook/assets/image%20%2841%29.png)
+![](../../.gitbook/assets/image%20%2844%29.png)
 
 上下两图中，左右分布的参数距离均为2，但是他们的分布距离却截然不同，即上图重叠区小，下图重叠区大。因为这个范数是参数 $$\theta$$ 相关的，所以参数 $$\theta$$ 会影响优化的轨迹，这是不合理的，实际上应当只允许分布影响优化轨迹。
 
@@ -28,9 +28,9 @@ $$\begin{aligned} F_{\ell} &=\mathbb{E}\left[\operatorname{vec}\left\{\nabla_{W}
 
 $$\operatorname{vec}(\Delta W)=\hat{F}_{\ell}^{-1} \operatorname{vec}\left\{\nabla_{W} \mathcal{J}\right\}=\operatorname{vec}\left(A^{-1} \nabla_{W} \mathcal{J} S^{-1}\right)$$ 
 
-有关K-FAC的证明请参阅：[Optimizing Neural Networks with Kronecker-factored Approximate Curvature](https://arxiv.org/pdf/1503.05671.pdf)
+[从流形的角度理解自然梯度](https://www.cnblogs.com/tiny-player/p/3323973.html)
 
-从流形的角度理解自然梯度：[https://www.cnblogs.com/tiny-player/p/3323973.html](https://www.cnblogs.com/tiny-player/p/3323973.html)
+[K-FAC的近似理论证明](https://arxiv.org/pdf/1503.05671.pdf)
 
 ### Natural gradient in actor-critic
 
