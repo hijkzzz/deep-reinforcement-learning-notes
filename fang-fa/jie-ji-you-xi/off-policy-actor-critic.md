@@ -38,6 +38,8 @@ $$\operatorname{MSPBE}(\mathbf{v})=\left\|\hat{V}-\Pi T_{\pi}^{\lambda, \gamma} 
 
 其中$$\hat{V}=X \mathbf{v}$$ ， $$X$$ 的每一行都是一个样本， $$λ$$ 是资格迹权重参数， $$D$$ 是一个矩阵（对角元素为$$d^{b} $$）， $$Π $$ 是一个投影操作， $$T_{\pi}^{\lambda, \gamma}$$ 是λ-weighted Bellman operator\(对于终止概率为 $$γ$$ 的策略 $$π$$ \)。在线性情况下， $$\Pi=X\left(X^{\top} D X\right)^{-1} X^{\top} D$$ 。
 
+请参考 $$GTD(λ)$$ 算法
+
 #### Off-policy Policy-gradient Theorem
 
 策略梯度为
@@ -77,6 +79,10 @@ $$\mathbf{g}(\mathbf{u}) \approx \widehat{\mathbf{g}(\mathbf{u})}=\mathrm{E}_{b}
 其中off-policy λ-return定义的 $$R_{t}^{\lambda}$$ 为：
 
  $$\begin{aligned} R_{t}^{\lambda}=& r_{t+1}+(1-\lambda) \gamma\left(s_{t+1}\right) \hat{V}\left(s_{t+1}\right) \\ &+\lambda \gamma\left(s_{t+1}\right) \rho\left(s_{t+1}, a_{t+1}\right) R_{t+1}^{\lambda} \end{aligned}$$
+
+### Convergence Proofs
+
+请参考原文附录
 
 ## 伪代码 
 
