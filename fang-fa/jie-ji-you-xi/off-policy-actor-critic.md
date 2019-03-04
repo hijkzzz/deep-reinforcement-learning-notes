@@ -80,11 +80,25 @@ $$\mathbf{g}(\mathbf{u}) \approx \widehat{\mathbf{g}(\mathbf{u})}=\mathrm{E}_{b}
 
  $$\begin{aligned} R_{t}^{\lambda}=& r_{t+1}+(1-\lambda) \gamma\left(s_{t+1}\right) \hat{V}\left(s_{t+1}\right) \\ &+\lambda \gamma\left(s_{t+1}\right) \rho\left(s_{t+1}, a_{t+1}\right) R_{t+1}^{\lambda} \end{aligned}$$
 
+这就是前向视角的Off-PAC
+
 ### Convergence Proofs
 
 请参考原文附录
 
 ## 伪代码 
+
+为了实现前面描述的算法，这里转换为后向视角，关键的一步是
+
+$$\mathrm{E}_{b}\left[\rho\left(s_{t}, a_{t}\right) \psi\left(s_{t}, a_{t}\right)\left(R_{t}^{\lambda}-\hat{V}\left(s_{t}\right)\right)\right]=\mathrm{E}_{b}\left[\delta_{t} \mathrm{e}_{t}\right]$$ 
+
+其中 $$\delta_{t}=r_{t+1}+\gamma\left(s_{t+1}\right) \hat{V}\left(s_{t+1}\right)-\hat{V}\left(s_{t}\right)$$ 是时间差分误差， $$\mathbf{e}_{t} \in \mathbb{R}^{N_{\mathbf{u}}}$$ 是资格迹，由下式更新
+
+$$\mathbf{e}_{t}=\rho\left(s_{t}, a_{t}\right)\left(\psi\left(s_{t}, a_{t}\right)+\lambda \mathbf{e}_{t-1}\right)$$ 
+
+然后我们可以得到： $$\mathbf{u}_{t+1}-\mathbf{u}_{t}=\alpha_{u, t} \delta_{t} \mathbf{e}_{t}$$ 
+
+证明见原文附录或者参考资格迹的相关教程
 
 ![](../../.gitbook/assets/image%20%2827%29.png)
 
