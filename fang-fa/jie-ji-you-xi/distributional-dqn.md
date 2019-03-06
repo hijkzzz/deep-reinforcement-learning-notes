@@ -22,9 +22,11 @@ $$
 
 贝尔曼/最优算子定义
 
-![](../../.gitbook/assets/image%20%2821%29.png)
+![](../../.gitbook/assets/image%20%2824%29.png)
 
 ### 分布贝尔曼算子
+
+仅对算法感兴趣的读者可以选择跳过这一节
 
 #### Distributional Equations
 
@@ -62,9 +64,9 @@ $$
 \begin{aligned} d_{p}(a U, a V) \leq|a| d_{p}(U, V) &(\mathrm{Pl}) \\ d_{p}(A+U, A+V) \leq d_{p}(U, V) &(\mathrm{P} 2) \\ d_{p}(A U, A V) \leq\|A\|_{p} d_{p}(U, V) &(\mathrm{P} 3) \end{aligned}
 $$
 
-引理
+引理1、2
 
-![Wasserstein&#x5C3A;&#x5EA6;&#x5F15;&#x7406;](../../.gitbook/assets/image%20%2851%29.png)
+![Wasserstein&#x5C3A;&#x5EA6;&#x5F15;&#x7406;](../../.gitbook/assets/image%20%2856%29.png)
 
 #### Policy Evaluation
 
@@ -78,21 +80,41 @@ $$\mathcal{T}^{\pi} Z(x, a) : \stackrel{D}{=} R(x, a)+\gamma P^{\pi} Z(x, a)$$
 
 随机性的三个来源定义了复合分布，我们通常假设这三个量是独立的
 
-![](../../.gitbook/assets/image%20%2832%29.png)
+![](../../.gitbook/assets/image%20%2836%29.png)
 
-引理
+引理3
 
-![](../../.gitbook/assets/image%20%2847%29.png)
+![](../../.gitbook/assets/image%20%2852%29.png)
 
 这说明 $$Z_{k+1} :=T^{\pi} Z_{k}$$ 在尺度 $$\overline{d}_{p}$$ 下收缩，然而可能不适用于其他的尺度。
 
 #### Control
 
-![&#x6700;&#x4F18;&#x4EF7;&#x503C;&#x5206;&#x5E03;](../../.gitbook/assets/image%20%2836%29.png)
+最优价值分布和贪心策略定义
 
-![&#x8D2A;&#x5FC3;&#x7B56;&#x7565;](../../.gitbook/assets/image%20%2846%29.png)
+![](../../.gitbook/assets/image%20%2840%29.png)
+
+![](../../.gitbook/assets/image%20%2851%29.png)
+
+最优贝尔曼算子等价于
 
 ![](../../.gitbook/assets/image%20%2833%29.png)
+
+引理4
+
+![](../../.gitbook/assets/image%20%2837%29.png)
+
+因此，我们希望 $$Z_k$$ 能够快速收敛到一个fixed point，然而这可能很慢或者不确定。实际上，我们可以希望pointwise convergence，即收敛到 nonstationary optimal value distributions。
+
+![](../../.gitbook/assets/image%20%285%29.png)
+
+将定理1与引理4相比较揭示了分布框架和通常的期望设置之间的显著差异。虽然 $$Z_{k}$$ 的平均值迅速指数收敛到 $$Q^*$$ ，但它的分布不需要表现得那么好！为了强调这种差异，我们提供了一些负面结果，如下：
+
+![](../../.gitbook/assets/image%20%2815%29.png)
+
+![](../../.gitbook/assets/image%20%2811%29.png)
+
+![](../../.gitbook/assets/image%20%2858%29.png)
 
 ### 近似分布学习
 
@@ -106,15 +128,17 @@ $$
 Z_{\theta}(x, a)=z_{i} \quad \text { w.p. } p_{i}(x, a) :=\frac{e^{\theta_{i}(x, a)}}{\sum_{j} e^{\theta_{j}(x, a)}}
 $$
 
+其中 $$\left\{z_{i}=V_{\mathrm{MIN}}+i \triangle z : 0 \leq\right.i<N \},\Delta z :=\frac{V_{\mathrm{mAx}}-V_{\mathrm{MIN}}}{N-1}$$ 
+
 #### Projected Bellman Update
 
-![](../../.gitbook/assets/image%20%2844%29.png)
+使用离散的分布造成了一个问题：贝尔曼更新 $$\mathcal{T} Z_{\theta}$$ 和我们的 $$Z_{\theta}$$ 几乎总是disjoint support。从前面一节（分布贝尔曼算子）的分析来看，将 $$\mathcal{T} Z_{\theta} \text { and } Z_{\theta}$$的 Wasserstein metric（视为损失）最小化之间似乎很自然。但是因为Wasserstein loss不适合采样的转移（参考原文附录）。
 
+相反，我们将采样的贝尔曼更新$$\mathcal{T} Z_{\theta}$$ 投影到 $$Z_{\theta}$$ support，见
 
+$$
+\left(\Phi \hat{\mathcal{T}} Z_{\theta}(x, a)\right)_{i}=\sum_{j=0}^{N-1}\left[1-\frac{\left|\left[\hat{\mathcal{T}} z_{j}\right]_{V_{\mathrm{wuv}}}^{V_{\max }}-z_{i}\right|}{\Delta z}\right]_{0}^{1} p_{j}\left(x^{\prime}, \pi\left(x^{\prime}\right)\right)
+$$
 
- 
-
-
-
-
+![](../../.gitbook/assets/image%20%2849%29.png)
 

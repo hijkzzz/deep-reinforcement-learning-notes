@@ -58,7 +58,7 @@ $$\nabla_{\mathbf{u}} J_{\gamma}(\mathbf{u}) \approx \mathbf{g}(\mathbf{u})=\sum
 
 ![](../../.gitbook/assets/image%20%284%29.png)
 
-![](../../.gitbook/assets/image%20%2811%29.png)
+![](../../.gitbook/assets/image%20%2813%29.png)
 
 #### The Actor: Incremental Update Algorithm with Eligibility Traces
 
@@ -100,7 +100,7 @@ $$\mathbf{e}_{t}=\rho\left(s_{t}, a_{t}\right)\left(\psi\left(s_{t}, a_{t}\right
 
 证明见原文附录或者参考资格迹的相关教程
 
-![](../../.gitbook/assets/image%20%2830%29.png)
+![](../../.gitbook/assets/image%20%2834%29.png)
 
 
 
