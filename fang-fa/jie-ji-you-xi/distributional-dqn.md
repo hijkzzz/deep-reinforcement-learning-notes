@@ -134,13 +134,13 @@ $$
 
 #### Projected Bellman Update
 
-使用离散的分布造成了一个问题：贝尔曼更新 $$\mathcal{T} Z_{\theta}$$ 和我们的 $$Z_{\theta}$$ 几乎总是disjoint support\([https://en.wikipedia.org/wiki/Support\_\(mathematics\)](https://en.wikipedia.org/wiki/Support_%28mathematics%29)\)。从前面一节（分布贝尔曼算子）的分析来看，将 $$\mathcal{T} Z_{\theta} \text { and } Z_{\theta}$$的 Wasserstein metric（视为损失）最小化之间似乎很自然，但是Wasserstein loss无法在采样的样本下学习。
+使用离散的分布造成了一个问题：贝尔曼更新 $$\mathcal{T} Z_{\theta}$$ 和我们的 $$Z_{\theta}$$ 几乎总是有disjoint support\([https://en.wikipedia.org/wiki/Support\_\(mathematics\)](https://en.wikipedia.org/wiki/Support_%28mathematics%29)\)。从前面一节（分布贝尔曼算子）的分析来看，将 $$\mathcal{T} Z_{\theta} \text { and } Z_{\theta}$$的 Wasserstein metric（视为损失）最小化之间似乎很自然，但是Wasserstein loss无法在采样的样本下学习。
 
-相反，我们将贝尔曼更新$$\mathcal{T} Z_{\theta}$$ 投影到 $$Z_{\theta}$$ 的support
+我们的解决方案是，将贝尔曼更新$$\mathcal{T} Z_{\theta}$$ 投影到 $$Z_{\theta}$$ 的support
 
 ![](../../.gitbook/assets/image%20%2862%29.png)
 
-给定样本 $$\left(x, a, r, x^{\prime}\right)$$ ，贝尔曼更新为： $$\hat{\mathcal{T}} z_{j} :=r+\gamma z_{j}$$ ，然后将概率 $$p_{j}\left(x^{\prime}, \pi\left(x^{\prime}\right)\right)$$ 分配给 $$\hat{T} z_{j}$$ 的直接邻居，第 $$i$$ 个投影更新 $$\Phi \hat{\mathcal{T}} Z_{\theta}(x, a)$$ 为：
+给定样本 $$\left(x, a, r, x^{\prime}\right)$$ ，贝尔曼更新为： $$\hat{\mathcal{T}} z_{j} :=r+\gamma z_{j}$$ ，然后将概率 $$p_{j}\left(x^{\prime}, \pi\left(x^{\prime}\right)\right)$$ 分配给 $$\hat{T} z_{j}$$ 的邻居，第 $$i$$ 个投影更新 $$\Phi \hat{\mathcal{T}} Z_{\theta}(x, a)$$ 为：
 
 $$
 \left(\Phi \hat{\mathcal{T}} Z_{\theta}(x, a)\right)_{i}=\sum_{j=0}^{N-1}\left[1-\frac{\left|\left[\hat{\mathcal{T}} z_{j}\right]_{V_{\mathrm{min}}}^{V_{\max }}-z_{i}\right|}{\Delta z}\right]_{0}^{1} p_{j}\left(x^{\prime}, \pi\left(x^{\prime}\right)\right)
@@ -148,9 +148,25 @@ $$
 
 其中 $$[\cdot]_{a}^{b}$$ 即限制上下界为 $$[a, b]$$ 
 
-损失函数使用KL散度 $$D_{\mathrm{KL}}\left(\Phi \hat{\mathcal{T}} Z_{\tilde{\theta}}(x, a) \| Z_{\theta}(x, a)\right)$$ 
+然后损失函数使用KL散度 $$D_{\mathrm{KL}}\left(\Phi \hat{\mathcal{T}} Z_{\tilde{\theta}}(x, a) \| Z_{\theta}(x, a)\right)$$ ，再用梯度下降优化即可
+
+由于此算法离散atom数量在ALE上设置51个效果最好，又被称为C51算法
 
 ## 伪代码
 
 ![](../../.gitbook/assets/image%20%2849%29.png)
+
+## 讨论
+
+为什么使用分布DQN？
+
+Reduced chattering 即减少震荡，降低不稳定性
+
+State aliasing 由于部分观测，相似的状态可能Value很不相同，而使用distribution则可以缓解这个问题
+
+A richer set of predictions
+
+Framework for inductive bias 使用distribution可以很容易的添加bound假设
+
+Well-behaved optimization ，使用KL Divergence可以很容易的最小化损失
 
