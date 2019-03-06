@@ -161,7 +161,7 @@ $$
 
 ![](../../.gitbook/assets/image%20%2860%29.png)
 
-![](../../.gitbook/assets/image%20%2866%29.png)
+![](../../.gitbook/assets/image%20%2867%29.png)
 
 ![](../../.gitbook/assets/image%20%281%29.png)
 

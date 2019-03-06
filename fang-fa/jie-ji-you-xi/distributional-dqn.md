@@ -4,7 +4,9 @@
 
 > [A Distributional Perspective on Reinforcement Learning](https://arxiv.org/pdf/1707.06887.pdf)
 
-在本文中，我们论证了价值分布（强化学习代理接收的随机回报的分布）的基本重要性。 这与强化学习的通用方法不同，后者为这种回归或价值的期望建模。尽管已经有一套研究价值分布的成熟的体系，但到目前为止，它一直被用于特定目的，例如实施风险敏感的的行为。 我们从策略评估和控制设置的理论结果开始，揭示了后者的显着分布不稳定性。 然后从分布的角度设计了一种新的算法，将Bellman等式应用于近似分布的学习。我们使用街机学习环境中的游戏集来评估我们的算法。我们获得了最新的结果和轶事证据，证明了价值分布在接近配偶强化学习中的重要性。最后，我们从理论和经验两方面论证了数值分布在近似环境下对学习的影响。
+在本文中，我们论证了价值分布（强化学习代理接收的随机回报的分布）的基本重要性。 这与强化学习的通用方法不同，后者为这种回归或价值的期望建模。尽管已经有一套研究价值分布的成熟的体系，但到目前为止，它一直被用于特定目的，例如实施风险敏感的的行为。 我们从策略评估和控制设置的理论结果开始，揭示了后者的显着分布不稳定性。 然后从分布的角度设计了一种新的算法，将Bellman等式应用于近似分布的学习。我们使用街机学习环境中的游戏集来评估我们的算法。我们获得了最新的结果和轶事证据，证明了价值分布在接近配偶强化学习中的重要性。最后，我们从理论和经验两方面论证了价值分布在近似环境下对学习的影响。
+
+从算法的角度来看，学习近似分布而不是近似期望有很多好处。 分布式Bellman算子在有价值分布中保留多模态，我们相信这会导致更稳定的学习。 近似完整分布也减轻了从不稳定的学习的影响。
 
 ## 算法
 
@@ -26,7 +28,7 @@ $$
 
 ### 分布贝尔曼算子
 
-仅对算法感兴趣的读者可以选择跳过这一节
+仅对算法贡献感兴趣的读者 可以选择跳过这一节
 
 #### Distributional Equations
 
@@ -118,7 +120,7 @@ $$\mathcal{T}^{\pi} Z(x, a) : \stackrel{D}{=} R(x, a)+\gamma P^{\pi} Z(x, a)$$
 
 ### 近似分布学习
 
-在本节中，我们提出了一种基于分布Bellman最优性算子的算法。 特别是，这将需要选择近似分布。 虽然已经有人考虑过高斯分布，但据我们所知，我们是第一个使用丰富的参数分布的。
+在本节中，我们提出了一种基于分布Bellman最优性算子的算法。 特别是，这将需要选择近似分布。 已经有人使用过高斯分布了，这里我们考虑使用离散分布。
 
 #### Parametric Distribution
 
@@ -132,13 +134,23 @@ $$
 
 #### Projected Bellman Update
 
-使用离散的分布造成了一个问题：贝尔曼更新 $$\mathcal{T} Z_{\theta}$$ 和我们的 $$Z_{\theta}$$ 几乎总是disjoint support。从前面一节（分布贝尔曼算子）的分析来看，将 $$\mathcal{T} Z_{\theta} \text { and } Z_{\theta}$$的 Wasserstein metric（视为损失）最小化之间似乎很自然。但是因为Wasserstein loss不适合采样的转移（参考原文附录）。
+使用离散的分布造成了一个问题：贝尔曼更新 $$\mathcal{T} Z_{\theta}$$ 和我们的 $$Z_{\theta}$$ 几乎总是disjoint support\([https://en.wikipedia.org/wiki/Support\_\(mathematics\)](https://en.wikipedia.org/wiki/Support_%28mathematics%29)\)。从前面一节（分布贝尔曼算子）的分析来看，将 $$\mathcal{T} Z_{\theta} \text { and } Z_{\theta}$$的 Wasserstein metric（视为损失）最小化之间似乎很自然，但是Wasserstein loss无法在采样的样本下学习。
 
-相反，我们将采样的贝尔曼更新$$\mathcal{T} Z_{\theta}$$ 投影到 $$Z_{\theta}$$ support，见
+相反，我们将贝尔曼更新$$\mathcal{T} Z_{\theta}$$ 投影到 $$Z_{\theta}$$ 的support
+
+![](../../.gitbook/assets/image%20%2862%29.png)
+
+给定样本 $$\left(x, a, r, x^{\prime}\right)$$ ，贝尔曼更新为： $$\hat{\mathcal{T}} z_{j} :=r+\gamma z_{j}$$ ，然后将概率 $$p_{j}\left(x^{\prime}, \pi\left(x^{\prime}\right)\right)$$ 分配给 $$\hat{T} z_{j}$$ 的直接邻居，第 $$i$$ 个投影更新 $$\Phi \hat{\mathcal{T}} Z_{\theta}(x, a)$$ 为：
 
 $$
-\left(\Phi \hat{\mathcal{T}} Z_{\theta}(x, a)\right)_{i}=\sum_{j=0}^{N-1}\left[1-\frac{\left|\left[\hat{\mathcal{T}} z_{j}\right]_{V_{\mathrm{wuv}}}^{V_{\max }}-z_{i}\right|}{\Delta z}\right]_{0}^{1} p_{j}\left(x^{\prime}, \pi\left(x^{\prime}\right)\right)
+\left(\Phi \hat{\mathcal{T}} Z_{\theta}(x, a)\right)_{i}=\sum_{j=0}^{N-1}\left[1-\frac{\left|\left[\hat{\mathcal{T}} z_{j}\right]_{V_{\mathrm{min}}}^{V_{\max }}-z_{i}\right|}{\Delta z}\right]_{0}^{1} p_{j}\left(x^{\prime}, \pi\left(x^{\prime}\right)\right)
 $$
+
+其中 $$[\cdot]_{a}^{b}$$ 即限制上下界为 $$[a, b]$$ 
+
+损失函数使用KL散度 $$D_{\mathrm{KL}}\left(\Phi \hat{\mathcal{T}} Z_{\tilde{\theta}}(x, a) \| Z_{\theta}(x, a)\right)$$ 
+
+## 伪代码
 
 ![](../../.gitbook/assets/image%20%2849%29.png)
 
