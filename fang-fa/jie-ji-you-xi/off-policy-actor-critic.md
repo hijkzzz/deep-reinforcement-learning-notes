@@ -56,9 +56,9 @@ $$\nabla_{\mathbf{u}} J_{\gamma}(\mathbf{u}) \approx \mathbf{g}(\mathbf{u})=\sum
 
 下面的定理证明了这个近似（证明见原文附录）
 
-![](../../.gitbook/assets/image%20%284%29.png)
+![](../../.gitbook/assets/image%20%286%29.png)
 
-![](../../.gitbook/assets/image%20%2813%29.png)
+![](../../.gitbook/assets/image%20%2817%29.png)
 
 #### The Actor: Incremental Update Algorithm with Eligibility Traces
 
@@ -100,7 +100,7 @@ $$\mathbf{e}_{t}=\rho\left(s_{t}, a_{t}\right)\left(\psi\left(s_{t}, a_{t}\right
 
 证明见原文附录或者参考资格迹的相关教程
 
-![](../../.gitbook/assets/image%20%2836%29.png)
+![](../../.gitbook/assets/image%20%2842%29.png)
 
 
 

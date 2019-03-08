@@ -46,21 +46,117 @@ $$
 \begin{aligned} L_{\pi_{\theta_{0}}}\left(\pi_{\theta_{0}}\right) &=\eta\left(\pi_{\theta_{0}}\right) \\ \nabla_{\theta} L_{\pi_{\theta_{0}}}\left.\left(\pi_{\theta}\right)\right|_{\theta=\theta_{0}} &=\nabla_{\theta} \eta\left.\left(\pi_{\theta}\right)\right|_{\theta=\theta_{0}} \end{aligned}
 $$
 
-上式给出了一个增强策略的梯度方向，然而却没有指出最佳的步长，为了解决这个问题
+上式给出了一个增强策略的梯度方向，然而却没有指出合适的步长，为了解决这个问题我们采用新的思路：
 
-令 $$\pi^{\prime}=\arg \max _{\pi^{\prime}} L_{\pi_{\mathrm{old}}}\left(\pi^{\prime}\right)$$ ，新策略为 $$\pi_{\text { new }}(a | s)=(1-\alpha) \pi_{\text { old }}(a | s)+\alpha \pi^{\prime}(a | s)$$ 
+令 $$\pi^{\prime}=\arg \max _{\pi^{\prime}} L_{\pi_{\mathrm{old}}}\left(\pi^{\prime}\right)$$ ，令新策略为 $$\pi_{\text { new }}(a | s)=(1-\alpha) \pi_{\text { old }}(a | s)+\alpha \pi^{\prime}(a | s)$$ 
 
-有下界
+根据 Kakade & Langford \(2002\) 等人的相关工作有下界关系：
 
 $$\eta\left(\pi_{\text { new }}\right) \geq L_{\pi_{\text { old }}}\left(\pi_{\text { new }}\right)-\frac{2 \epsilon \gamma}{(1-\gamma)^{2}} \alpha^{2} \\ where\ \epsilon=\max _{s}\left|\mathbb{E}_{a \sim \pi^{\prime}(a | s)}\left[A_{\pi}(s, a)\right]\right|$$
 
+我们只要让下界单调递增，则可实现策略的提升
+
 ###  一般随机策略的单调改进保证
 
+我们用total variation divergence作为 $$\alpha$$ 的度量 ：
+
+$$D_{\mathrm{TV}}^{\max }(\pi, \tilde{\pi})=\max _{s} D_{T V}(\pi(\cdot | s) \| \tilde{\pi}(\cdot | s))$$ ，有定理（证明见原文附录）
+
+![](../../.gitbook/assets/image%20%2837%29.png)
+
+注意到其与KL散度的关系 $$D_{T V}(p \| q)^{2} \leq D_{\mathrm{KL}}(p \| q)$$ ，定理可写为
+
+![](../../.gitbook/assets/image.png)
+
+于是有如下算法，可以保证策略的单调递增
+
+![](../../.gitbook/assets/image%20%2869%29.png)
+
+证明：令 $$M_{i}(\pi)=L_{\pi_{i}}(\pi)-C D_{\mathrm{KL}}^{\max }\left(\pi_{i}, \pi\right)$$ ，结合上式有
+
+![](../../.gitbook/assets/image%20%285%29.png)
+
+我们提出了算法1的近似算法Trust region policy optimization，其使用KL散度作为约束而不是惩罚项，以支持健壮的大步更新。
+
+### 参数化策略的优化
+
+我们把算法1的问题从
+
+$$\underset{\theta}{\operatorname{maximize}}\left[L_{\theta_{\text { old }}}(\theta)-C D_{\mathrm{KL}}^{\max }\left(\theta_{\text { old }}, \theta\right)\right]$$ 
+
+转换为带约束的最大化问题
+
+$$\begin{array}{l}{\text { maximize } L_{\theta_{\text { old }}}(\theta)} \\ {\text { subject to } D_{\mathrm{KL}}^{\max }\left(\theta_{\text { old }}, \theta\right) \leq \delta}\end{array}$$
+
+同时为了方便解决约束问题，我们用平均KL散度替换最大KL散度
+
+$$\overline{D}_{\mathrm{KL}}^{\rho}\left(\theta_{1}, \theta_{2}\right) :=\mathbb{E}_{s \sim \rho}\left[D_{\mathrm{KL}}\left(\pi_{\theta_{1}}(\cdot | s) \| \pi_{\theta_{2}}(\cdot | s)\right]\right.$$ 
+
+于是得到
+
+$$\begin{array}{l}{\text { maximize } L_{\theta_{\text { old }}}(\theta)} \\ {\text { subject to } \overline{D}_{\mathrm{KL}}^{\rho \theta_{\text { old }}}\left(\theta_{\text { old }}, \theta\right) \leq \delta}\end{array}$$
+
+### 基于采样的目标和约束估计 
+
+本节旨在用蒙特卡洛模拟近似上面的优化问题，展开 $$L_{\theta \text { old }}(\theta)$$ 
+
+![](../../.gitbook/assets/image%20%2844%29.png)
+
+首先用 $$\frac{1}{1-\gamma} \mathbb{E}_{s \sim \rho_{\theta_{\text { old }}}}[\ldots]$$ 替换 $$\sum_{S} \rho_{\theta_{\text { old }}}(s)[\ldots]$$ ，然后用用 $$Q_{\theta_{\text { old }}}$$ 替换 $$A_{\theta_{\text { old }}}$$ 
+
+最后用重要性采样处理动作求和
+
+$$\sum_{a} \pi_{\theta}(a | s_{n}) A_{\theta_{\text { old }}}\left(s_{n}, a\right)=\mathbb{E}_{a \sim q}\left[\frac{\pi_{\theta}(a | s_{n})}{q(a | s_{n})} A_{\theta_{\text { old }}}\left(s_{n}, a\right)\right]$$
+
+得到等价优化目标
+
+ 
+
+![](../../.gitbook/assets/image%20%289%29.png)
+
+剩下的就是用样本均值代替期望值，用经验估计代替Q值。以下部分描述了两种不同的方案来执行这种估计。
+
+![](../../.gitbook/assets/image%20%2870%29.png)
+
+### 实际算法
+
+通常可以分为三步
+
+![](../../.gitbook/assets/image%20%2854%29.png)
+
+原文附录C给出了具体的优化算法
+
+总结前面的内容
+
+![](../../.gitbook/assets/image%20%2818%29.png)
+
+### 与前面工作的联系
+
+使用L的线性近似和KL散度的二阶近似，自然梯度更新可以视为TRPO的特例
+
+$$
+\begin{array}{l}{\text { maximize }\left[\nabla_{\theta} L_{\theta_{\text { old }}}\left.(\theta)\right|_{\theta=\theta_{\text { old }}} \cdot\left(\theta-\theta_{\text { old }}\right)\right]} \\ {\text { subject to } \frac{1}{2}\left(\theta_{\text { old }}-\theta\right)^{T} A\left(\theta_{\text { old }}\right)\left(\theta_{\text { old }}-\theta\right) \leq \delta} \\ {\text { where } A\left(\theta_{\text { old }}\right)_{i j}=} \\ {\frac{\partial}{\partial \theta_{i}} \frac{\partial}{\partial \theta_{j}} \mathbb{E}_{s \sim \rho_{\pi}}\left.\left[D_{\mathrm{KL}}(\pi(\cdot | s, \theta_{\text { old }}) \| \pi(\cdot | s, \theta))\right]\right|_{\theta=\theta_{\text { old }}}}\end{array}
+$$
+
+更新式:  $$\theta_{\text { new }}=\theta_{\text { old }}+\frac{1}{\lambda} A\left(\theta_{\text { old }}\right)^{-1} \nabla_{\theta} L\left.(\theta)\right|_{\theta=\theta_{\text { old }}}$$
+
+## 实验
+
+![](../../.gitbook/assets/image%20%2816%29.png)
 
 
 
 
 
+
+
+
+
+
+
+
+
+ 
 
 
 
