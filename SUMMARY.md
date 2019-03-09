@@ -39,6 +39,7 @@
   * [Distributional DQN](fang-fa/jie-ji-you-xi/distributional-dqn.md)
   * [Noisy Network](fang-fa/jie-ji-you-xi/noisy-network.md)
   * [Rainbow](fang-fa/jie-ji-you-xi/rainbow.md)
+  * [ES](fang-fa/jie-ji-you-xi/es.md)
 * [蒙特祖玛的复仇](fang-fa/ment-te-zu-ma-de-fu-chou.md)
 * [第一人称射击游戏](fang-fa/di-yi-ren-cheng-she-ji-you-xi.md)
 * [开放世界游戏](fang-fa/kai-fang-shi-jie-you-xi.md)
