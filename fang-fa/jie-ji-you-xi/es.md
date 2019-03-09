@@ -20,13 +20,13 @@
 
 进化算法的常规流程为：初始种群&gt;&gt;交叉变异&gt;&gt;评价&gt;&gt;筛选下一代......直到问题收敛
 
-令 $$F$$ 为评价函数， $$\theta$$ 为策略网络参数，扰动策略分布 $$p_{\psi}(\theta)$$ 为种群
+令 $$F$$ 为评价函数， $$\theta$$ 为策略的参数，带噪音的分布 $$p_{\psi}(\theta)$$ 为当前的策略种群
 
 则优化的最终目标是最大化 $$\mathbb{E}_{\theta \sim p_{\psi}} F(\theta)$$ ，所以得到梯度
 
 $$\nabla_{\psi} \mathbb{E}_{\theta \sim p_{\psi}} F(\theta)=\mathbb{E}_{\theta \sim p_{\psi}}\left\{F(\theta) \nabla_{\psi} \log p_{\psi}(\theta)\right\}$$ 
 
-令扰动分布服从高斯分布，则有
+令噪音分布服从高斯分布，则有
 
 $$\nabla_{\theta} \mathbb{E}_{c \sim N(0, I)} F(\theta+\sigma \epsilon)=\frac{1}{\sigma} \mathbb{E}_{c \sim N(0, I)}\{F(\theta+\sigma \epsilon) \epsilon\}$$ 
 
@@ -42,7 +42,31 @@ $$\nabla_{\theta} \mathbb{E}_{c \sim N(0, I)} F(\theta+\sigma \epsilon)=\frac{1}
 
 ![](../../.gitbook/assets/image%20%289%29.png)
 
-### 参数空间中的平滑与动作空间中的平滑
+### 参数空间中的平滑 vs 动作空间中的平滑
+
+RL的一大困难来源于缺乏政策绩效的信息梯度:这种梯度可能由于环境或策略的不平滑而不存在，或者可能只能作为高方差估计来获得，因为环境通常只能通过采样来访问。令 $$\mathbf{a}=\left\{a_{1}, \dots, a_{T}\right\}$$ ，其中 $$a_{t}=\pi(s ; \theta)$$， 则我们的优化目标为 $$F(\theta)=R(\mathbf{a}(\theta))$$ 。
+
+由于动作被允许是离散的，并且策略被允许是确定性的， $$F(θ)$$ 在 $$θ$$ 中可能是不平滑的。更重要的是，因为我们不能明确地访问决策问题的潜在状态转移函数，梯度不能用类似反向传播的算法来计算。为了使问题变得平滑并有一种方法来估计它的梯度，我们需要添加噪声
+
+策略梯度方法在动作空间添加噪音 $$\epsilon$$ 
+
+$$
+\nabla_{\theta} F_{P G}(\theta)=\mathbb{E}_{\epsilon}\left\{R(\mathbf{a}(\epsilon, \theta)) \nabla_{\theta} \log p(\mathbf{a}(\epsilon, \theta) ; \theta)\right\}
+$$
+
+对于进化策略，这里使用的方法是基于参数扰动的噪音，即参数 $$\tilde{\theta}=\theta+\xi$$ ，$$a_{t}=\mathbf{a}(\xi, \theta)=\pi(s ; \tilde{\theta})$$ 
+
+$$
+\nabla_{\theta} F_{E S}(\theta)=\mathbb{E}_{\xi}\left\{R(\mathbf{a}(\xi, \theta)) \nabla_{\theta} \log p(\tilde{\theta}(\xi, \theta) ; \theta)\right\}
+$$
+
+
+
+
+
+
+
+
 
 
 
