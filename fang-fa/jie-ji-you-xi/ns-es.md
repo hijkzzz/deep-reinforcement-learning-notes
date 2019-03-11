@@ -18,6 +18,8 @@ $$
 \nabla_{\phi} \mathbb{E}_{\theta \sim \phi}[f(\theta)] \approx \frac{1}{n} \sum_{i=1}^{n} f\left(\theta_{t}^{i}\right) \nabla_{\phi} \log p_{\phi}\left(\theta_{t}^{i}\right)
 $$
 
+设 $$\theta_{t}^{i}=\theta_{t}+\sigma \epsilon_{i} \text { where } \epsilon_{i} \sim \mathcal{N}(0, I)$$ ，通过对样本参数扰动的总和进行加权来估计梯度
+
 $$
 \nabla_{\theta_{t}} \mathbb{E}_{\epsilon \sim \mathcal{N}(0, I)}\left[f\left(\theta_{t}+\sigma \epsilon\right)\right] \approx \frac{1}{n \sigma} \sum_{i=1}^{n} f\left(\theta_{t}^{i}\right) \epsilon_{i}
 $$
