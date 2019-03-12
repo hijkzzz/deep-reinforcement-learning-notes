@@ -123,7 +123,7 @@ Retrace需要估计Q和V，但是我们不能轻易连续的动作空间中利�
 
 #### POLICY EVALUATION
 
-![](../../.gitbook/assets/image%20%2814%29.png)
+![](../../.gitbook/assets/image%20%2815%29.png)
 
 我们提出了一个SDN网络（借鉴Dueling Deep-Q Network）解决这个问题，在每个时间步，SDN输出 $$Q_π$$ 的随机估计 $$\widetilde{Q}_{\theta_{v}}$$ 和 $$V_π$$ 的确定性估计 $$V_θ$$ ，使得
 
@@ -159,9 +159,9 @@ $$
 
 ## 伪代码
 
-![](../../.gitbook/assets/image%20%2874%29.png)
+![](../../.gitbook/assets/image%20%2879%29.png)
 
-![](../../.gitbook/assets/image%20%2881%29.png)
+![](../../.gitbook/assets/image%20%2886%29.png)
 
 ![](../../.gitbook/assets/image%20%282%29.png)
 
@@ -173,5 +173,5 @@ $$
 
 #### MuJoCo
 
-![](../../.gitbook/assets/image%20%2855%29.png)
+![](../../.gitbook/assets/image%20%2858%29.png)
 
