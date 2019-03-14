@@ -8,7 +8,7 @@
 
 ## 算法
 
-![](../../.gitbook/assets/image%20%2887%29.png)
+![](../../.gitbook/assets/image%20%2890%29.png)
 
 最优贝尔曼方程
 
@@ -32,11 +32,11 @@ $$L_{i}\left(\theta_{i}\right)=\mathbb{E}_{s, a \sim \rho(\cdot)}\left[\left(y_{
 
 为了提高训练的稳定性，算法中有两个网络，其一是最新的行为网络，其二是目标网络。目标网络每C步和当前最新的网络同步一次。
 
-![](../../.gitbook/assets/image%20%2866%29.png)
+![](../../.gitbook/assets/image%20%2869%29.png)
 
 ## 伪代码
 
-![](../../.gitbook/assets/image%20%2811%29.png)
+![](../../.gitbook/assets/image%20%2812%29.png)
 
 
 

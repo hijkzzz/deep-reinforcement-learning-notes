@@ -1,4 +1,4 @@
-# Distributed Deep Q-Learning
+# Gorila
 
 ## 介绍
 
@@ -8,9 +8,9 @@
 
 ## 算法
 
-![](../../.gitbook/assets/image%20%2886%29.png)
+![](../../.gitbook/assets/image%20%2889%29.png)
 
 ## 伪代码
 
-![](../../.gitbook/assets/image%20%2875%29.png)
+![](../../.gitbook/assets/image%20%2878%29.png)
 
