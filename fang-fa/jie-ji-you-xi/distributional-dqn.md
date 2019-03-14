@@ -68,7 +68,7 @@ $$
 
 引理1、2
 
-![Wasserstein&#x5C3A;&#x5EA6;&#x5F15;&#x7406;](../../.gitbook/assets/image%20%2881%29.png)
+![Wasserstein&#x5C3A;&#x5EA6;&#x5F15;&#x7406;](../../.gitbook/assets/image%20%2882%29.png)
 
 #### Policy Evaluation
 
@@ -86,7 +86,7 @@ $$\mathcal{T}^{\pi} Z(x, a) : \stackrel{D}{=} R(x, a)+\gamma P^{\pi} Z(x, a)$$
 
 引理3
 
-![](../../.gitbook/assets/image%20%2877%29.png)
+![](../../.gitbook/assets/image%20%2878%29.png)
 
 这说明 $$Z_{k+1} :=T^{\pi} Z_{k}$$ 在尺度 $$\overline{d}_{p}$$ 下收缩，然而可能不适用于其他的尺度。
 
@@ -96,7 +96,7 @@ $$\mathcal{T}^{\pi} Z(x, a) : \stackrel{D}{=} R(x, a)+\gamma P^{\pi} Z(x, a)$$
 
 ![](../../.gitbook/assets/image%20%2859%29.png)
 
-![](../../.gitbook/assets/image%20%2875%29.png)
+![](../../.gitbook/assets/image%20%2876%29.png)
 
 最优贝尔曼算子等价于
 
@@ -116,7 +116,7 @@ $$\mathcal{T}^{\pi} Z(x, a) : \stackrel{D}{=} R(x, a)+\gamma P^{\pi} Z(x, a)$$
 
 ![](../../.gitbook/assets/image%20%2817%29.png)
 
-![](../../.gitbook/assets/image%20%2883%29.png)
+![](../../.gitbook/assets/image%20%2884%29.png)
 
 ### 近似分布学习
 
@@ -138,7 +138,7 @@ $$
 
 我们的解决方案是，将贝尔曼更新$$\mathcal{T} Z_{\theta}$$ 投影到 $$Z_{\theta}$$ 的support
 
-![](../../.gitbook/assets/image%20%2890%29.png)
+![](../../.gitbook/assets/image%20%2891%29.png)
 
 给定样本 $$\left(x, a, r, x^{\prime}\right)$$ ，贝尔曼更新为： $$\hat{\mathcal{T}} z_{j} :=r+\gamma z_{j}$$ ，然后将概率 $$p_{j}\left(x^{\prime}, \pi\left(x^{\prime}\right)\right)$$ 分配给 $$\hat{T} z_{j}$$ 的邻居，第 $$i$$ 个投影更新 $$\Phi \hat{\mathcal{T}} Z_{\theta}(x, a)$$ 为：
 
@@ -154,7 +154,7 @@ $$
 
 ## 伪代码
 
-![](../../.gitbook/assets/image%20%2873%29.png)
+![](../../.gitbook/assets/image%20%2874%29.png)
 
 ## 讨论
 
