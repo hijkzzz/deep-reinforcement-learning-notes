@@ -42,7 +42,7 @@ A2C即A3C的同步版本
 
 ### 雅达利 2600 游戏
 
-![](../../.gitbook/assets/image%20%2877%29.png)
+![](../../.gitbook/assets/image%20%2878%29.png)
 
 
 

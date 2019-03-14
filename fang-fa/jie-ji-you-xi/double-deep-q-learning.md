@@ -28,7 +28,7 @@ $$Y_{t}^{\text { Double } Q} \equiv R_{t+1}+\gamma Q\left(S_{t+1}, \operatorname
 
 ### 由于估计误差导致的过度乐观
 
-![](../../.gitbook/assets/image%20%2885%29.png)
+![](../../.gitbook/assets/image%20%2887%29.png)
 
 请注意，我们不需要假设不同动作的估计误差是独立的。这个定理表明，即使估计值平均正确，任何的估计误差都可以推动估计值远离真正的最优值。
 

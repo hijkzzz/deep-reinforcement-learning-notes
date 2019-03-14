@@ -28,7 +28,7 @@
 
 ## 实验
 
-![](../../.gitbook/assets/image%20%2875%29.png)
+![](../../.gitbook/assets/image%20%2876%29.png)
 
 
 

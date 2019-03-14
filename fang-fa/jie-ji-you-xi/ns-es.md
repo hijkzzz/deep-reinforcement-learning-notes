@@ -78,11 +78,11 @@ $$
 
 我们最初设置 $$w = 1.0$$ ，如果性能在固定数量的代间停滞不前，我们会降低它。我们继续下降，直到性能提高，这时我们增加。
 
-![](../../.gitbook/assets/image%20%2867%29.png)
+![](../../.gitbook/assets/image%20%2868%29.png)
 
 ## 实验
 
-![](../../.gitbook/assets/image%20%2868%29.png)
+![](../../.gitbook/assets/image%20%2869%29.png)
 
 ![](../../.gitbook/assets/image%20%2846%29.png)
 

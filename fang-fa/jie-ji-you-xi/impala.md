@@ -44,7 +44,7 @@ $$c_{i}$$ 类似于"trace cutting"系数， $$c_{s} \ldots c_{t-1}$$ 的乘积�
 
 总的来说： $$\overline{\rho}$$ 影响收敛到的价值函数的性质， $$\overline{c}$$ 影响收敛到这个函数的速度。
 
-![](../../.gitbook/assets/image%20%2881%29.png)
+![](../../.gitbook/assets/image%20%2882%29.png)
 
 #### Actor-Critic algorithm
 
@@ -84,5 +84,5 @@ $$-\nabla_{\omega} \sum \pi_{\omega}(a | x_{s}) \log \pi_{\omega}(a | x_{s})$$
 
 ### 游戏测试
 
-![](../../.gitbook/assets/image%20%2891%29.png)
+![](../../.gitbook/assets/image%20%2893%29.png)
 

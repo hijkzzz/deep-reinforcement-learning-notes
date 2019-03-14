@@ -22,7 +22,7 @@ $$
 
 证明TRPO的理论实际上建议使用惩罚而不是约束，即解决下面的无约束优化问题
 
-![](../../.gitbook/assets/image%20%2866%29.png)
+![](../../.gitbook/assets/image%20%2867%29.png)
 
 然而，TRPO使用一个约束来代替的原因是： 对于不同的问题最佳的$$β$$是不同的，甚至在一个任务的不同阶段都会变化。 
 
@@ -38,7 +38,7 @@ $$
 
 其中 $$\epsilon$$是超参数，如 $$\epsilon=0.2$$ ，下图是一个简单示例图
 
-![](../../.gitbook/assets/image%20%2892%29.png)
+![](../../.gitbook/assets/image%20%2894%29.png)
 
 ### Adaptive KL Penalty Coefficient
 
