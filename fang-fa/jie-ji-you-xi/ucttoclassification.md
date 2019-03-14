@@ -28,13 +28,17 @@
 
 关键思想是使用由UCT代理计算的动作选择（从动作值中贪婪地选择）来训练基于分类器的CNN。 每场比赛都进行以下操作。 收集800次运行样本如上。 这些运行产生一个表，其中行对应于沿每个轨迹的每个状态的最后四个帧，并且单个列是根据轨迹状态下的UCT-agent最佳的动作选择。 该训练数据用于通过多项分类训练CNN（参见下面的CNN细节）。 UCTtoClassification-agent用该训练过程学习的CNN分类器来选择评估期间的动作。
 
-![](../../.gitbook/assets/image%20%2862%29.png)
+![](../../.gitbook/assets/image%20%2863%29.png)
 
 上面的方法有一个潜在的问题是，CNN的的决策可能与UCT不同，这就造成的了输入分布与实际游戏不一致。所以我们提出了下面的方法：
 
 #### UCTtoClassification-Interleaved
 
 收集200 UCT-agent运行如上; 这些显然会有相同的输入分布问题。 来自这些运​​行的数据用于通过多项分类来训练CNN，就像在UCTtoClassification-agent的方法中一样（我们不对UCTtoRegression-agent执行此操作，因为我们在下面显示它比UCTtoClassification-agent更糟糕）。 然后，训练有素的CNN用于决定收集另外200个运行中的动作选择（尽管选择随机动作的5％以确保一些探索）。 在每个轨道的游戏的每个状态下，UCT被要求计算其动作选择，并且原始数据集被增加，每个状态的最后四个帧作为行和列作为UCT的动作选择。 此400轨迹数据集的输入分布现在可能与UCT代理的输入分布不同。 该数据集用于通过多项分类再次训练CNN。 重复该交错过程，直到CNN的最后一轮训练的数据集中总共有800转的数据。 UCTtoClassification-Interleaved代理使用此训练过程学习的最终CNN分类器来选择测试期间的操作。
+
+## 实验
+
+![](../../.gitbook/assets/image%20%2846%29.png)
 
 
 
