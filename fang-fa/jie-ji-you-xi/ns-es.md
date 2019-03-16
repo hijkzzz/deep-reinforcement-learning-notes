@@ -56,7 +56,7 @@ $$
 
 更新当前参数向量后，将计算 $$b\left(\pi_{\theta_{t+1}^{m}}\right)$$ 并将其添加到共享归档 $$A$$ 中。整个过程重复预定的迭代次数，因为NS没有真正的收敛点。 在训练期间，算法会保留具有最高平均奖励的策略，并在训练完成后返回此策略。
 
-![](../../.gitbook/assets/image%20%2852%29.png)
+![](../../.gitbook/assets/image%20%2853%29.png)
 
 ### QD-ES\(NSR-ES and NSRA-ES\)
 
@@ -68,7 +68,7 @@ $$
 
 直观地说，该梯度朝向既表现出新颖行为又获得高回报的策略。然而，通常， $$f\left(\theta_{t}^{i, m}\right)$$ 和 $$N\left(\theta_{t}^{i, m}, A\right)$$ 的尺度不同。 为了有效地组合这两个信号，我们在计算平均值之前独立地对它们进行rank-normalize。
 
-![](../../.gitbook/assets/image%20%2814%29.png)
+![](../../.gitbook/assets/image%20%2815%29.png)
 
 NSR-ES具有相同的回报和新颖度梯度权重，在训练中是静态的。我们探索NSR-ES的进一步扩展，称为NSRAdapt-ES（NSRA-ES），它通过在训练期间智能地调整加权参数 $$w$$ ，以此动态调节 $$f\left(\theta_{t}^{i, m}\right)$$与$$N\left(\theta_{t}^{i, m}, A\right)$$的优先级。
 
@@ -78,13 +78,13 @@ $$
 
 我们最初设置 $$w = 1.0$$ ，如果性能在固定数量的代间停滞不前，我们会降低它。我们继续下降，直到性能提高，这时我们增加。
 
-![](../../.gitbook/assets/image%20%2870%29.png)
+![](../../.gitbook/assets/image%20%2873%29.png)
 
 ## 实验
 
-![](../../.gitbook/assets/image%20%2871%29.png)
+![](../../.gitbook/assets/image%20%2874%29.png)
 
-![](../../.gitbook/assets/image%20%2847%29.png)
+![](../../.gitbook/assets/image%20%2848%29.png)
 
 
 

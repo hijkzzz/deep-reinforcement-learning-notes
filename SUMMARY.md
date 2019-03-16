@@ -44,6 +44,7 @@
   * [Deep GA](fang-fa/jie-ji-you-xi/deep-ga.md)
   * [Playing Atari with Six Neurons](fang-fa/jie-ji-you-xi/playing-atari-with-six-neurons.md)
   * [UCTtoClassification](fang-fa/jie-ji-you-xi/ucttoclassification.md)
+  * [Policy Distillation](fang-fa/jie-ji-you-xi/policy-distillation.md)
 * [蒙特祖玛的复仇](fang-fa/ment-te-zu-ma-de-fu-chou.md)
 * [第一人称射击游戏](fang-fa/di-yi-ren-cheng-she-ji-you-xi.md)
 * [开放世界游戏](fang-fa/kai-fang-shi-jie-you-xi.md)

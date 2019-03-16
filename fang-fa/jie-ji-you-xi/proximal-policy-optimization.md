@@ -22,7 +22,7 @@ $$
 
 证明TRPO的理论实际上建议使用惩罚而不是约束，即解决下面的无约束优化问题
 
-![](../../.gitbook/assets/image%20%2869%29.png)
+![](../../.gitbook/assets/image%20%2872%29.png)
 
 然而，TRPO使用一个约束来代替的原因是： 对于不同的问题最佳的$$β$$是不同的，甚至在一个任务的不同阶段都会变化。 
 
@@ -30,19 +30,19 @@ $$
 
 设 $$r_{l}(\theta)=\frac{\pi_{\theta}\left(a_{t} | s_{t}\right)}{\pi_{\theta_{\text { old }}}\left(a_{t} | s_{t}\right)}, \text { so } r\left(\theta_{\text { old }}\right)=1$$ ，上面的约束函数变为：
 
-![](../../.gitbook/assets/image%20%2815%29.png)
+![](../../.gitbook/assets/image%20%2816%29.png)
 
 我们提出的代理损失为，即当概率比的变化会使目标函数提高时，我们忽略它：
 
-![](../../.gitbook/assets/image%20%2843%29.png)
+![](../../.gitbook/assets/image%20%2844%29.png)
 
 其中 $$\epsilon$$是超参数，如 $$\epsilon=0.2$$ ，下图是一个简单示例图
 
-![](../../.gitbook/assets/image%20%2896%29.png)
+![](../../.gitbook/assets/image%20%28100%29.png)
 
 ### Adaptive KL Penalty Coefficient
 
-![](../../.gitbook/assets/image%20%2859%29.png)
+![](../../.gitbook/assets/image%20%2861%29.png)
 
 这种方法动态调节 $$β$$ ，但是效果没有CLIP好
 
