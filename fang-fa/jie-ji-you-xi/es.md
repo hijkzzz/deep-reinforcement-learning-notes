@@ -32,7 +32,7 @@ $$\nabla_{\theta} \mathbb{E}_{c \sim N(0, I)} F(\theta+\sigma \epsilon)=\frac{1}
 
 于是有算法1
 
-![](../../.gitbook/assets/image%20%2843%29.png)
+![](../../.gitbook/assets/image%20%2844%29.png)
 
 这里初始种群为带扰动的初始策略网络，评价函数视为环境的回报，基于评价函数用梯度下降产生下一代群体。
 

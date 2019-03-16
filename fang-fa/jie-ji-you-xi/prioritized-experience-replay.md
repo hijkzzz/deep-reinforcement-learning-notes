@@ -26,5 +26,5 @@ $$\beta$$是退火参数，在实践中，我们将$$\beta$$从其初始值$$\be
 
 ## 伪代码
 
-![](../../.gitbook/assets/image%20%2866%29.png)
+![](../../.gitbook/assets/image%20%2868%29.png)
 

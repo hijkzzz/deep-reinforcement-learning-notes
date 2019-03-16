@@ -18,11 +18,11 @@
 
 最后，我们发现给每个线程一个不同的探索策略有助于提高健壮性。以这种方式增加勘探的多样性通常也会通过更好的勘探来提高性能
 
-![](../../.gitbook/assets/image%20%2841%29.png)
+![](../../.gitbook/assets/image%20%2842%29.png)
 
 ### 异步优势 Actor-Critic\(A3C\)
 
-![](../../.gitbook/assets/image%20%2855%29.png)
+![](../../.gitbook/assets/image%20%2857%29.png)
 
 我们还发现，将将策略 $$π$$ 的熵添加到目标函数中，通过阻止结构收敛到次优的确定性策略改进了探索。包括熵正则化项在内的全目标函数对政策参数的梯度形式为：
 
@@ -36,13 +36,13 @@ $$
 
 A2C即A3C的同步版本
 
-![](../../.gitbook/assets/image%20%2819%29.png)
+![](../../.gitbook/assets/image%20%2820%29.png)
 
 ## 实验
 
 ### 雅达利 2600 游戏
 
-![](../../.gitbook/assets/image%20%2883%29.png)
+![](../../.gitbook/assets/image%20%2885%29.png)
 
 
 

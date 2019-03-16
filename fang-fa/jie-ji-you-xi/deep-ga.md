@@ -12,11 +12,11 @@
 
 ### 遗传算法
 
-![](../../.gitbook/assets/image%20%2835%29.png)
+![](../../.gitbook/assets/image%20%2836%29.png)
 
 ### 新颖搜索
 
-![](../../.gitbook/assets/image%20%2821%29.png)
+![](../../.gitbook/assets/image%20%2822%29.png)
 
 ### 为什么GA比ES快？
 
@@ -24,11 +24,11 @@
 
 ### 群体编码方法
 
-![](../../.gitbook/assets/image%20%2839%29.png)
+![](../../.gitbook/assets/image%20%2840%29.png)
 
 ## 实验
 
-![](../../.gitbook/assets/image%20%2881%29.png)
+![](../../.gitbook/assets/image%20%2883%29.png)
 
 
 

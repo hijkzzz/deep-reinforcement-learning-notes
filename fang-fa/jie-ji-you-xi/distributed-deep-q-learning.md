@@ -8,9 +8,9 @@
 
 ## 算法
 
-![](../../.gitbook/assets/image%20%2897%29.png)
+![](../../.gitbook/assets/image%20%2899%29.png)
 
 ## 伪代码
 
-![](../../.gitbook/assets/image%20%2884%29.png)
+![](../../.gitbook/assets/image%20%2886%29.png)
 

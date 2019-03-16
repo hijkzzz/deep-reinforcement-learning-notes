@@ -52,7 +52,7 @@ $$
 
 ### MULTI-TASK POLICY DISTILLATION
 
-![](../../.gitbook/assets/image%20%2860%29.png)
+![](../../.gitbook/assets/image%20%2862%29.png)
 
 我们使用N个DQN单游戏专家，每个都经过单独训练。 这些代理产生输入和目标，只需单游戏蒸馏，数据存储在单独的内存缓冲区中。 蒸馏器然后从数据存储顺序学习，每一集切换到不同的一个。由于不同的任务通常具有不同的动作集，因此为每个任务训练单独的输出层（称为控制器层）并且任务的id用于切换 在训练和评估期间得到正确的输出。 我们还尝试了KL和NLL蒸馏损失功能，用于多任务学习。
 
@@ -62,9 +62,9 @@ $$
 
 ## 实验
 
-![](../../.gitbook/assets/image%20%2894%29.png)
+![](../../.gitbook/assets/image%20%2896%29.png)
 
-![](../../.gitbook/assets/image%20%2867%29.png)
+![](../../.gitbook/assets/image%20%2869%29.png)
 
 ![](../../.gitbook/assets/image%20%2813%29.png)
 
