@@ -10,7 +10,7 @@
 
 ### Bootstrapped Network
 
-![](../../.gitbook/assets/image%20%2882%29.png)
+![](../../.gitbook/assets/image%20%2885%29.png)
 
 Bootstrapped DQN用bootstrap修改DQN以近似Q值的分布。 在每个周期开始时，Bootstrapped DQN从其近似后验中采样单个Q值函数。 然后，代理遵循在整个事件期间对该样本最优的策略。这是Thompson sampling启发式算法对RL的自然适应，允许时间上的扩展\(或深度\)探索。
 
@@ -18,5 +18,5 @@ Bootstrapped DQN用bootstrap修改DQN以近似Q值的分布。 在每个周期�
 
 ## 伪代码
 
-![](../../.gitbook/assets/image%20%2880%29.png)
+![](../../.gitbook/assets/image%20%2883%29.png)
 

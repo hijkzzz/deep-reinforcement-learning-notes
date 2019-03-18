@@ -47,6 +47,7 @@
   * [Policy Distillation](fang-fa/jie-ji-you-xi/policy-distillation.md)
   * [Actor-Mimic](fang-fa/jie-ji-you-xi/actor-mimic.md)
   * [Action-Conditional Video Predictionusing Deep Networks in Atari Games](fang-fa/jie-ji-you-xi/action-conditional-video-predictionusing-deep-networks-in-atari-games.md)
+  * [Loss is its own Reward: Self-Supervision for Reinforcement Learning](fang-fa/jie-ji-you-xi/loss-is-its-own-reward-self-supervision-for-reinforcement-learning.md)
 * [蒙特祖玛的复仇](fang-fa/ment-te-zu-ma-de-fu-chou.md)
 * [第一人称射击游戏](fang-fa/di-yi-ren-cheng-she-ji-you-xi.md)
 * [开放世界游戏](fang-fa/kai-fang-shi-jie-you-xi.md)
