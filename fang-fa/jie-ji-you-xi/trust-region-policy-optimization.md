@@ -62,7 +62,7 @@ $$\eta\left(\pi_{\text { new }}\right) \geq L_{\pi_{\text { old }}}\left(\pi_{\t
 
 $$D_{\mathrm{TV}}^{\max }(\pi, \tilde{\pi})=\max _{s} D_{T V}(\pi(\cdot | s) \| \tilde{\pi}(\cdot | s))$$ ，有定理（证明见原文附录）
 
-![](../../.gitbook/assets/image%20%2847%29.png)
+![](../../.gitbook/assets/image%20%2848%29.png)
 
 注意到其与KL散度的关系 $$D_{T V}(p \| q)^{2} \leq D_{\mathrm{KL}}(p \| q)$$ ，定理可写为
 
@@ -70,7 +70,7 @@ $$D_{\mathrm{TV}}^{\max }(\pi, \tilde{\pi})=\max _{s} D_{T V}(\pi(\cdot | s) \| 
 
 于是有如下算法，可以保证策略的单调递增
 
-![](../../.gitbook/assets/image%20%2891%29.png)
+![](../../.gitbook/assets/image%20%2892%29.png)
 
 证明：令 $$M_{i}(\pi)=L_{\pi_{i}}(\pi)-C D_{\mathrm{KL}}^{\max }\left(\pi_{i}, \pi\right)$$ ，结合上式有
 
@@ -100,7 +100,7 @@ $$\begin{array}{l}{\text { maximize } L_{\theta_{\text { old }}}(\theta)} \\ {\t
 
 本节旨在用蒙特卡洛模拟近似上面的优化问题，展开 $$L_{\theta \text { old }}(\theta)$$ 
 
-![](../../.gitbook/assets/image%20%2858%29.png)
+![](../../.gitbook/assets/image%20%2859%29.png)
 
 首先用 $$\frac{1}{1-\gamma} \mathbb{E}_{s \sim \rho_{\theta_{\text { old }}}}[\ldots]$$ 替换 $$\sum_{S} \rho_{\theta_{\text { old }}}(s)[\ldots]$$ ，然后用用 $$Q_{\theta_{\text { old }}}$$ 替换 $$A_{\theta_{\text { old }}}$$ 
 
@@ -116,19 +116,19 @@ $$\sum_{a} \pi_{\theta}(a | s_{n}) A_{\theta_{\text { old }}}\left(s_{n}, a\righ
 
 剩下的就是用样本均值代替期望值，用经验估计代替Q值。以下部分描述了两种不同的方案来执行这种估计。
 
-![](../../.gitbook/assets/image%20%2892%29.png)
+![](../../.gitbook/assets/image%20%2893%29.png)
 
 ### 实际算法
 
 通常可以分为三步
 
-![](../../.gitbook/assets/image%20%2872%29.png)
+![](../../.gitbook/assets/image%20%2873%29.png)
 
 原文附录C给出了具体的优化算法
 
 总结前面的内容
 
-![](../../.gitbook/assets/image%20%2825%29.png)
+![](../../.gitbook/assets/image%20%2826%29.png)
 
 ### 与前面工作的联系
 
@@ -142,7 +142,7 @@ $$
 
 ## 实验
 
-![](../../.gitbook/assets/image%20%2821%29.png)
+![](../../.gitbook/assets/image%20%2822%29.png)
 
 
 
