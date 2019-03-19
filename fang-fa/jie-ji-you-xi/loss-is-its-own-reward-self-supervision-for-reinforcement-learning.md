@@ -12,7 +12,7 @@
 
 监督学习/无监督学习/自监督学习区别
 
-![](../../.gitbook/assets/image%20%2866%29.png)
+![](../../.gitbook/assets/image%20%2868%29.png)
 
 ### Tasks
 
@@ -44,9 +44,9 @@ Inverse dynamics，即映射 $$\mathcal{S} \times \mathcal{S} \rightarrow \mathc
 
 ## 实验
 
-![](../../.gitbook/assets/image%20%2896%29.png)
+![](../../.gitbook/assets/image%20%2899%29.png)
 
-![](../../.gitbook/assets/image%20%2886%29.png)
+![](../../.gitbook/assets/image%20%2889%29.png)
 
 ![](../../.gitbook/assets/image%20%2830%29.png)
 

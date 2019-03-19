@@ -48,7 +48,7 @@ $$
 
 多任务学习测试
 
-![](../../.gitbook/assets/image%20%2854%29.png)
+![](../../.gitbook/assets/image%20%2856%29.png)
 
 迁移学习测试
 

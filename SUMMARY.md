@@ -49,6 +49,8 @@
   * [Action-Conditional Video Predictionusing Deep Networks in Atari Games](fang-fa/jie-ji-you-xi/action-conditional-video-predictionusing-deep-networks-in-atari-games.md)
   * [Loss is its own Reward: Self-Supervision for Reinforcement Learning](fang-fa/jie-ji-you-xi/loss-is-its-own-reward-self-supervision-for-reinforcement-learning.md)
 * [蒙特祖玛的复仇](fang-fa/ment-te-zu-ma-de-fu-chou.md)
+* [竞速游戏](fang-fa/jing-su-you-xi/README.md)
+  * [DDPG](fang-fa/jing-su-you-xi/ddpg.md)
 * [第一人称射击游戏](fang-fa/di-yi-ren-cheng-she-ji-you-xi.md)
 * [开放世界游戏](fang-fa/kai-fang-shi-jie-you-xi.md)
 * [即时战略游戏](fang-fa/ji-shi-zhan-lve-you-xi.md)

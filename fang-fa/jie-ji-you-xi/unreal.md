@@ -8,7 +8,7 @@
 
 ## 算法
 
-![](../../.gitbook/assets/image%20%2849%29.png)
+![](../../.gitbook/assets/image%20%2850%29.png)
 
 ### AUXILIARY CONTROL TASKS
 
@@ -53,5 +53,5 @@ $$\mathcal{L}_{U N R E A L}(\theta)=\mathcal{L}_{\mathrm{A} 3 \mathrm{C}}+\lambd
 
 迷宫任务和雅达利游戏机
 
-![](../../.gitbook/assets/image%20%2874%29.png)
+![](../../.gitbook/assets/image%20%2877%29.png)
 

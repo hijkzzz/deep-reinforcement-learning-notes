@@ -12,7 +12,7 @@
 
 ### 遗传算法
 
-![](../../.gitbook/assets/image%20%2839%29.png)
+![](../../.gitbook/assets/image%20%2840%29.png)
 
 ### 新颖搜索
 
@@ -24,11 +24,11 @@
 
 ### 群体编码方法
 
-![](../../.gitbook/assets/image%20%2843%29.png)
+![](../../.gitbook/assets/image%20%2844%29.png)
 
 ## 实验
 
-![](../../.gitbook/assets/image%20%2888%29.png)
+![](../../.gitbook/assets/image%20%2891%29.png)
 
 
 

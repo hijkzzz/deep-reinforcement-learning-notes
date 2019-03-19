@@ -100,7 +100,7 @@ $$\mathbf{e}_{t}=\rho\left(s_{t}, a_{t}\right)\left(\psi\left(s_{t}, a_{t}\right
 
 证明见原文附录或者参考资格迹的相关教程
 
-![](../../.gitbook/assets/image%20%2859%29.png)
+![](../../.gitbook/assets/image%20%2861%29.png)
 
 
 

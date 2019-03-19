@@ -56,7 +56,7 @@ $$
 
 更新当前参数向量后，将计算 $$b\left(\pi_{\theta_{t+1}^{m}}\right)$$ 并将其添加到共享归档 $$A$$ 中。整个过程重复预定的迭代次数，因为NS没有真正的收敛点。 在训练期间，算法会保留具有最高平均奖励的策略，并在训练完成后返回此策略。
 
-![](../../.gitbook/assets/image%20%2858%29.png)
+![](../../.gitbook/assets/image%20%2860%29.png)
 
 ### QD-ES\(NSR-ES and NSRA-ES\)
 
@@ -78,13 +78,13 @@ $$
 
 我们最初设置 $$w = 1.0$$ ，如果性能在固定数量的代间停滞不前，我们会降低它。我们继续下降，直到性能提高，这时我们增加。
 
-![](../../.gitbook/assets/image%20%2879%29.png)
+![](../../.gitbook/assets/image%20%2882%29.png)
 
 ## 实验
 
-![](../../.gitbook/assets/image%20%2880%29.png)
+![](../../.gitbook/assets/image%20%2883%29.png)
 
-![](../../.gitbook/assets/image%20%2852%29.png)
+![](../../.gitbook/assets/image%20%2854%29.png)
 
 
 
