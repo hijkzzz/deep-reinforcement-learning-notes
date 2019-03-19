@@ -24,7 +24,7 @@ $$
 
 贝尔曼/最优算子定义
 
-![](../../.gitbook/assets/image%20%2843%29.png)
+![](../../.gitbook/assets/image-43.png)
 
 ### 分布贝尔曼算子
 
@@ -34,11 +34,11 @@ $$
 
 $$(\Omega, \mathcal{F}, \mathrm{Pr})$$是概率空间
 
- $$\|\mathbf{u}\|_{p}$$ 表示 $$\mathbf{u} \in \mathbb{R}^{\mathcal{X}}$$ 的 $$L_{p}$$ 范数
+$$\|\mathbf{u}\|_{p}$$ 表示 $$\mathbf{u} \in \mathbb{R}^{\mathcal{X}}$$ 的 $$L_{p}$$ 范数
 
- 当$$U : \Omega \rightarrow \mathbb{R}^{\mathcal{X}}\left(\text { or } \mathbb{R}^{\mathcal{X} \times \mathcal{A}}\right)$$ ，有$$\|U\|_{p} :=\left[\mathbb{E}\left[\|U(\omega)\|_{p}^{p}\right]\right]^{1 / p}$$，并且 $$\|U\|_{\infty}=\operatorname{ess} \sup \|U(\omega)\|_{\infty}$$ 
+当$$U : \Omega \rightarrow \mathbb{R}^{\mathcal{X}}\left(\text { or } \mathbb{R}^{\mathcal{X} \times \mathcal{A}}\right)$$ ，有$$\|U\|_{p} :=\left[\mathbb{E}\left[\|U(\omega)\|_{p}^{p}\right]\right]^{1 / p}$$，并且 $$\|U\|_{\infty}=\operatorname{ess} \sup \|U(\omega)\|_{\infty}$$
 
-累积分布函数 $$F_{U}(y) :=\operatorname{Pr}\{U \leq y\}$$ ，逆函数 $$F_{U}^{-1}(q) :=\inf \left\{y : F_{U}(y) \geq q\right\}$$ 
+累积分布函数 $$F_{U}(y) :=\operatorname{Pr}\{U \leq y\}$$ ，逆函数 $$F_{U}^{-1}(q) :=\inf \left\{y : F_{U}(y) \geq q\right\}$$
 
 $$U \overset{D}{:=}V$$ 表示两个随机变量的分布相同
 
@@ -46,19 +46,19 @@ $$U \overset{D}{:=}V$$ 表示两个随机变量的分布相同
 
 定义两个累计分布函数的Wasserstein尺度
 
-$$d_{p}(F, G) :=\inf _{U, V}\|U-V\|_{p}$$ 
+$$d_{p}(F, G) :=\inf _{U, V}\|U-V\|_{p}$$
 
 其中下界是关于累积分布的所有的随机变量 $$(U, V)$$ ，通过均匀随机变量 $$\mathcal{U}\ in\ [0,1]$$ 的逆累计分布函数获得此下限
 
-$$d_{p}(F, G)=\left\|F^{-1}(\mathcal{U})-G^{-1}(\mathcal{U})\right\|_{p}$$ 
+$$d_{p}(F, G)=\left\|F^{-1}(\mathcal{U})-G^{-1}(\mathcal{U})\right\|_{p}$$
 
- $$p<\infty$$ 时，可写为
+$$p<\infty$$ 时，可写为
 
-$$d_{p}(F, G)=\left(\int_{0}^{1}\left|F^{-1}(u)-G^{-1}(u)\right|^{p} d u\right)^{1 / p}$$ 
+$$d_{p}(F, G)=\left(\int_{0}^{1}\left|F^{-1}(u)-G^{-1}(u)\right|^{p} d u\right)^{1 / p}$$
 
 对于两个随机变量定义
 
-$$d_{p}(U, V)=\inf _{U, V}\|U-V\|_{p}$$ 
+$$d_{p}(U, V)=\inf _{U, V}\|U-V\|_{p}$$
 
 Wasserstein尺度有以下性质
 
@@ -68,25 +68,25 @@ $$
 
 引理1、2
 
-![Wasserstein&#x5C3A;&#x5EA6;&#x5F15;&#x7406;](../../.gitbook/assets/image%20%2896%29.png)
+![Wasserstein&#x5C3A;&#x5EA6;&#x5F15;&#x7406;](../../.gitbook/assets/image-96.png)
 
 #### Policy Evaluation
 
-定义转移算子 $$P^{\pi} : \mathcal{Z} \rightarrow \mathcal{Z}$$ 
+定义转移算子 $$P^{\pi} : \mathcal{Z} \rightarrow \mathcal{Z}$$
 
-$$\begin{aligned} P^{\pi} Z(x, a) & :=Z\left(X^{\prime}, A^{\prime}\right) \\ X^{\prime} & \sim P(\cdot | x, a), A^{\prime} \sim \pi(\cdot | X^{\prime}) \end{aligned}$$ 
+$$\begin{aligned} P^{\pi} Z(x, a) & :=Z\left(X^{\prime}, A^{\prime}\right) \\ X^{\prime} & \sim P(\cdot | x, a), A^{\prime} \sim \pi(\cdot | X^{\prime}) \end{aligned}$$
 
-我们定义了分布Bellman算子 $$\mathcal{T}^{\pi} : \mathcal{Z} \rightarrow \mathcal{Z}$$ 
+我们定义了分布Bellman算子 $$\mathcal{T}^{\pi} : \mathcal{Z} \rightarrow \mathcal{Z}$$
 
-$$\mathcal{T}^{\pi} Z(x, a) : \stackrel{D}{=} R(x, a)+\gamma P^{\pi} Z(x, a)$$ 
+$$\mathcal{T}^{\pi} Z(x, a) : \stackrel{D}{=} R(x, a)+\gamma P^{\pi} Z(x, a)$$
 
 随机性的三个来源定义了复合分布，我们通常假设这三个量是独立的
 
-![](../../.gitbook/assets/image%20%2864%29.png)
+![](../../.gitbook/assets/image-64.png)
 
 引理3
 
-![](../../.gitbook/assets/image%20%2892%29.png)
+![](../../.gitbook/assets/image-92.png)
 
 这说明 $$Z_{k+1} :=T^{\pi} Z_{k}$$ 在尺度 $$\overline{d}_{p}$$ 下收缩，然而可能不适用于其他的尺度。
 
@@ -94,29 +94,29 @@ $$\mathcal{T}^{\pi} Z(x, a) : \stackrel{D}{=} R(x, a)+\gamma P^{\pi} Z(x, a)$$
 
 最优价值分布和贪心策略定义
 
-![](../../.gitbook/assets/image%20%2871%29.png)
+![](../../.gitbook/assets/image-71.png)
 
-![](../../.gitbook/assets/image%20%2890%29.png)
+![](../../.gitbook/assets/image-90.png)
 
 最优贝尔曼算子等价于
 
-![](../../.gitbook/assets/image%20%2859%29.png)
+![](../../.gitbook/assets/image-59.png)
 
 引理4
 
-![](../../.gitbook/assets/image%20%2865%29.png)
+![](../../.gitbook/assets/image-65.png)
 
 因此，我们希望 $$Z_k$$ 能够快速收敛到一个fixed point，然而这可能很慢或者不确定。实际上，我们可以希望pointwise convergence，即收敛到 nonstationary optimal value distributions。
 
-![](../../.gitbook/assets/image%20%288%29.png)
+![](../../.gitbook/assets/image-8.png)
 
 将定理1与引理4相比较揭示了分布框架和通常的期望设置之间的显著差异。虽然 $$Z_{k}$$ 的平均值迅速指数收敛到 $$Q^*$$ ，但它的分布不需要表现得那么好！为了强调这种差异，我们提供了一些负面结果，如下：
 
-![](../../.gitbook/assets/image%20%2832%29.png)
+![](../../.gitbook/assets/image-32.png)
 
-![](../../.gitbook/assets/image%20%2821%29.png)
+![](../../.gitbook/assets/image-21.png)
 
-![](../../.gitbook/assets/image%20%2898%29.png)
+![](../../.gitbook/assets/image-98.png)
 
 ### 近似分布学习
 
@@ -130,7 +130,7 @@ $$
 Z_{\theta}(x, a)=z_{i} \quad \text { w.p. } p_{i}(x, a) :=\frac{e^{\theta_{i}(x, a)}}{\sum_{j} e^{\theta_{j}(x, a)}}
 $$
 
-其中 $$\left\{z_{i}=V_{\mathrm{MIN}}+i \triangle z : 0 \leq\right.i<N \},\Delta z :=\frac{V_{\mathrm{mAx}}-V_{\mathrm{MIN}}}{N-1}$$ 
+其中 $$\left\{z_{i}=V_{\mathrm{MIN}}+i \triangle z : 0 \leq\right.i<N \},\Delta z :=\frac{V_{\mathrm{mAx}}-V_{\mathrm{MIN}}}{N-1}$$
 
 #### Projected Bellman Update
 
@@ -138,7 +138,7 @@ $$
 
 我们的解决方案是，将贝尔曼更新$$\mathcal{T} Z_{\theta}$$ 投影到 $$Z_{\theta}$$ 的support
 
-![](../../.gitbook/assets/image%20%28107%29.png)
+![](../../.gitbook/assets/image-107.png)
 
 给定样本 $$\left(x, a, r, x^{\prime}\right)$$ ，贝尔曼更新为： $$\hat{\mathcal{T}} z_{j} :=r+\gamma z_{j}$$ ，然后将概率 $$p_{j}\left(x^{\prime}, \pi\left(x^{\prime}\right)\right)$$ 分配给 $$\hat{T} z_{j}$$ 的邻居，第 $$i$$ 个投影更新 $$\Phi \hat{\mathcal{T}} Z_{\theta}(x, a)$$ 为：
 
@@ -146,7 +146,7 @@ $$
 \left(\Phi \hat{\mathcal{T}} Z_{\theta}(x, a)\right)_{i}=\sum_{j=0}^{N-1}\left[1-\frac{\left|\left[\hat{\mathcal{T}} z_{j}\right]_{V_{\mathrm{min}}}^{V_{\max }}-z_{i}\right|}{\Delta z}\right]_{0}^{1} p_{j}\left(x^{\prime}, \pi\left(x^{\prime}\right)\right)
 $$
 
-其中 $$[\cdot]_{a}^{b}$$ 即限制上下界为 $$[a, b]$$ 
+其中 $$[\cdot]_{a}^{b}$$ 即限制上下界为 $$[a, b]$$
 
 然后损失函数使用KL散度 $$D_{\mathrm{KL}}\left(\Phi \hat{\mathcal{T}} Z_{\tilde{\theta}}(x, a) \| Z_{\theta}(x, a)\right)$$ ，再用梯度下降优化即可
 
@@ -154,7 +154,7 @@ $$
 
 ## 伪代码
 
-![](../../.gitbook/assets/image%20%2887%29.png)
+![](../../.gitbook/assets/image-87.png)
 
 ## 讨论
 

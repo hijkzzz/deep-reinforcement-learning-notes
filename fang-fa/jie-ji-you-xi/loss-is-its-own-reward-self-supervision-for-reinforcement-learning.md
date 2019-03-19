@@ -12,11 +12,11 @@
 
 监督学习/无监督学习/自监督学习区别
 
-![](../../.gitbook/assets/image%20%2868%29.png)
+![](../../.gitbook/assets/image-68.png)
 
 ### Tasks
 
-![](../../.gitbook/assets/image%20%287%29.png)
+![](../../.gitbook/assets/image-7.png)
 
 #### Reward
 
@@ -44,15 +44,9 @@ Inverse dynamics，即映射 $$\mathcal{S} \times \mathcal{S} \rightarrow \mathc
 
 ## 实验
 
-![](../../.gitbook/assets/image%20%2899%29.png)
+![](../../.gitbook/assets/image-99.png)
 
-![](../../.gitbook/assets/image%20%2889%29.png)
+![](../../.gitbook/assets/image-89.png)
 
-![](../../.gitbook/assets/image%20%2830%29.png)
-
-
-
-
-
-
+![](../../.gitbook/assets/image-30.png)
 

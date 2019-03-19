@@ -48,11 +48,9 @@ $$
 
 多任务学习测试
 
-![](../../.gitbook/assets/image%20%2856%29.png)
+![](../../.gitbook/assets/image-56.png)
 
 迁移学习测试
 
-![](../../.gitbook/assets/image%20%2817%29.png)
-
-
+![](../../.gitbook/assets/image-17.png)
 

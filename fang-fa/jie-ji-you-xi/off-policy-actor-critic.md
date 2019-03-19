@@ -16,27 +16,27 @@
 
 价值函数定义
 
-$$V^{\pi, \gamma}(s)=\mathrm{E}\left[r_{t+1}+\ldots+r_{t+T} | s_{t}=s\right] \forall s \in \mathcal{S} $$ 
+$$V^{\pi, \gamma}(s)=\mathrm{E}\left[r_{t+1}+\ldots+r_{t+T} | s_{t}=s\right] \forall s \in \mathcal{S}$$
 
 动作值函数定义
 
-$$\begin{array}{l}{Q^{\pi, \gamma}(s, a)=} \\ {\sum_{s^{\prime} \in S} P\left(s^{\prime} | s, a\right)\left[\mathcal{R}\left(s, a, s^{\prime}\right)+\gamma\left(s^{\prime}\right) V^{\pi, \gamma}\left(s^{\prime}\right)\right]}\end{array} $$
+$$\begin{array}{l}{Q^{\pi, \gamma}(s, a)=} \\ {\sum_{s^{\prime} \in S} P\left(s^{\prime} | s, a\right)\left[\mathcal{R}\left(s, a, s^{\prime}\right)+\gamma\left(s^{\prime}\right) V^{\pi, \gamma}\left(s^{\prime}\right)\right]}\end{array}$$
 
-我们的学习目标是找出一个能最大化下面函数的策略 $$u $$ 
+我们的学习目标是找出一个能最大化下面函数的策略 $$u$$
 
-$$J_{\gamma}(\mathbf{u})=\sum_{s \in \mathcal{S}} d^{b}(s) V^{\pi_{\mathbf{u}}, \gamma}(s)$$ 
+$$J_{\gamma}(\mathbf{u})=\sum_{s \in \mathcal{S}} d^{b}(s) V^{\pi_{\mathbf{u}}, \gamma}(s)$$
 
-其中 $$d^{b}(s)=\lim _{t \rightarrow \infty} P\left(s_{t}=s | s_{0}, b\right) $$ ，即在动作 $$b$$ 和初始状态 $$s_0$$ 下的极限概率分布。用 $$d^{b} $$加权的原因是，在off-policy中，数据是从行为策略的分布获得。
+其中 $$d^{b}(s)=\lim _{t \rightarrow \infty} P\left(s_{t}=s | s_{0}, b\right)$$ ，即在动作 $$b$$ 和初始状态 $$s_0$$ 下的极限概率分布。用 $$d^{b}$$加权的原因是，在off-policy中，数据是从行为策略的分布获得。
 
 #### The Critic: Policy Evaluation
 
-用线性函数近似价值函数： $$\hat{V}(s)=\mathbf{v}^{\mathbf{T}} \mathbf{x}_{s}$$ 
+用线性函数近似价值函数： $$\hat{V}(s)=\mathbf{v}^{\mathbf{T}} \mathbf{x}_{s}$$
 
 λ-weighted mean-squared projected Bellman error
 
-$$\operatorname{MSPBE}(\mathbf{v})=\left\|\hat{V}-\Pi T_{\pi}^{\lambda, \gamma} \hat{V}\right\|_{D}^{2} $$ 
+$$\operatorname{MSPBE}(\mathbf{v})=\left\|\hat{V}-\Pi T_{\pi}^{\lambda, \gamma} \hat{V}\right\|_{D}^{2}$$
 
-其中$$\hat{V}=X \mathbf{v}$$ ， $$X$$ 的每一行都是一个样本， $$λ$$ 是资格迹权重参数， $$D$$ 是一个矩阵（对角元素为$$d^{b} $$）， $$Π $$ 是一个投影操作， $$T_{\pi}^{\lambda, \gamma}$$ 是λ-weighted Bellman operator\(对于终止概率为 $$γ$$ 的策略 $$π$$ \)。在线性情况下， $$\Pi=X\left(X^{\top} D X\right)^{-1} X^{\top} D$$ 。
+其中$$\hat{V}=X \mathbf{v}$$ ， $$X$$ 的每一行都是一个样本， $$λ$$ 是资格迹权重参数， $$D$$ 是一个矩阵（对角元素为$$d^{b}$$）， $$Π$$ 是一个投影操作， $$T_{\pi}^{\lambda, \gamma}$$ 是λ-weighted Bellman operator\(对于终止概率为 $$γ$$ 的策略 $$π$$ \)。在线性情况下， $$\Pi=X\left(X^{\top} D X\right)^{-1} X^{\top} D$$ 。
 
 请参考 $$GTD(λ)$$ 算法
 
@@ -44,21 +44,21 @@ $$\operatorname{MSPBE}(\mathbf{v})=\left\|\hat{V}-\Pi T_{\pi}^{\lambda, \gamma} 
 
 策略梯度为
 
-$$\mathbf{u}_{t+1}-\mathbf{u}_{t} \approx \alpha_{u, t} \nabla_{\mathbf{u}} J_{\gamma}\left(\mathbf{u}_{t}\right)$$ 
+$$\mathbf{u}_{t+1}-\mathbf{u}_{t} \approx \alpha_{u, t} \nabla_{\mathbf{u}} J_{\gamma}\left(\mathbf{u}_{t}\right)$$
 
 展开得到
 
-$$\begin{aligned} \nabla_{\mathbf{u}} J_{\gamma}(\mathbf{u})=& \nabla_{\mathbf{u}}\left[\sum_{s \in \mathcal{S}} d^{b}(s) \sum_{a \in \mathcal{A}} \pi(a | s) Q^{\pi, \gamma}(s, a)\right] \\=& \sum_{s \in \mathcal{S}} d^{b}(s) \sum_{a \in \mathcal{A}}\left[\nabla_{\mathbf{u}} \pi(a | s) Q^{\pi, \gamma}(s, a)\right.\\ &+\pi(a | s) \nabla_{\mathbf{u}} Q^{\pi, \gamma}(s, a) ] \end{aligned}$$ 
+$$\begin{aligned} \nabla_{\mathbf{u}} J_{\gamma}(\mathbf{u})=& \nabla_{\mathbf{u}}\left[\sum_{s \in \mathcal{S}} d^{b}(s) \sum_{a \in \mathcal{A}} \pi(a | s) Q^{\pi, \gamma}(s, a)\right] \\=& \sum_{s \in \mathcal{S}} d^{b}(s) \sum_{a \in \mathcal{A}}\left[\nabla_{\mathbf{u}} \pi(a | s) Q^{\pi, \gamma}(s, a)\right.\\ &+\pi(a | s) \nabla_{\mathbf{u}} Q^{\pi, \gamma}(s, a) ] \end{aligned}$$
 
 $$\nabla_{\mathbf{u}} Q^{\pi, \gamma}(s, a)$$ 很难估计，所以忽略掉，得到近似梯度
 
-$$\nabla_{\mathbf{u}} J_{\gamma}(\mathbf{u}) \approx \mathbf{g}(\mathbf{u})=\sum_{s \in \mathcal{S}} d^{b}(s) \sum_{a \in \mathcal{A}} \nabla_{\mathbf{u}} \pi(a | s) Q^{\pi, \gamma}(s, a)$$ 
+$$\nabla_{\mathbf{u}} J_{\gamma}(\mathbf{u}) \approx \mathbf{g}(\mathbf{u})=\sum_{s \in \mathcal{S}} d^{b}(s) \sum_{a \in \mathcal{A}} \nabla_{\mathbf{u}} \pi(a | s) Q^{\pi, \gamma}(s, a)$$
 
 下面的定理证明了这个近似（证明见原文附录）
 
-![](../../.gitbook/assets/image%20%286%29.png)
+![](../../.gitbook/assets/image-6.png)
 
-![](../../.gitbook/assets/image%20%2826%29.png)
+![](../../.gitbook/assets/image-26.png)
 
 #### The Actor: Incremental Update Algorithm with Eligibility Traces
 
@@ -70,15 +70,15 @@ $$
 
 其中 $$\rho(s, a)=\frac{\pi(a | s)}{b(a | s)}, \psi(s, a)=\frac{\nabla_{\mathbf{u}} \pi(a | s)}{\pi(a | s)}$$ ，这里引入了新的符号 $$\mathrm{E}_{b}[\cdot]$$期望 来隐含地表示条件，所有随机变量\(按时间步长索引\)都是从行为策略下它们的极限平稳分布中提取出来的。然后减去一个baseline减小方差：
 
-$$\mathbf{g}(\mathbf{u})=\mathrm{E}_{b}\left[\rho\left(s_{t}, a_{t}\right) \psi\left(s_{t}, a_{t}\right)\left(Q^{\pi, \gamma}\left(s_{t}, a_{t}\right)-\hat{V}\left(s_{t}\right)\right)\right]$$ 
+$$\mathbf{g}(\mathbf{u})=\mathrm{E}_{b}\left[\rho\left(s_{t}, a_{t}\right) \psi\left(s_{t}, a_{t}\right)\left(Q^{\pi, \gamma}\left(s_{t}, a_{t}\right)-\hat{V}\left(s_{t}\right)\right)\right]$$
 
 下一步是替换动作值
 
-$$\mathbf{g}(\mathbf{u}) \approx \widehat{\mathbf{g}(\mathbf{u})}=\mathrm{E}_{b}\left[\rho\left(s_{t}, a_{t}\right) \psi\left(s_{t}, a_{t}\right)\left(R_{t}^{\lambda}-\hat{V}\left(s_{t}\right)\right)\right]$$ 
+$$\mathbf{g}(\mathbf{u}) \approx \widehat{\mathbf{g}(\mathbf{u})}=\mathrm{E}_{b}\left[\rho\left(s_{t}, a_{t}\right) \psi\left(s_{t}, a_{t}\right)\left(R_{t}^{\lambda}-\hat{V}\left(s_{t}\right)\right)\right]$$
 
 其中off-policy λ-return定义的 $$R_{t}^{\lambda}$$ 为：
 
- $$\begin{aligned} R_{t}^{\lambda}=& r_{t+1}+(1-\lambda) \gamma\left(s_{t+1}\right) \hat{V}\left(s_{t+1}\right) \\ &+\lambda \gamma\left(s_{t+1}\right) \rho\left(s_{t+1}, a_{t+1}\right) R_{t+1}^{\lambda} \end{aligned}$$
+$$\begin{aligned} R_{t}^{\lambda}=& r_{t+1}+(1-\lambda) \gamma\left(s_{t+1}\right) \hat{V}\left(s_{t+1}\right) \\ &+\lambda \gamma\left(s_{t+1}\right) \rho\left(s_{t+1}, a_{t+1}\right) R_{t+1}^{\lambda} \end{aligned}$$
 
 这就是前向视角的Off-PAC
 
@@ -86,21 +86,19 @@ $$\mathbf{g}(\mathbf{u}) \approx \widehat{\mathbf{g}(\mathbf{u})}=\mathrm{E}_{b}
 
 请参考原文附录
 
-## 伪代码 
+## 伪代码
 
 为了实现前面描述的算法，这里转换为后向视角，关键的一步是
 
-$$\mathrm{E}_{b}\left[\rho\left(s_{t}, a_{t}\right) \psi\left(s_{t}, a_{t}\right)\left(R_{t}^{\lambda}-\hat{V}\left(s_{t}\right)\right)\right]=\mathrm{E}_{b}\left[\delta_{t} \mathrm{e}_{t}\right]$$ 
+$$\mathrm{E}_{b}\left[\rho\left(s_{t}, a_{t}\right) \psi\left(s_{t}, a_{t}\right)\left(R_{t}^{\lambda}-\hat{V}\left(s_{t}\right)\right)\right]=\mathrm{E}_{b}\left[\delta_{t} \mathrm{e}_{t}\right]$$
 
 其中 $$\delta_{t}=r_{t+1}+\gamma\left(s_{t+1}\right) \hat{V}\left(s_{t+1}\right)-\hat{V}\left(s_{t}\right)$$ 是时间差分误差， $$\mathbf{e}_{t} \in \mathbb{R}^{N_{\mathbf{u}}}$$ 是资格迹，由下式更新
 
-$$\mathbf{e}_{t}=\rho\left(s_{t}, a_{t}\right)\left(\psi\left(s_{t}, a_{t}\right)+\lambda \mathbf{e}_{t-1}\right)$$ 
+$$\mathbf{e}_{t}=\rho\left(s_{t}, a_{t}\right)\left(\psi\left(s_{t}, a_{t}\right)+\lambda \mathbf{e}_{t-1}\right)$$
 
-然后我们可以得到： $$\mathbf{u}_{t+1}-\mathbf{u}_{t}=\alpha_{u, t} \delta_{t} \mathbf{e}_{t}$$ 
+然后我们可以得到： $$\mathbf{u}_{t+1}-\mathbf{u}_{t}=\alpha_{u, t} \delta_{t} \mathbf{e}_{t}$$
 
 证明见原文附录或者参考资格迹的相关教程
 
-![](../../.gitbook/assets/image%20%2861%29.png)
-
-
+![](../../.gitbook/assets/image-61.png)
 

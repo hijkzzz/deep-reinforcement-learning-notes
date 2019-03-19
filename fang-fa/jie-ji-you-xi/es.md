@@ -28,11 +28,11 @@ $$\nabla_{\psi} \mathbb{E}_{\theta \sim p_{\psi}} F(\theta)=\mathbb{E}_{\theta \
 
 我们用多元高斯分布来生成噪音，则可得到梯度
 
-$$\nabla_{\theta} \mathbb{E}_{c \sim N(0, I)} F(\theta+\sigma \epsilon)=\frac{1}{\sigma} \mathbb{E}_{c \sim N(0, I)}\{F(\theta+\sigma \epsilon) \epsilon\}$$ 
+$$\nabla_{\theta} \mathbb{E}_{c \sim N(0, I)} F(\theta+\sigma \epsilon)=\frac{1}{\sigma} \mathbb{E}_{c \sim N(0, I)}\{F(\theta+\sigma \epsilon) \epsilon\}$$
 
 于是有算法1
 
-![](../../.gitbook/assets/image%20%2848%29.png)
+![](../../.gitbook/assets/image-48.png)
 
 这里初始种群为带扰动的初始策略网络，评价函数视为环境的回报，基于评价函数用梯度下降产生下一代群体。
 
@@ -40,7 +40,7 @@ $$\nabla_{\theta} \mathbb{E}_{c \sim N(0, I)} F(\theta+\sigma \epsilon)=\frac{1}
 
 ES非常适合扩展到许多并行工作者：1）它在完整的episode上运行，因此只需要进程之间的不频繁通信。 2）每个进程获得的唯一信息是episode的标量返回：如果我们在优化之前在进程之间同步随机种子，每个进程都知道其他进程使用了什么扰动，因此每个进程只需要与另一个进程之间传递单个标量同意参数更新。3 \)它不需要值函数近似。具有值函数估计的RL本质上是连续的:为了改进给定的策略，通常需要对值函数进行多次更新来获得足够的信号。因此该算法可以有效的扩展到上千个工作进程。
 
-![](../../.gitbook/assets/image%20%2810%29.png)
+![](../../.gitbook/assets/image-10.png)
 
 ES的探索由参数扰动驱动，对于ES来改进参数 $$θ$$ ，种群中的一些成员必须获得比其他成员更好的回报：即高斯扰动向量偶尔导致新的个体 $$\theta+\sigma \epsilon$$ 具有更好的回报是至关重要的。
 
@@ -58,19 +58,9 @@ $$
 \nabla_{\theta} F_{P G}(\theta)=\mathbb{E}_{\epsilon}\left\{R(\mathbf{a}(\epsilon, \theta)) \nabla_{\theta} \log p(\mathbf{a}(\epsilon, \theta) ; \theta)\right\}
 $$
 
-对于进化策略，这里使用的方法是基于参数扰动的噪音，即参数 $$\tilde{\theta}=\theta+\xi$$ ，$$a_{t}=\mathbf{a}(\xi, \theta)=\pi(s ; \tilde{\theta})$$ 
+对于进化策略，这里使用的方法是基于参数扰动的噪音，即参数 $$\tilde{\theta}=\theta+\xi$$ ，$$a_{t}=\mathbf{a}(\xi, \theta)=\pi(s ; \tilde{\theta})$$
 
 $$
 \nabla_{\theta} F_{E S}(\theta)=\mathbb{E}_{\xi}\left\{R(\mathbf{a}(\xi, \theta)) \nabla_{\theta} \log p(\tilde{\theta}(\xi, \theta) ; \theta)\right\}
 $$
-
-
-
-
-
-
-
-
-
-
 

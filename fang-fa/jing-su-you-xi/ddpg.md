@@ -22,15 +22,15 @@ $$
 
 用深度神经网络作为函数拟合器得到深度确定性梯度\(DDPG\)算法
 
-![](../../.gitbook/assets/image%20%2870%29.png)
+![](../../.gitbook/assets/image-70.png)
 
 其中 $$N_t$$ 是用于动作探索的噪音。和DQN一样，DDPG也有当前网络和目标网络之分，其中目标网络采用软更新的方式逐步复制当前网络的参数。Critic的学习和DQN一样使用时间差分算法，Actor则用确定性策略梯度定理来优化。最后，DDPG也用经验池来保证充分利用样本。
 
 ## 实验
 
-![](../../.gitbook/assets/image%20%2851%29.png)
+![](../../.gitbook/assets/image-51.png)
 
-![](../../.gitbook/assets/image%20%2831%29.png)
+![](../../.gitbook/assets/image-31.png)
 
 文中提到用BNN可以提升训练的效果，然而Weight Normalization的论文提到BNN会使得DQN学习不稳定。在我的实验中，小BATCH\_SIZE情况下DDPG确实难以学到东西，毕竟DDPG的Critic部分和DQN类似。
 

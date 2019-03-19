@@ -40,7 +40,7 @@ $$
 Q^{\mathrm{ret}}\left(x_{t}, a_{t}\right)=r_{t}+\gamma \overline{\rho}_{t+1}\left[Q^{\mathrm{ret}}\left(x_{t+1}, a_{t+1}\right)-Q\left(x_{t+1}, a_{t+1}\right)\right]+\gamma V\left(x_{t+1}\right)
 $$
 
-$$\overline{\rho}_{t}$$ 是截断的重要性采样系数，即 $$\overline{\rho}_{t}=\min \left\{c, \rho_{t}\right\} \text { with } \rho_{t}=\frac{\pi\left(a_{t} | x_{t}\right)}{\mu\left(a_{t} | x_{t}\right)}$$ ， $$Q$$ 是 $$Q_π$$ 的当前值估计，并且 $$V(x)=\mathbb{E}_{a \sim \pi} Q(x, a)$$ 
+$$\overline{\rho}_{t}$$ 是截断的重要性采样系数，即 $$\overline{\rho}_{t}=\min \left\{c, \rho_{t}\right\} \text { with } \rho_{t}=\frac{\pi\left(a_{t} | x_{t}\right)}{\mu\left(a_{t} | x_{t}\right)}$$ ， $$Q$$ 是 $$Q_π$$ 的当前值估计，并且 $$V(x)=\mathbb{E}_{a \sim \pi} Q(x, a)$$
 
 递归 $$Retrace$$ 方程需要估计 $$Q$$。为了计算它，在离散动作空间中，我们采用具有“双头”的卷积神经网络，其输出估计 $$Q_{θv}(x_t, a_t)$$ ，以及策略 $$\pi_θ(a_t | x_t)$$ 。
 
@@ -48,7 +48,7 @@ $$Retrace$$ 是一种off-policy、基于回报的[算法](http://arxiv.org/abs/1
 
 为了近似策略梯度 $$g^{\mathrm{marg}}$$ ， $$ACER$$ 使用 $$Q^{\mathrm{ret}}$$ 估计 $$Q^{\pi}$$ 。由于Retrace使用多步回报，它可以显著减少策略梯度估计中的偏差。
 
-为了学习Critic $$Q_{\theta_{v}}\left(x_{t}, a_{t}\right)$$ ，我们再次使用 $$Q^{\mathrm{ret}}\left(x_{t}, a_{t}\right)$$ 作为均方误差损失的目标函数，并使用以下标准梯度更新其参数 $$θ_v$$ 
+为了学习Critic $$Q_{\theta_{v}}\left(x_{t}, a_{t}\right)$$ ，我们再次使用 $$Q^{\mathrm{ret}}\left(x_{t}, a_{t}\right)$$ 作为均方误差损失的目标函数，并使用以下标准梯度更新其参数 $$θ_v$$
 
 $$
 \left(Q^{\mathrm{ret}}\left(x_{t}, a_{t}\right)-Q_{\theta_{v}}\left(x_{t}, a_{t}\right)\right) \nabla_{\theta_{v}} Q_{\theta_{v}}\left(x_{t}, a_{t}\right) )
@@ -58,7 +58,7 @@ $$
 
 #### **IMPORTANCE WEIGHT TRUNCATION WITH BIAS CORRECTION**
 
-为了防止高方差，我们建议通过以下对 ****$$g^{\text { marg }}$$ 的分解来截断重要性权重并引入校正项：
+为了防止高方差，我们建议通过以下对 _\*\*_$$g^{\text { marg }}$$ 的分解来截断重要性权重并引入校正项：
 
 $$
 g^{\operatorname{marg}}=\mathbb{E}_{x_{t} a_{t}}\left[\rho_{t} \nabla_{\theta} \log \pi_{\theta}\left(a_{t} | x_{t}\right) Q^{\pi}\left(x_{t}, a_{t}\right)\right] \\
@@ -67,9 +67,9 @@ $$
 
 其中 $$\overline{\rho}_{t}=\min \left\{c, \rho_{t}\right\} \text { with } \rho_{t}=\frac{\pi\left(a_{t} | x_{t}\right)}{\mu\left(a_{t} | x_{t}\right)}$$ ，并且 $$[x]_{+}=x \text { if } x>0$$ 其他情况取0。左起第一项为截断权重，第二项为校正项。我们提醒读者，上述期望是关于行为策略下的极限状态分布: $$x_{t} \sim \beta$$ 和 $$a_{t} \sim \mu$$ 。
 
-我们用神经网络 $$Q_{θ_v}(x_t,a_t)$$ 拟合逼近校正项中的 $$Q^π(x_t,a)$$ ，这种修改我们称之为truncation with bias correction trick，在这种情况下应用于函数 $$\nabla_{\theta} \log \pi_{\theta}\left(a_{t} | x_{t}\right) Q^{\pi}\left(x_{t}, a_{t}\right) $$ ：
+我们用神经网络 $$Q_{θ_v}(x_t,a_t)$$ 拟合逼近校正项中的 $$Q^π(x_t,a)$$ ，这种修改我们称之为truncation with bias correction trick，在这种情况下应用于函数 $$\nabla_{\theta} \log \pi_{\theta}\left(a_{t} | x_{t}\right) Q^{\pi}\left(x_{t}, a_{t}\right)$$ ：
 
- $$\widehat{g}^{\operatorname{marg}}= \mathbb{E}_{x_{t}}\left[\mathbb{E}_{a_{t}}\left[\overline{\rho}_{t} \nabla_{\theta} \log \pi_{\theta}\left(a_{t} | x_{t}\right) Q^{r e t}\left(x_{t}, a_{t}\right)\right]+\mathbb{E}_{a \sim \pi}\left(\left[\frac{\rho_{t}(a)-c}{\rho_{t}(a)}\right]_{+}^{ } \nabla_{\theta} \log \pi_{\theta}(a | x_{t}) Q_{\theta_{v}}\left(x_{t}, a\right)\right)\right]$$
+$$\widehat{g}^{\operatorname{marg}}= \mathbb{E}_{x_{t}}\left[\mathbb{E}_{a_{t}}\left[\overline{\rho}_{t} \nabla_{\theta} \log \pi_{\theta}\left(a_{t} | x_{t}\right) Q^{r e t}\left(x_{t}, a_{t}\right)\right]+\mathbb{E}_{a \sim \pi}\left(\left[\frac{\rho_{t}(a)-c}{\rho_{t}(a)}\right]_{+}^{ } \nabla_{\theta} \log \pi_{\theta}(a | x_{t}) Q_{\theta_{v}}\left(x_{t}, a\right)\right)\right]$$
 
 利用行为策略 $$\mu$$ 采样的样本轨迹 $$\left\{x_{0}, a_{0}, r_{0}, \mu(\cdot | x_{0}), \cdots, x_{k}, a_{k}, r_{k}, \mu(\cdot | x_{k})\right\}$$ ，可以近似得到 off-policy ACER梯度:
 
@@ -93,7 +93,7 @@ Actor-Critic的策略更新经常表现出很大的方差。因此，为了确�
 
 我们将average policy network表示为 $$φ_{θ_a}$$ ，并在每次更新策略参数 $$θ$$ 后“柔和地”更新其参数 $$\theta_{a} \leftarrow \alpha \theta_{a}+(1-\alpha) \theta$$
 
-例如，考虑前面定义的ACER策略梯度，但是关于 $$\phi$$的 
+例如，考虑前面定义的ACER策略梯度，但是关于 $$\phi$$的
 
 $$
 \begin{aligned} \widehat{g}_{t}^{\operatorname{acer}}=& \overline{\rho}_{t} \nabla_{\phi_{\theta}\left(x_{t}\right)} \log f\left(a_{t} | \phi_{\theta}(x)\right)\left[Q^{\mathrm{ret}}\left(x_{t}, a_{t}\right)-V_{\theta_{v}}\left(x_{t}\right)\right] \\ &+\underset{a \sim \pi}{\mathbb{E}}\left(\left[\frac{\rho_{t}(a)-c}{\rho_{t}(a)}\right]_{+} \nabla_{\phi_{\theta}\left(x_{t}\right)} \log f\left(a_{t} | \phi_{\theta}(x)\right)\left[Q_{\theta_{v}}\left(x_{t}, a\right)-V_{\theta_{v}}\left(x_{t}\right)\right]\right) \end{aligned}
@@ -105,13 +105,13 @@ $$
 \begin{array}{ll}{\underset{z}{\operatorname{minimize}}} & {\frac{1}{2}\left\|\hat{g}_{t}^{\text { acer }}-z\right\|_{2}^{2}} \\ {\text { subject to }} & {\nabla_{\phi_{\theta}\left(x_{t}\right)} D_{K L}[f(\cdot | \phi_{\theta_{a}}\left(x_{t}\right)) \| f(\cdot | \phi_{\theta}\left(x_{t}\right))]^{T} z \leq \delta}\end{array}
 $$
 
-由于约束是线性的，整个优化问题简化为简单的二次规划问题，利用KKT条件可以很容易地以封闭形式导出其解，令 $$k=\nabla_{\phi_{\theta}\left(x_{t}\right)} D_{K L}\left[f\left(\cdot\left|\phi_{\theta_{a}}\left(x_{t}\right)\|f(\cdot | \phi_{\theta}\left(x_{t}\right)]\right.\right.\right.$$ 
+由于约束是线性的，整个优化问题简化为简单的二次规划问题，利用KKT条件可以很容易地以封闭形式导出其解，令 $$k=\nabla_{\phi_{\theta}\left(x_{t}\right)} D_{K L}\left[f\left(\cdot\left|\phi_{\theta_{a}}\left(x_{t}\right)\|f(\cdot | \phi_{\theta}\left(x_{t}\right)]\right.\right.\right.$$
 
 $$
 z^{*}=\hat{g}_{t}^{\mathrm{acer}}-\max \left\{0, \frac{k^{T} \hat{g}_{t}^{\mathrm{acer}}-\delta}{\|k\|_{2}^{2}}\right\} k
 $$
 
-在第二阶段，我们利用反向传播。具体地，关于 $$φ_θ$$ 的更新的梯度，即 $$z^*$$ ，通过网络反向传播，以计算与参数相关的导数。 策略网络的参数更新遵循链规则： $$\frac{\partial \phi_{\theta}(x)}{\partial \theta} z^{*}$$ 
+在第二阶段，我们利用反向传播。具体地，关于 $$φ_θ$$ 的更新的梯度，即 $$z^*$$ ，通过网络反向传播，以计算与参数相关的导数。 策略网络的参数更新遵循链规则： $$\frac{\partial \phi_{\theta}(x)}{\partial \theta} z^{*}$$
 
 信任区域步骤在分布的统计空间中执行，而不是在策略参数的空间中执行。这样做是故意的，以避免通过策略网络进行额外的反向传播。
 
@@ -123,7 +123,7 @@ Retrace需要估计Q和V，但是我们不能轻易连续的动作空间中利�
 
 #### POLICY EVALUATION
 
-![](../../.gitbook/assets/image%20%2820%29.png)
+![](../../.gitbook/assets/image-20.png)
 
 我们提出了一个SDN网络（借鉴Dueling Deep-Q Network）解决这个问题，在每个时间步，SDN输出 $$Q_π$$ 的随机估计 $$\widetilde{Q}_{\theta_{v}}$$ 和 $$V_π$$ 的确定性估计 $$V_θ$$ ，使得
 
@@ -137,11 +137,11 @@ $$
 V^{\text {target}}\left(x_{t}\right)=\min \left\{1, \frac{\pi\left(a_{t} | x_{t}\right)}{\mu\left(a_{t} | x_{t}\right)}\right\}\left(Q^{\mathrm{ret}}\left(x_{t}, a_{t}\right)-Q_{\theta_{v}}\left(x_{t}, a_{t}\right)\right)+V_{\theta_{v}}\left(x_{t}\right)
 $$
 
-最后，当估计在连续域估计 $$Q^{\mathrm{ret}}$$时，我们实现了一个稍微不同的截断重要性权重公式， $$\overline{\rho}_{t}=\min \left\{1,\left(\frac{\pi\left(a_{t} | x_{t}\right)}{\mu\left(a_{t} | x_{t}\right)}\right)^{\frac{1}{d}}\right\} $$ ，d是动作空间的维度。虽然不是必需的，但我们发现这种配方可以加快学习速度。
+最后，当估计在连续域估计 $$Q^{\mathrm{ret}}$$时，我们实现了一个稍微不同的截断重要性权重公式， $$\overline{\rho}_{t}=\min \left\{1,\left(\frac{\pi\left(a_{t} | x_{t}\right)}{\mu\left(a_{t} | x_{t}\right)}\right)^{\frac{1}{d}}\right\}$$ ，d是动作空间的维度。虽然不是必需的，但我们发现这种配方可以加快学习速度。
 
 #### TRUST REGION UPDATING
 
-对于分布 $$f $$ ，我们选择具有固定对角协方差和均值的高斯分布 $$\phi_{\theta}(x) $$ 
+对于分布 $$f$$ ，我们选择具有固定对角协方差和均值的高斯分布 $$\phi_{\theta}(x)$$
 
 考虑关于随机Deuling Network的ACER策略梯度
 
@@ -159,19 +159,19 @@ $$
 
 ## 伪代码
 
-![](../../.gitbook/assets/image%20%28104%29.png)
+![](../../.gitbook/assets/image-104.png)
 
-![](../../.gitbook/assets/image%20%28112%29.png)
+![](../../.gitbook/assets/image-112.png)
 
-![](../../.gitbook/assets/image%20%282%29.png)
+![](../../.gitbook/assets/image-2.png)
 
 ## 实验
 
 #### 雅达利游戏机
 
-![](../../.gitbook/assets/image%20%284%29.png)
+![](../../.gitbook/assets/image-4.png)
 
 #### MuJoCo
 
-![](../../.gitbook/assets/image%20%2878%29.png)
+![](../../.gitbook/assets/image-78.png)
 

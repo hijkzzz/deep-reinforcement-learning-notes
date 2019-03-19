@@ -12,7 +12,7 @@
 
 定义期望折扣回报
 
-$$\begin{array}{l}{\eta(\pi)=\mathbb{E}_{s 0, a_{0}, \ldots}\left[\sum_{t=0}^{\infty} \gamma^{t} r\left(s_{t}\right)\right], \text { where }} \\ {s_{0} \sim \rho_{0}\left(s_{0}\right), a_{t} \sim \pi\left(a_{t} | s_{t}\right), s_{t+1} \sim P\left(s_{t+1} | s_{t}, a_{t}\right)}\end{array}$$ 
+$$\begin{array}{l}{\eta(\pi)=\mathbb{E}_{s 0, a_{0}, \ldots}\left[\sum_{t=0}^{\infty} \gamma^{t} r\left(s_{t}\right)\right], \text { where }} \\ {s_{0} \sim \rho_{0}\left(s_{0}\right), a_{t} \sim \pi\left(a_{t} | s_{t}\right), s_{t+1} \sim P\left(s_{t+1} | s_{t}, a_{t}\right)}\end{array}$$
 
 定义价值函数、动作价值函数、动作优势价值函数
 
@@ -22,7 +22,7 @@ $$
 
 定义策略 $$\tilde{\pi}$$ 相对于策略 $$\pi$$ 的期望优势
 
-$$\eta(\tilde{\pi})=\eta(\pi)+\mathbb{E}_{s_{0}, a_{0}, \cdots \sim \tilde{\pi}}\left[\sum_{t=0}^{\infty} \gamma^{t} A_{\pi}\left(s_{t}, a_{t}\right)\right]$$ 
+$$\eta(\tilde{\pi})=\eta(\pi)+\mathbb{E}_{s_{0}, a_{0}, \cdots \sim \tilde{\pi}}\left[\sum_{t=0}^{\infty} \gamma^{t} A_{\pi}\left(s_{t}, a_{t}\right)\right]$$
 
 即动作根据$$\tilde{\pi}$$采样，策略评估还是使用 $$\pi$$
 
@@ -48,7 +48,7 @@ $$
 
 上式给出了一个增强策略的梯度方向，然而却没有指出合适的步长，为了解决这个问题我们采用新的思路：
 
-令 $$\pi^{\prime}=\arg \max _{\pi^{\prime}} L_{\pi_{\mathrm{old}}}\left(\pi^{\prime}\right)$$ ，令新策略为 $$\pi_{\text { new }}(a | s)=(1-\alpha) \pi_{\text { old }}(a | s)+\alpha \pi^{\prime}(a | s)$$ 
+令 $$\pi^{\prime}=\arg \max _{\pi^{\prime}} L_{\pi_{\mathrm{old}}}\left(\pi^{\prime}\right)$$ ，令新策略为 $$\pi_{\text { new }}(a | s)=(1-\alpha) \pi_{\text { old }}(a | s)+\alpha \pi^{\prime}(a | s)$$
 
 根据 Kakade & Langford \(2002\) 等人的相关工作有下界关系：
 
@@ -56,13 +56,13 @@ $$\eta\left(\pi_{\text { new }}\right) \geq L_{\pi_{\text { old }}}\left(\pi_{\t
 
 我们只要让下界单调递增，则可实现策略的提升
 
-###  一般随机策略的单调改进保证
+### 一般随机策略的单调改进保证
 
 我们用total variation divergence作为 $$\alpha$$ 的度量 ：
 
 $$D_{\mathrm{TV}}^{\max }(\pi, \tilde{\pi})=\max _{s} D_{T V}(\pi(\cdot | s) \| \tilde{\pi}(\cdot | s))$$ ，有定理（证明见原文附录）
 
-![](../../.gitbook/assets/image%20%2852%29.png)
+![](../../.gitbook/assets/image-52.png)
 
 注意到其与KL散度的关系 $$D_{T V}(p \| q)^{2} \leq D_{\mathrm{KL}}(p \| q)$$ ，定理可写为
 
@@ -70,11 +70,11 @@ $$D_{\mathrm{TV}}^{\max }(\pi, \tilde{\pi})=\max _{s} D_{T V}(\pi(\cdot | s) \| 
 
 于是有如下算法，可以保证策略的单调递增
 
-![](../../.gitbook/assets/image%20%28100%29.png)
+![](../../.gitbook/assets/image-100.png)
 
 证明：令 $$M_{i}(\pi)=L_{\pi_{i}}(\pi)-C D_{\mathrm{KL}}^{\max }\left(\pi_{i}, \pi\right)$$ ，结合上式有
 
-![](../../.gitbook/assets/image%20%285%29.png)
+![](../../.gitbook/assets/image-5.png)
 
 我们提出了算法1的近似算法Trust region policy optimization，其使用KL散度作为约束而不是惩罚项，以支持健壮的大步更新。
 
@@ -82,7 +82,7 @@ $$D_{\mathrm{TV}}^{\max }(\pi, \tilde{\pi})=\max _{s} D_{T V}(\pi(\cdot | s) \| 
 
 我们把算法1的问题从
 
-$$\underset{\theta}{\operatorname{maximize}}\left[L_{\theta_{\text { old }}}(\theta)-C D_{\mathrm{KL}}^{\max }\left(\theta_{\text { old }}, \theta\right)\right]$$ 
+$$\underset{\theta}{\operatorname{maximize}}\left[L_{\theta_{\text { old }}}(\theta)-C D_{\mathrm{KL}}^{\max }\left(\theta_{\text { old }}, \theta\right)\right]$$
 
 转换为带约束的最大化问题
 
@@ -90,19 +90,19 @@ $$\begin{array}{l}{\text { maximize } L_{\theta_{\text { old }}}(\theta)} \\ {\t
 
 同时为了方便解决约束问题，我们用平均KL散度替换最大KL散度
 
-$$\overline{D}_{\mathrm{KL}}^{\rho}\left(\theta_{1}, \theta_{2}\right) :=\mathbb{E}_{s \sim \rho}\left[D_{\mathrm{KL}}\left(\pi_{\theta_{1}}(\cdot | s) \| \pi_{\theta_{2}}(\cdot | s)\right]\right.$$ 
+$$\overline{D}_{\mathrm{KL}}^{\rho}\left(\theta_{1}, \theta_{2}\right) :=\mathbb{E}_{s \sim \rho}\left[D_{\mathrm{KL}}\left(\pi_{\theta_{1}}(\cdot | s) \| \pi_{\theta_{2}}(\cdot | s)\right]\right.$$
 
 于是得到
 
 $$\begin{array}{l}{\text { maximize } L_{\theta_{\text { old }}}(\theta)} \\ {\text { subject to } \overline{D}_{\mathrm{KL}}^{\rho \theta_{\text { old }}}\left(\theta_{\text { old }}, \theta\right) \leq \delta}\end{array}$$
 
-### 基于采样的目标和约束估计 
+### 基于采样的目标和约束估计
 
-本节旨在用蒙特卡洛模拟近似上面的优化问题，展开 $$L_{\theta \text { old }}(\theta)$$ 
+本节旨在用蒙特卡洛模拟近似上面的优化问题，展开 $$L_{\theta \text { old }}(\theta)$$
 
-![](../../.gitbook/assets/image%20%2863%29.png)
+![](../../.gitbook/assets/image-63.png)
 
-首先用 $$\frac{1}{1-\gamma} \mathbb{E}_{s \sim \rho_{\theta_{\text { old }}}}[\ldots]$$ 替换 $$\sum_{S} \rho_{\theta_{\text { old }}}(s)[\ldots]$$ ，然后用用 $$Q_{\theta_{\text { old }}}$$ 替换 $$A_{\theta_{\text { old }}}$$ 
+首先用 $$\frac{1}{1-\gamma} \mathbb{E}_{s \sim \rho_{\theta_{\text { old }}}}[\ldots]$$ 替换 $$\sum_{S} \rho_{\theta_{\text { old }}}(s)[\ldots]$$ ，然后用用 $$Q_{\theta_{\text { old }}}$$ 替换 $$A_{\theta_{\text { old }}}$$
 
 最后用重要性采样处理动作求和
 
@@ -110,25 +110,23 @@ $$\sum_{a} \pi_{\theta}(a | s_{n}) A_{\theta_{\text { old }}}\left(s_{n}, a\righ
 
 得到等价优化目标
 
- 
-
-![](../../.gitbook/assets/image%20%2812%29.png)
+![](../../.gitbook/assets/image-12.png)
 
 剩下的就是用样本均值代替期望值，用经验估计代替Q值。以下部分描述了两种不同的方案来执行这种估计。
 
-![](../../.gitbook/assets/image%20%28101%29.png)
+![](../../.gitbook/assets/image-101.png)
 
 ### 实际算法
 
 通常可以分为三步
 
-![](../../.gitbook/assets/image%20%2879%29.png)
+![](../../.gitbook/assets/image-79.png)
 
 原文附录C给出了具体的优化算法
 
 总结前面的内容
 
-![](../../.gitbook/assets/image%20%2827%29.png)
+![](../../.gitbook/assets/image-27.png)
 
 ### 与前面工作的联系
 
@@ -138,29 +136,9 @@ $$
 \begin{array}{l}{\text { maximize }\left[\nabla_{\theta} L_{\theta_{\text { old }}}\left.(\theta)\right|_{\theta=\theta_{\text { old }}} \cdot\left(\theta-\theta_{\text { old }}\right)\right]} \\ {\text { subject to } \frac{1}{2}\left(\theta_{\text { old }}-\theta\right)^{T} A\left(\theta_{\text { old }}\right)\left(\theta_{\text { old }}-\theta\right) \leq \delta} \\ {\text { where } A\left(\theta_{\text { old }}\right)_{i j}=} \\ {\frac{\partial}{\partial \theta_{i}} \frac{\partial}{\partial \theta_{j}} \mathbb{E}_{s \sim \rho_{\pi}}\left.\left[D_{\mathrm{KL}}(\pi(\cdot | s, \theta_{\text { old }}) \| \pi(\cdot | s, \theta))\right]\right|_{\theta=\theta_{\text { old }}}}\end{array}
 $$
 
-更新式:  $$\theta_{\text { new }}=\theta_{\text { old }}+\frac{1}{\lambda} A\left(\theta_{\text { old }}\right)^{-1} \nabla_{\theta} L\left.(\theta)\right|_{\theta=\theta_{\text { old }}}$$
+更新式: $$\theta_{\text { new }}=\theta_{\text { old }}+\frac{1}{\lambda} A\left(\theta_{\text { old }}\right)^{-1} \nabla_{\theta} L\left.(\theta)\right|_{\theta=\theta_{\text { old }}}$$
 
 ## 实验
 
-![](../../.gitbook/assets/image%20%2823%29.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
+![](../../.gitbook/assets/image-23.png)
 

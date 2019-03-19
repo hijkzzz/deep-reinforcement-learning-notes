@@ -24,15 +24,9 @@ Rainbow即集成各种DQN算法的变体
 
 ## 实验效果
 
-![](../../.gitbook/assets/image%20%2828%29.png)
+![](../../.gitbook/assets/image-28.png)
 
-![](../../.gitbook/assets/image%20%2835%29.png)
+![](../../.gitbook/assets/image-35.png)
 
 可以看出priority和multi-step的影响最大
-
-
-
-
-
-
 

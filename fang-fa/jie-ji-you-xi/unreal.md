@@ -8,13 +8,13 @@
 
 ## 算法
 
-![](../../.gitbook/assets/image%20%2850%29.png)
+![](../../.gitbook/assets/image-50.png)
 
 ### AUXILIARY CONTROL TASKS
 
 给定一组辅助控制任务 $$C$$ ， $$π_(c)$$ 是每个辅助任务的代理策略 $$c \in \mathcal{C}$$ ， $$π$$ 是代理对基础任务的策略。 总体目标是在所有这些辅助任务中最大化总体性能。
 
-$$\underset{\theta}{\arg \max } \mathbb{E}_{\pi}\left[R_{1 : \infty}\right]+\lambda_{c} \sum_{c \in C} \mathbb{E}_{\pi_{c}}\left[R_{1 : \infty}^{(c)}\right]$$ 
+$$\underset{\theta}{\arg \max } \mathbb{E}_{\pi}\left[R_{1 : \infty}\right]+\lambda_{c} \sum_{c \in C} \mathbb{E}_{\pi_{c}}\left[R_{1 : \infty}^{(c)}\right]$$
 
 原则上为了同时学习多个辅助任务，应用off-policy，对于每个辅助任务都有一个单独的的损失函数
 
@@ -47,11 +47,11 @@ $$\mathbb{E}\left[\left(R_{t : t+n}+\gamma^{n} \max _{a^{\prime}} Q^{(c)}\left(s
 
 UNREAL算法针对代理的联合参数 $$θ$$ 优化单个组合损失函数，其将A3C损失 $$L_{A3C}$$ 与辅助控制损失 $$L_{PC}$$ ，辅助奖励预测损失 $$L_{RP}$$ 和重放价值损失 $$L_{VR}$$ 组合
 
-$$\mathcal{L}_{U N R E A L}(\theta)=\mathcal{L}_{\mathrm{A} 3 \mathrm{C}}+\lambda_{\mathrm{VR}} \mathcal{L}_{\mathrm{VR}}+\lambda_{\mathrm{PC}} \sum \mathcal{L}_{Q}^{(c)}+\lambda_{\mathrm{RP}} \mathcal{L}_{\mathrm{RP}}$$ 
+$$\mathcal{L}_{U N R E A L}(\theta)=\mathcal{L}_{\mathrm{A} 3 \mathrm{C}}+\lambda_{\mathrm{VR}} \mathcal{L}_{\mathrm{VR}}+\lambda_{\mathrm{PC}} \sum \mathcal{L}_{Q}^{(c)}+\lambda_{\mathrm{RP}} \mathcal{L}_{\mathrm{RP}}$$
 
 ## 实验
 
 迷宫任务和雅达利游戏机
 
-![](../../.gitbook/assets/image%20%2877%29.png)
+![](../../.gitbook/assets/image-77.png)
 

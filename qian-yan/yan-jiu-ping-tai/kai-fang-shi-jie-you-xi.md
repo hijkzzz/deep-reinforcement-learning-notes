@@ -8,5 +8,3 @@
 
 ![](../../.gitbook/assets/minecraft.png)
 
-
-

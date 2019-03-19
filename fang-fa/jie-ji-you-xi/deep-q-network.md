@@ -8,17 +8,17 @@
 
 ## 算法
 
-![](../../.gitbook/assets/image%20%28109%29.png)
+![](../../.gitbook/assets/image-109.png)
 
 最优贝尔曼方程
 
-$$Q^{*}(s, a)=\mathbb{E}_{s^{\prime} \sim \mathcal{E}}\left[r+\gamma \max _{a^{\prime}} Q^{*}\left(s^{\prime}, a^{\prime}\right) | s, a\right]$$ 
+$$Q^{*}(s, a)=\mathbb{E}_{s^{\prime} \sim \mathcal{E}}\left[r+\gamma \max _{a^{\prime}} Q^{*}\left(s^{\prime}, a^{\prime}\right) | s, a\right]$$
 
 在DQN中使用一个卷积神经网络拟合上面的Q函数，损失函数如下
 
-$$L_{i}\left(\theta_{i}\right)=\mathbb{E}_{s, a \sim \rho(\cdot)}\left[\left(y_{i}-Q\left(s, a ; \theta_{i}\right)\right)^{2}\right]$$ 
+$$L_{i}\left(\theta_{i}\right)=\mathbb{E}_{s, a \sim \rho(\cdot)}\left[\left(y_{i}-Q\left(s, a ; \theta_{i}\right)\right)^{2}\right]$$
 
-其中 $$y_{i}=\mathbb{E}_{s^{\prime} \sim \mathcal{E}}\left[r+\gamma \max _{a^{\prime}} Q\left(s^{\prime}, a^{\prime} ; \theta_{i-1}\right) | s, a\right]$$ 
+其中 $$y_{i}=\mathbb{E}_{s^{\prime} \sim \mathcal{E}}\left[r+\gamma \max _{a^{\prime}} Q\left(s^{\prime}, a^{\prime} ; \theta_{i-1}\right) | s, a\right]$$
 
 ### 探索利用
 
@@ -32,11 +32,9 @@ $$L_{i}\left(\theta_{i}\right)=\mathbb{E}_{s, a \sim \rho(\cdot)}\left[\left(y_{
 
 为了提高训练的稳定性，算法中有两个网络，其一是最新的行为网络，其二是目标网络。目标网络每C步和当前最新的网络同步一次。
 
-![](../../.gitbook/assets/image%20%2884%29.png)
+![](../../.gitbook/assets/image-84.png)
 
 ## 伪代码
 
-![](../../.gitbook/assets/image%20%2813%29.png)
-
-
+![](../../.gitbook/assets/image-13.png)
 
