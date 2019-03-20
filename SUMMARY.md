@@ -48,6 +48,7 @@
   * [Actor-Mimic](fang-fa/jie-ji-you-xi/actor-mimic.md)
   * [Action-Conditional Video Predictionusing Deep Networks in Atari Games](fang-fa/jie-ji-you-xi/action-conditional-video-predictionusing-deep-networks-in-atari-games.md)
   * [Loss is its own Reward: Self-Supervision for Reinforcement Learning](fang-fa/jie-ji-you-xi/loss-is-its-own-reward-self-supervision-for-reinforcement-learning.md)
+  * [HRA](fang-fa/jie-ji-you-xi/hra.md)
 * [蒙特祖玛的复仇](fang-fa/ment-te-zu-ma-de-fu-chou.md)
 * [竞速游戏](fang-fa/jing-su-you-xi/README.md)
   * [DDPG](fang-fa/jing-su-you-xi/ddpg.md)
