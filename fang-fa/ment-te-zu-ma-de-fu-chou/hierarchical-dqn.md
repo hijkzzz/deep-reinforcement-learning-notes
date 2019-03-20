@@ -8,5 +8,43 @@
 
 ## 算法
 
+![](../../.gitbook/assets/image%20%285%29.png)
+
+![](../../.gitbook/assets/image%20%2813%29.png)
+
+### Agents
+
+我们使用temporal abstraction of options来定义每个目标的策略。 这些代理同时学习这些option策略，同时学习最佳的目标序列。 为了使每个 $$π_g$$ 学习目标 $$g$$ ，代理人还有一个批评者，根据代理人是否能够实现其目标，提供内在的激励信号。
+
+### Temporal Abstractions
+
+代理人使用由controlle和meta-controller组成的两阶段层次结构。 元控制器接收状态 $$s_{t}$$ 选择一个目标 $$g_{\iota} \in \mathcal{G}$$ ，其中 $$ \mathcal{G}$$ 表示有可能的当前目标的集合。目标将在接下来的几个步骤中保持不变，直到达到目标或达到最终状态。内部批评家负责评估目标是否已经达到，并提供适当的奖励。同样，元控制器的目标是优化累积的外在奖励。
+
+### Deep Reinforcement Learning with Temporal Abstractions
+
+用深度强化学习来学习这些策略
+
+controller
+
+![](../../.gitbook/assets/image%20%287%29.png)
+
+meta-controller
+
+![](../../.gitbook/assets/image%20%2812%29.png)
+
+然后用类似TD的算法学习
+
+![](../../.gitbook/assets/image%20%289%29.png)
+
+### 伪代码
+
+![](../../.gitbook/assets/image%20%2811%29.png)
+
+## 实验
+
+![](../../.gitbook/assets/image%20%284%29.png)
+
+![](../../.gitbook/assets/image%20%286%29.png)
+
 
 
