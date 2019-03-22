@@ -51,6 +51,7 @@
   * [HRA](fang-fa/jie-ji-you-xi/hra.md)
 * [蒙特祖玛的复仇](fang-fa/ment-te-zu-ma-de-fu-chou/README.md)
   * [Hierarchical-DQN](fang-fa/ment-te-zu-ma-de-fu-chou/hierarchical-dqn.md)
+  * [Unifying Count-Based Exploration and Intrinsic Motivation](fang-fa/ment-te-zu-ma-de-fu-chou/unifying-count-based-exploration-and-intrinsic-motivation.md)
 * [竞速游戏](fang-fa/jing-su-you-xi/README.md)
   * [DDPG](fang-fa/jing-su-you-xi/ddpg.md)
 * [第一人称射击游戏](fang-fa/di-yi-ren-cheng-she-ji-you-xi.md)
