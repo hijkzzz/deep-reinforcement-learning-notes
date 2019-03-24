@@ -76,7 +76,7 @@ $$
 
 定义 Learning-positive density model
 
-![](../../.gitbook/assets/image%20%283%29.png)
+![](../../.gitbook/assets/image%20%286%29.png)
 
 #### Estimating the Frequency of a Salient Event in FREEWAY
 
@@ -88,7 +88,7 @@ $$
 4. 它们随着实际计数线性增长\(平均\)
 5. 它们在非平稳数据存在的情况下很稳健
 
-![](../../.gitbook/assets/image%20%284%29.png)
+![](../../.gitbook/assets/image%20%288%29.png)
 
 在高速公路上，代理人必须让一只鸡穿过繁忙的道路。作为我们的例子，我们考虑估计鸡到达屏幕顶部的次数。就像雅达利2600游戏一样，这一自然显著的事件与分数的增加相关联，这也转化为积极的回报。我们可以合理地想象知道我们对环境的这一部分有多确定是有用的。穿越后，鸡被传送回屏幕底部。
 
@@ -132,7 +132,7 @@ $$
 
 如下定理所示，预测增益允许我们将伪计数和信息增益联系起来
 
-![](../../.gitbook/assets/image%20%2817%29.png)
+![](../../.gitbook/assets/image%20%2826%29.png)
 
 定理1表明，使用与 $$\hat{N}_{n}(x)^{-1 / 2}$$ 成比例的探索奖励，类似于MBIE-EB 奖励，会导致一种行为，至少与从信息增益奖励中获得的行为一样具有探索性。由于伪计数对应于表格设置中的经验计数，这种方法还保留了已知的理论保证。事实上，我们确信伪计数可以用于证明非表格设置中的类似结果。
 
@@ -154,11 +154,11 @@ $$
 
 其中 $$\beta=0.05$$ 
 
-![](../../.gitbook/assets/image%20%2814%29.png)
+![](../../.gitbook/assets/image%20%2821%29.png)
 
 #### Actor-Critic
 
-![](../../.gitbook/assets/image%20%281%29.png)
+![](../../.gitbook/assets/image%20%282%29.png)
 
 
 
