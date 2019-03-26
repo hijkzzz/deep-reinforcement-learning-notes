@@ -54,6 +54,7 @@
   * [Unifying Count-Based Exploration and Intrinsic Motivation](fang-fa/ment-te-zu-ma-de-fu-chou/unifying-count-based-exploration-and-intrinsic-motivation.md)
   * [Pixel Recurrent Neural Networks](fang-fa/ment-te-zu-ma-de-fu-chou/pixel-recurrent-neural-networks.md)
   * [Count-Based Exploration with Neural Density Models](fang-fa/ment-te-zu-ma-de-fu-chou/count-based-exploration-with-neural-density-models.md)
+  * [Ape-X](fang-fa/ment-te-zu-ma-de-fu-chou/ape-x.md)
 * [竞速游戏](fang-fa/jing-su-you-xi/README.md)
   * [DDPG](fang-fa/jing-su-you-xi/ddpg.md)
 * [第一人称射击游戏](fang-fa/di-yi-ren-cheng-she-ji-you-xi.md)
