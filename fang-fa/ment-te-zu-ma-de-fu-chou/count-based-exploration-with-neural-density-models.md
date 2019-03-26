@@ -52,7 +52,7 @@ CTS密度模型基于算法Context Tree Switching，一种Bayesian variable-orde
 
 Q-Learning
 
-![](../../.gitbook/assets/image%20%2843%29.png)
+![](../../.gitbook/assets/image%20%2847%29.png)
 
 众所周知，在学习效率和近似误差方面，通过多步方法可以获得更好的性能。这些方法在一步学习和蒙特卡罗更新之间进行插值：
 
@@ -122,11 +122,11 @@ $$
 
 ### DQN
 
-![](../../.gitbook/assets/image%20%2846%29.png)
+![](../../.gitbook/assets/image%20%2850%29.png)
 
 ### Reactor
 
-![](../../.gitbook/assets/image%20%2825%29.png)
+![](../../.gitbook/assets/image%20%2826%29.png)
 
 ### Quality of the Density Model
 
