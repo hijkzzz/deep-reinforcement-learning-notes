@@ -59,6 +59,7 @@
   * [Ape-X  DQfD](fang-fa/ment-te-zu-ma-de-fu-chou/ape-x-dqfd.md)
   * [Beating Atari with Natural Language Guided Reinforcement Learning](fang-fa/ment-te-zu-ma-de-fu-chou/beating-atari-with-natural-language-guided-reinforcement-learning.md)
 * [竞速游戏](fang-fa/jing-su-you-xi/README.md)
+  * [Deep Driving](fang-fa/jing-su-you-xi/deep-driving.md)
   * [DDPG](fang-fa/jing-su-you-xi/ddpg.md)
 * [第一人称射击游戏](fang-fa/di-yi-ren-cheng-she-ji-you-xi.md)
 * [开放世界游戏](fang-fa/kai-fang-shi-jie-you-xi.md)
