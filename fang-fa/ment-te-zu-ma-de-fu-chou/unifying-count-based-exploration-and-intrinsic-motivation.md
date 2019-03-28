@@ -76,7 +76,7 @@ $$
 
 定义 Learning-positive density model
 
-![](../../.gitbook/assets/image%20%2814%29.png)
+![](../../.gitbook/assets/image%20%2816%29.png)
 
 #### Estimating the Frequency of a Salient Event in FREEWAY
 
@@ -88,7 +88,7 @@ $$
 4. 它们随着实际计数线性增长\(平均\)
 5. 它们在非平稳数据存在的情况下很稳健
 
-![](../../.gitbook/assets/image%20%2817%29.png)
+![](../../.gitbook/assets/image%20%2819%29.png)
 
 在高速公路上，代理人必须让一只鸡穿过繁忙的道路。作为我们的例子，我们考虑估计鸡到达屏幕顶部的次数。就像雅达利2600游戏一样，这一自然显著的事件与分数的增加相关联，这也转化为积极的回报。我们可以合理地想象知道我们对环境的这一部分有多确定是有用的。穿越后，鸡被传送回屏幕底部。
 
@@ -132,7 +132,7 @@ $$
 
 如下定理所示，预测增益允许我们将伪计数和信息增益联系起来
 
-![](../../.gitbook/assets/image%20%2857%29.png)
+![](../../.gitbook/assets/image%20%2862%29.png)
 
 定理1表明，使用与 $$\hat{N}_{n}(x)^{-1 / 2}$$ 成比例的探索奖励，类似于MBIE-EB 奖励，会导致一种行为，至少与从信息增益奖励中获得的行为一样具有探索性。由于伪计数对应于表格设置中的经验计数，这种方法还保留了已知的理论保证。事实上，我们确信伪计数可以用于证明非表格设置中的类似结果。
 
@@ -142,15 +142,15 @@ $$
 
 我们还假设经验分布 $$μ_n$$ 指向分布 $$μ$$ ，并且对于recoding probability写为 $$\mu_{n}^{\prime}(x)$$ 。 我们从密度模型的两个假设开始。
 
-![](../../.gitbook/assets/image%20%2862%29.png)
+![](../../.gitbook/assets/image%20%2868%29.png)
 
 假设（a）表明， $$ρ$$ 最终应该将概率与经验分布 $$μ(x)$$ 的极限成比例。 另一方面，假设\( b \)限制了 $$ρ$$ 相对于 $$μ$$ 的learning rate。
 
-![](../../.gitbook/assets/image%20%285%29.png)
+![](../../.gitbook/assets/image%20%287%29.png)
 
 该模型的相对变化率在伪计数与经验计数的比率中起着至关重要的作用，这种变化率需要 $$\dot{r}(x)$$ 收敛。
 
-![](../../.gitbook/assets/image%20%2828%29.png)
+![](../../.gitbook/assets/image%20%2830%29.png)
 
 一些公式的详细推导请参阅原文附录
 
@@ -166,11 +166,11 @@ $$
 
 其中 $$\beta=0.05$$ 
 
-![](../../.gitbook/assets/image%20%2847%29.png)
+![](../../.gitbook/assets/image%20%2851%29.png)
 
 #### Actor-Critic
 
-![](../../.gitbook/assets/image%20%287%29.png)
+![](../../.gitbook/assets/image%20%289%29.png)
 
 
 

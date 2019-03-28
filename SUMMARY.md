@@ -57,6 +57,7 @@
   * [Ape-X](fang-fa/ment-te-zu-ma-de-fu-chou/ape-x.md)
   * [DQfD](fang-fa/ment-te-zu-ma-de-fu-chou/dqfd.md)
   * [Ape-X  DQfD](fang-fa/ment-te-zu-ma-de-fu-chou/ape-x-dqfd.md)
+  * [Beating Atari with Natural Language Guided Reinforcement Learning](fang-fa/ment-te-zu-ma-de-fu-chou/beating-atari-with-natural-language-guided-reinforcement-learning.md)
 * [竞速游戏](fang-fa/jing-su-you-xi/README.md)
   * [DDPG](fang-fa/jing-su-you-xi/ddpg.md)
 * [第一人称射击游戏](fang-fa/di-yi-ren-cheng-she-ji-you-xi.md)
