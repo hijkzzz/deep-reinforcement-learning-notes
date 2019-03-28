@@ -8,11 +8,11 @@
 
 ## 方法
 
-![](../../.gitbook/assets/image%20%2814%29.png)
+![](../../.gitbook/assets/image%20%2816%29.png)
 
 原则上，actor和learner可以分布在多个worker中。在我们的实验中，数百名参与者在处理器上运行以生成数据，一名学习者在处理器上运行以采样最有用的样本\(图1 \)。actor和learner的伪代码在算法1和2中显示。更新后的网络参数会定期从学习者处传达给参与者。
 
-![](../../.gitbook/assets/image%20%2841%29.png)
+![](../../.gitbook/assets/image%20%2843%29.png)
 
 与共享梯度相比，共享经验具有一定的优势。 低延迟通信并不像分布式SGD那么重要，因为经验数据比梯度过时更慢，只要学习算法对off-policy数据具有鲁棒性。 在整个系统中，我们通过将所有通信与集中式重放进行批处理来利用这一点，以一定的延迟为代价提高效率和吞吐量。 通过这种方法，参与者和学习者甚至可以在不限制性能的情况下在不同的数据中心运行。
 
@@ -24,7 +24,7 @@ $$
 l_{t}(\boldsymbol{\theta})=\frac{1}{2}\left(G_{t}-q\left(S_{t}, A_{t}, \boldsymbol{\theta}\right)\right)^{2}
 $$
 
-![](../../.gitbook/assets/image%20%2851%29.png)
+![](../../.gitbook/assets/image%20%2853%29.png)
 
 ### APE-X DPG
 
@@ -32,15 +32,15 @@ $$
 l_{t}(\psi)=\frac{1}{2}\left(G_{t}-q\left(S_{t}, A_{t}, \psi\right)\right)^{2}
 $$
 
-![](../../.gitbook/assets/image%20%2831%29.png)
+![](../../.gitbook/assets/image%20%2833%29.png)
 
 ## 实验
 
-![](../../.gitbook/assets/image%20%2820%29.png)
+![](../../.gitbook/assets/image%20%2822%29.png)
 
-![](../../.gitbook/assets/image%20%2835%29.png)
+![](../../.gitbook/assets/image%20%2837%29.png)
 
-![](../../.gitbook/assets/image%20%2824%29.png)
+![](../../.gitbook/assets/image%20%2826%29.png)
 
 ![](../../.gitbook/assets/image%20%283%29.png)
 
