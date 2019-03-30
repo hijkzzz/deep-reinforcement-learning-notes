@@ -63,6 +63,7 @@
   * [DDPG](fang-fa/jing-su-you-xi/ddpg.md)
 * [第一人称射击游戏](fang-fa/di-yi-ren-cheng-she-ji-you-xi/README.md)
   * [DQN with SLAM](fang-fa/di-yi-ren-cheng-she-ji-you-xi/dqn-with-slam.md)
+  * [Direct Future Prediction](fang-fa/di-yi-ren-cheng-she-ji-you-xi/direct-future-prediction.md)
 * [开放世界游戏](fang-fa/kai-fang-shi-jie-you-xi.md)
 * [即时战略游戏](fang-fa/ji-shi-zhan-lve-you-xi.md)
 * [团队体育游戏](fang-fa/tuan-dui-ti-yu-you-xi.md)
