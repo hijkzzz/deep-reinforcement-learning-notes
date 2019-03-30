@@ -1,4 +1,4 @@
-# Actor-Critic with Experience Replay
+# ACER
 
 ## 介绍
 

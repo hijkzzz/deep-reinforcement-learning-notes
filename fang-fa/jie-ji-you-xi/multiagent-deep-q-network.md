@@ -1,4 +1,4 @@
-# Multiagent Deep Q-Network
+# Multiagent DQN
 
 ## 介绍
 

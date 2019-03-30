@@ -1,4 +1,4 @@
-# Deep Recurrent  Q-Network
+# DRQN
 
 ## 介绍
 

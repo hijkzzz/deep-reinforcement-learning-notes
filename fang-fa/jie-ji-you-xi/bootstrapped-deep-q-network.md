@@ -1,4 +1,4 @@
-# Bootstrapped Deep Q-Network
+# Bootstrapped DQN
 
 ## 介绍
 

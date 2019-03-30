@@ -1,4 +1,4 @@
-# Deep Q-Network
+# DQN
 
 ## 介绍
 

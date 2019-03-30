@@ -1,4 +1,4 @@
-# Trust Region Policy Optimization
+# TRPO
 
 ## 介绍
 

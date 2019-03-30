@@ -1,4 +1,4 @@
-# Noisy Network
+# Noisy-Net
 
 ## 介绍
 

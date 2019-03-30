@@ -1,4 +1,4 @@
-# Double Deep Q-Learning
+# Double DQN
 
 ## 介绍
 

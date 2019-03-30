@@ -1,4 +1,4 @@
-# Proximal Policy Optimization
+# PPO
 
 ## 介绍
 

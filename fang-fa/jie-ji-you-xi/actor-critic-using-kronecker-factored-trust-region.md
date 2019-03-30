@@ -1,4 +1,4 @@
-# Actor Critic using Kronecker-Factored Trust Region
+# ACKTR
 
 ## 介绍
 

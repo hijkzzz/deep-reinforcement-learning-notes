@@ -1,4 +1,4 @@
-# Dueling Deep Q-Network
+# Dueling DQN
 
 ## 介绍
 
