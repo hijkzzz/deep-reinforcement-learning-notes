@@ -1,4 +1,4 @@
-# Count-Based Exploration with Neural Density Models
+# DQN-PixelCNN
 
 ## 介绍
 

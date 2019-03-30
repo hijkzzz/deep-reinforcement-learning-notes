@@ -1,4 +1,4 @@
-# Unifying Count-Based Exploration and Intrinsic Motivation
+# DQN-CTS
 
 ## 介绍
 
