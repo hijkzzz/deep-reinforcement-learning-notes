@@ -10,7 +10,7 @@
 
 ![](../../.gitbook/assets/image%20%2841%29.png)
 
-![](../../.gitbook/assets/image%20%2879%29.png)
+![](../../.gitbook/assets/image%20%2881%29.png)
 
 ### Agents
 
@@ -30,15 +30,15 @@ controller
 
 meta-controller
 
-![](../../.gitbook/assets/image%20%2872%29.png)
+![](../../.gitbook/assets/image%20%2874%29.png)
 
 然后用类似TD的算法学习
 
-![](../../.gitbook/assets/image%20%2858%29.png)
+![](../../.gitbook/assets/image%20%2859%29.png)
 
 ### 伪代码
 
-![](../../.gitbook/assets/image%20%2863%29.png)
+![](../../.gitbook/assets/image%20%2865%29.png)
 
 ## 实验
 

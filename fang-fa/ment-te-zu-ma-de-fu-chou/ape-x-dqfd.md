@@ -20,13 +20,13 @@ $$
 \left(\mathcal{T}_{h} Q\right)(x, a) :=\mathbb{E}_{x^{\prime} \sim P(\cdot | x, a)}\left[h\left(R(x, a)+\gamma \max _{a^{\prime} \in \mathcal{A}} h^{-1}\left(Q\left(x^{\prime}, a^{\prime}\right)\right)\right)\right], \quad \forall(x, a) \in \mathcal{X} \times \mathcal{A}
 $$
 
-![](../../.gitbook/assets/image%20%2871%29.png)
+![](../../.gitbook/assets/image%20%2873%29.png)
 
 上述定理说明了新的Q函数的收敛性，我们的算法中使用 $$h : z \mapsto \operatorname{sign}(z)(\sqrt{|z|+1}-1)+\varepsilon z \text { with } \varepsilon=10^{-2}$$ 。
 
 新的损失函数可写为：
 
-![](../../.gitbook/assets/image%20%2876%29.png)
+![](../../.gitbook/assets/image%20%2878%29.png)
 
 ### Temporal consistency \(TC\) loss
 

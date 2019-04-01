@@ -8,5 +8,15 @@
 
 ## 方法
 
+### Life long learning
+
+![](../../.gitbook/assets/image%20%2855%29.png)
+
+《我的世界》是一个终身学习问题
+
+![](../../.gitbook/assets/image%20%2861%29.png)
+
+### 
+
 
 
