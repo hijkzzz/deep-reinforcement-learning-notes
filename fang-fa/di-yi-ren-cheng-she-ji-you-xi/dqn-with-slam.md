@@ -1,4 +1,4 @@
-# SLAM-Augmented DQN
+# DQN with SLAM
 
 ## 介绍
 
