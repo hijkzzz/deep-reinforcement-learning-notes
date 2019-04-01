@@ -10,7 +10,7 @@
 
 ![](../../.gitbook/assets/image%20%2841%29.png)
 
-![](../../.gitbook/assets/image%20%2875%29.png)
+![](../../.gitbook/assets/image%20%2879%29.png)
 
 ### Agents
 
@@ -26,19 +26,19 @@
 
 controller
 
-![](../../.gitbook/assets/image%20%2850%29.png)
+![](../../.gitbook/assets/image%20%2853%29.png)
 
 meta-controller
 
-![](../../.gitbook/assets/image%20%2869%29.png)
+![](../../.gitbook/assets/image%20%2872%29.png)
 
 然后用类似TD的算法学习
 
-![](../../.gitbook/assets/image%20%2855%29.png)
+![](../../.gitbook/assets/image%20%2858%29.png)
 
 ### 伪代码
 
-![](../../.gitbook/assets/image%20%2860%29.png)
+![](../../.gitbook/assets/image%20%2863%29.png)
 
 ## 实验
 
@@ -48,7 +48,7 @@ meta-controller
 
 内部批评者在 $$\left\langle\text {entity}_{1}, \text { relation, entity }_{2}\right\rangle$$ 的空间中定义，其中relation是实体上的的配置。在我们的实验中，代理可以自由选择任何entity2。 例如，如果代理人到达诸如门之类的其他实体，则认为代理人已经完成了目标（并且接收了回报）。
 
-![](../../.gitbook/assets/image%20%2846%29.png)
+![](../../.gitbook/assets/image%20%2848%29.png)
 
 
 
