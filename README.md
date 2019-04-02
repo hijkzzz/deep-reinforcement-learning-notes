@@ -1,11 +1,5 @@
 # 介绍
 
-## 深度强化学习
-
-Ian Goodfellow and Yoshua Bengio and Aaron Courville. [Deep Learning](http://www.deeplearningbook.org/)
-
-Richard S. Sutton and Andrew G. Barto. [Reinforcement Learning: An Introduction](http://incompleteideas.net/book/the-book-2nd.html)
-
 ## [深度学习玩视频游戏](http://arxiv.org/pdf/1708.07902)
 
 > [GitBook 电子书](https://hujian.gitbook.io/deep-learning-for-video-game-playing)/用 [gitbook-cli  ](https://www.npmjs.com/package/gitbook-cli)本地部署

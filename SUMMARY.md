@@ -4,6 +4,7 @@
 
 ## 前言
 
+* [相关书籍](qian-yan/xiang-guan-shu-ji.md)
 * [神经网络模型](qian-yan/shen-jing-wang-luo-mo-xing.md)
 * [神经网络学习算法](qian-yan/shen-jing-wang-luo-xue-xi-suan-fa.md)
 * [研究平台](qian-yan/yan-jiu-ping-tai/README.md)
