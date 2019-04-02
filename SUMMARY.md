@@ -30,6 +30,7 @@
   * [Multiagent DQN](fang-fa/jie-ji-you-xi/multiagent-deep-q-network.md)
   * [A3C](fang-fa/jie-ji-you-xi/asynchronous-deep-reinforcement-learning.md)
   * [Off-Policy Actor-Critic](fang-fa/jie-ji-you-xi/off-policy-actor-critic.md)
+  * [Retrace\(λ\)](fang-fa/jie-ji-you-xi/retrace-l.md)
   * [ACER](fang-fa/jie-ji-you-xi/actor-critic-with-experience-replay.md)
   * [Progressive  Neural Networks](fang-fa/jie-ji-you-xi/progressive-neural-networks.md)
   * [ACKTR](fang-fa/jie-ji-you-xi/actor-critic-using-kronecker-factored-trust-region.md)
