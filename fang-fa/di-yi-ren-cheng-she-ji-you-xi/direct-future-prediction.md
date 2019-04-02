@@ -47,7 +47,7 @@ $$
 
 ### ARCHITECTURE
 
-![](../../.gitbook/assets/image%20%2885%29.png)
+![](../../.gitbook/assets/image%20%2895%29.png)
 
 这里使用了类似于Dueling的网络结构，首先通过卷积网络、全连接网络得到 $$s, m, g$$ 。然后预测一个 $$E$$ 
 
@@ -65,13 +65,13 @@ $$
 
 ### 固定场景
 
-![](../../.gitbook/assets/image%20%2848%29.png)
+![](../../.gitbook/assets/image%20%2852%29.png)
 
-![](../../.gitbook/assets/image%20%2855%29.png)
+![](../../.gitbook/assets/image%20%2860%29.png)
 
 ### 与目标无关的训练
 
-![](../../.gitbook/assets/image%20%2850%29.png)
+![](../../.gitbook/assets/image%20%2855%29.png)
 
 
 
