@@ -40,13 +40,13 @@ SLAM（Simultaneous Localization and Mapping），同步定位与地图构建，
 
 ### Recognition and Reconstruction
 
-![](../../.gitbook/assets/image%20%2880%29.png)
+![](../../.gitbook/assets/image%20%2881%29.png)
 
 一旦我们有了相机姿势和一个物体蒙版深度图，我们就可以在地图上投影当前帧。
 
 ## 测试
 
-![](../../.gitbook/assets/image%20%2881%29.png)
+![](../../.gitbook/assets/image%20%2882%29.png)
 
 
 
