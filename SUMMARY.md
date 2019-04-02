@@ -62,7 +62,7 @@
   * [Direct Perception](fang-fa/jing-su-you-xi/deep-driving.md)
   * [DDPG](fang-fa/jing-su-you-xi/ddpg.md)
 * [第一人称射击游戏](fang-fa/di-yi-ren-cheng-she-ji-you-xi/README.md)
-  * [DQN with SLAM](fang-fa/di-yi-ren-cheng-she-ji-you-xi/dqn-with-slam.md)
+  * [SLAM-Augmented DQN](fang-fa/di-yi-ren-cheng-she-ji-you-xi/dqn-with-slam.md)
   * [Direct Future Prediction](fang-fa/di-yi-ren-cheng-she-ji-you-xi/direct-future-prediction.md)
 * [开放世界游戏](fang-fa/kai-fang-shi-jie-you-xi/README.md)
   * [H-DRLN](fang-fa/kai-fang-shi-jie-you-xi/h-drln.md)
