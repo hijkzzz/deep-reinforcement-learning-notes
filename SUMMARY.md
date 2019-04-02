@@ -66,6 +66,8 @@
   * [Direct Future Prediction](fang-fa/di-yi-ren-cheng-she-ji-you-xi/direct-future-prediction.md)
 * [开放世界游戏](fang-fa/kai-fang-shi-jie-you-xi/README.md)
   * [H-DRLN](fang-fa/kai-fang-shi-jie-you-xi/h-drln.md)
+  * [Recurrent  Memory  Q-Network](fang-fa/kai-fang-shi-jie-you-xi/recurrent-memory-q-network.md)
+  * [Teacher-Student Curriculum Learning](fang-fa/kai-fang-shi-jie-you-xi/teacher-student-curriculum-learning.md)
 * [即时战略游戏](fang-fa/ji-shi-zhan-lve-you-xi.md)
 * [团队体育游戏](fang-fa/tuan-dui-ti-yu-you-xi.md)
 * [文字冒险游戏](fang-fa/wen-zi-mao-xian-you-xi.md)
