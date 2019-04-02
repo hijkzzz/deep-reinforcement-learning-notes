@@ -1,4 +1,4 @@
-# Recurrent Memory Q-Network
+# Feedback Recurrent Memory Q-Network
 
 ## 介绍
 
