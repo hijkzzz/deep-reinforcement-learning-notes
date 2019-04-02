@@ -2,7 +2,7 @@
 description: 本页为经典的深度强化学习基础知识的书籍
 ---
 
-# 相关资料
+# 经典书籍
 
 ## 深度学习
 
@@ -10,7 +10,7 @@ description: 本页为经典的深度强化学习基础知识的书籍
 
 [Ian Goodfellow and Yoshua Bengio and Aaron Courville. Deep Learning](http://www.deeplearningbook.org/)
 
-\_\_[深度学习论文笔记](https://github.com/hijkzzz/deep-learning)
+\_\_[Deep Learning Notes](https://github.com/hijkzzz/deep-learning)
 
 ## 强化学习
 
