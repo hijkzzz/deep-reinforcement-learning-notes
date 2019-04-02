@@ -66,11 +66,11 @@ _扩展到Actor-Critic_
 
 critic梯度
 
-$$\left(v_{s}-V_{\theta}\left(x_{s}\right)\right) \nabla_{\theta} V_{\theta}\left(x_{s}\right)$$ \_\_
+$$\left(v_{s}-V_{\theta}\left(x_{s}\right)\right) \nabla_{\theta} V_{\theta}\left(x_{s}\right)$$ 
 
 _actor梯度_
 
-\_\_$$\rho_{s} \nabla_{\omega} \log \pi_{\omega}\left(a_{s} | x_{s}\right)\left(r_{s}+\gamma v_{s+1}-V_{\theta}\left(x_{s}\right)\right)$$ \_\_
+$$\rho_{s} \nabla_{\omega} \log \pi_{\omega}\left(a_{s} | x_{s}\right)\left(r_{s}+\gamma v_{s+1}-V_{\theta}\left(x_{s}\right)\right)$$ 
 
 为了防止过早收敛，我们可能增加_一个_熵
 
