@@ -1,8 +1,14 @@
 ---
-description: 本页为经典的深度强化学习基础知识的书籍
+description: 本页为深度强化学习相关的经典书籍
 ---
 
 # 经典书籍
+
+## 强化学习
+
+![](../.gitbook/assets/image%20%2894%29.png)
+
+[Richard S. Sutton and Andrew G. Barto. Reinforcement Learning: An Introduction](http://incompleteideas.net/book/the-book-2nd.html)
 
 ## 深度学习
 
@@ -12,11 +18,7 @@ description: 本页为经典的深度强化学习基础知识的书籍
 
 \_\_[Deep Learning Notes](https://github.com/hijkzzz/deep-learning)
 
-## 强化学习
 
-![](../.gitbook/assets/image%20%2894%29.png)
-
-[Richard S. Sutton and Andrew G. Barto. Reinforcement Learning: An Introduction](http://incompleteideas.net/book/the-book-2nd.html)
 
 
 
