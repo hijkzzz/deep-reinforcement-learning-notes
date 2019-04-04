@@ -52,7 +52,7 @@ CTS密度模型基于算法Context Tree Switching，一种Bayesian variable-orde
 
 Q-Learning
 
-![](../../.gitbook/assets/image%20%2897%29.png)
+![](../../.gitbook/assets/image%20%28105%29.png)
 
 众所周知，在学习效率和近似误差方面，通过多步方法可以获得更好的性能。这些方法在一步学习和蒙特卡罗更新之间进行插值：
 
@@ -102,11 +102,11 @@ $$
 
 避免密度模型的小批量更新的另一个更微妙的原因（尽管有要求\(d\)）是一个实际的优化问题。PG的计算\(必须在线\)包括模型更新，与深度神经网络一起使用的高级优化器，如本工作中使用的RMSProp优化器，是有状态的，跟踪运行中的例如模型参数的平均值和方差。如果模型是从小批量处理的，那么两个更新流可能会显示不同的统计特征，使优化算法的假设无效，导致训练速度变慢或不稳定。
 
-![](../../.gitbook/assets/image%20%2827%29.png)
+![](../../.gitbook/assets/image%20%2830%29.png)
 
 我们探索了不同的学习速率
 
-![](../../.gitbook/assets/image%20%2824%29.png)
+![](../../.gitbook/assets/image%20%2826%29.png)
 
 #### Computing the Pseudo-Count
 
@@ -122,11 +122,11 @@ $$
 
 ### DQN
 
-![](../../.gitbook/assets/image%20%28107%29.png)
+![](../../.gitbook/assets/image%20%28115%29.png)
 
 ### Reactor
 
-![](../../.gitbook/assets/image%20%2850%29.png)
+![](../../.gitbook/assets/image%20%2855%29.png)
 
 ### Quality of the Density Model
 
@@ -134,7 +134,7 @@ $$
 
 ### Importance of the Monte Carlo Return
 
-![](../../.gitbook/assets/image%20%2820%29.png)
+![](../../.gitbook/assets/image%20%2822%29.png)
 
 
 

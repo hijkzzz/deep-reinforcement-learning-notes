@@ -10,17 +10,17 @@
 
 ### Life long learning
 
-![](../../.gitbook/assets/image%20%2871%29.png)
+![](../../.gitbook/assets/image%20%2877%29.png)
 
 《我的世界》是一个终身学习问题
 
-![](../../.gitbook/assets/image%20%2877%29.png)
+![](../../.gitbook/assets/image%20%2883%29.png)
 
 ### Deep Skill Module
 
 预先学习的技能被表示为深层网络，被称为Deep Skill Networks（DSNs）。即使用我们的DQN算法版本以及常规经验重放（ER）对不同的任务进行了先验训练。我们定义了两种类型的DSN，如图3中的ModuleA和ModuleB。前者即神经网络版，后者为策略蒸馏的版本。
 
-![](../../.gitbook/assets/image%20%2830%29.png)
+![](../../.gitbook/assets/image%20%2833%29.png)
 
 ### H-DRLN architecture
 
@@ -50,7 +50,7 @@ $$
 
 状态空间表示为来自最后四个图像帧的原始图像像素，这些像素被组合并下采样为84×84像素图像。动作 - DSN的原始动作空间由六个动作组成：（1）向前移动，（2）向左旋转30°，（3）向右旋转30°，（4）向内旋转，（5）拾取项目和（ 6）放置它。奖励——在所有领域，代理人在每一步后都会得到一个小的负面奖励信号，在达到最终目标时会得到一个非负面的奖励。见图4和图5。
 
-![](../../.gitbook/assets/image%20%2817%29.png)
+![](../../.gitbook/assets/image%20%2819%29.png)
 
 ### Training a DSN
 
@@ -64,17 +64,17 @@ $$
 
 我们在两个房间领域（图4）训练了H-DRLN架构以及标准DQN。
 
-![](../../.gitbook/assets/image%20%2839%29.png)
+![](../../.gitbook/assets/image%20%2844%29.png)
 
 ### Training an H-DRLN with a Deep Skill Module
 
 在本节中，我们将讨论我们的培训结果，并使用深度技能模块来利用H-DRLN来解决复杂的Minecraft领域。
 
-![](../../.gitbook/assets/image%20%2879%29.png)
+![](../../.gitbook/assets/image%20%2885%29.png)
 
 这里的Deep Skill Module即多技能网络，通过多个Teacher网络指导一个Student学习多种技能。
 
-![](../../.gitbook/assets/image%20%28108%29.png)
+![](../../.gitbook/assets/image%20%28116%29.png)
 
 
 
