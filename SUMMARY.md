@@ -74,7 +74,6 @@
   * [Puppet Search](fang-fa/ji-shi-zhan-lve-you-xi/puppet-search.md)
   * [Combining strategic learning and tactical search in real-time strategy games](fang-fa/ji-shi-zhan-lve-you-xi/combining-strategic-learning-and-tactical-search-in-real-time-strategy-games.md)
   * [Counterfactual multi-agent policy gradients](fang-fa/ji-shi-zhan-lve-you-xi/counterfactual-multi-agent-policy-gradients.md)
-  * [All learning is local: Multiagent learning in global reward games](fang-fa/ji-shi-zhan-lve-you-xi/all-learning-is-local-multiagent-learning-in-global-reward-games.md)
   * [Zero Order](fang-fa/ji-shi-zhan-lve-you-xi/zero-order.md)
   * [IQL](fang-fa/ji-shi-zhan-lve-you-xi/iql.md)
   * [BiC-Net](fang-fa/ji-shi-zhan-lve-you-xi/bic-net.md)
