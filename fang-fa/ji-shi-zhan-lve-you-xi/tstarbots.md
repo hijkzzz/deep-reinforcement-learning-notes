@@ -1,4 +1,4 @@
-# TStarBots
+# Macro-action PPO
 
 ## 介绍
 
