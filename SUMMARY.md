@@ -79,6 +79,7 @@
   * [COMA](fang-fa/ji-shi-zhan-lve-you-xi/counterfactual-multi-agent-policy-gradients.md)
   * [Macro-action SL](fang-fa/ji-shi-zhan-lve-you-xi/macro-action-sl.md)
   * [Macro-action PPO](fang-fa/ji-shi-zhan-lve-you-xi/tstarbots.md)
+  * [On Reinforcement Learning for Full-length Game of StarCraft](fang-fa/ji-shi-zhan-lve-you-xi/on-reinforcement-learning-for-full-length-game-of-starcraft.md)
 * [团队体育游戏](fang-fa/tuan-dui-ti-yu-you-xi/README.md)
   * [DDPG + Inverting Gradients](fang-fa/tuan-dui-ti-yu-you-xi/ddpg-+-inverting-gradients.md)
   * [DDPG + Mixing policy targets](fang-fa/tuan-dui-ti-yu-you-xi/ddpg-+-mixing-policy-targets.md)
