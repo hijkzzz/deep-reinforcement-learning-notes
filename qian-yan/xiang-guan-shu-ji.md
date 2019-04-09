@@ -6,13 +6,13 @@ description: 本页为深度强化学习相关的经典书籍
 
 ## 强化学习
 
-![](../.gitbook/assets/image%20%28135%29.png)
+![](../.gitbook/assets/image%20%28139%29.png)
 
 [Richard S. Sutton and Andrew G. Barto. Reinforcement Learning: An Introduction](http://incompleteideas.net/book/the-book-2nd.html)
 
 ## 深度学习
 
-![](../.gitbook/assets/image%20%28131%29.png)
+![](../.gitbook/assets/image%20%28135%29.png)
 
 [Ian Goodfellow and Yoshua Bengio and Aaron Courville. Deep Learning](http://www.deeplearningbook.org/)
 

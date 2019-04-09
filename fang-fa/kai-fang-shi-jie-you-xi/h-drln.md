@@ -10,11 +10,11 @@
 
 ### Life long learning
 
-![](../../.gitbook/assets/image%20%2898%29.png)
+![](../../.gitbook/assets/image%20%28100%29.png)
 
 《我的世界》是一个终身学习问题
 
-![](../../.gitbook/assets/image%20%28106%29.png)
+![](../../.gitbook/assets/image%20%28108%29.png)
 
 ### Deep Skill Module
 
@@ -64,17 +64,17 @@ $$
 
 我们在两个房间领域（图4）训练了H-DRLN架构以及标准DQN。
 
-![](../../.gitbook/assets/image%20%2860%29.png)
+![](../../.gitbook/assets/image%20%2861%29.png)
 
 ### Training an H-DRLN with a Deep Skill Module
 
 在本节中，我们将讨论我们的培训结果，并使用深度技能模块来利用H-DRLN来解决复杂的Minecraft领域。
 
-![](../../.gitbook/assets/image%20%28108%29.png)
+![](../../.gitbook/assets/image%20%28110%29.png)
 
 这里的Deep Skill Module即多技能网络，通过多个Teacher网络指导一个Student学习多种技能。
 
-![](../../.gitbook/assets/image%20%28145%29.png)
+![](../../.gitbook/assets/image%20%28150%29.png)
 
 
 
