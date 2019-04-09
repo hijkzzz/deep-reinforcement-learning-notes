@@ -8,9 +8,9 @@
 
 ## 算法
 
-![](../../.gitbook/assets/image%20%2876%29.png)
+![](../../.gitbook/assets/image%20%2877%29.png)
 
-![](../../.gitbook/assets/image%20%28141%29.png)
+![](../../.gitbook/assets/image%20%28142%29.png)
 
 ### Agents
 
@@ -26,29 +26,29 @@
 
 controller
 
-![](../../.gitbook/assets/image%20%2894%29.png)
+![](../../.gitbook/assets/image%20%2895%29.png)
 
 meta-controller
 
-![](../../.gitbook/assets/image%20%28128%29.png)
+![](../../.gitbook/assets/image%20%28129%29.png)
 
 然后用类似TD的算法学习
 
-![](../../.gitbook/assets/image%20%28101%29.png)
+![](../../.gitbook/assets/image%20%28102%29.png)
 
 ### 伪代码
 
-![](../../.gitbook/assets/image%20%28112%29.png)
+![](../../.gitbook/assets/image%20%28113%29.png)
 
 ## 实验
 
-![](../../.gitbook/assets/image%20%2869%29.png)
+![](../../.gitbook/assets/image%20%2870%29.png)
 
 代理需要内在的动机去探索场景中有意义的部分，然后才能了解为自己获取钥匙的好处。受developmental psychology literature和面向对象MDP的启发，我们用场景中的entities 或者 objects来参数化环境中的目标。尽管近年来直接从图像或运动数据中获取目标的研究取得了一定的进展，但在计算机视觉中，对视觉场景中目标的无监督检测一直是一个悬而未决的问题。在这项工作中，我们构建了一个定制的对象检测器，它提供了可信的对象候选者。
 
 内部批评者在 $$\left\langle\text {entity}_{1}, \text { relation, entity }_{2}\right\rangle$$ 的空间中定义，其中relation是实体上的的配置。在我们的实验中，代理可以自由选择任何entity2。 例如，如果代理人到达诸如门之类的其他实体，则认为代理人已经完成了目标（并且接收了回报）。
 
-![](../../.gitbook/assets/image%20%2887%29.png)
+![](../../.gitbook/assets/image%20%2888%29.png)
 
 
 
