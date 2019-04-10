@@ -16,17 +16,17 @@
 
 另一种可能性是首先选择一个单元，然后是一个应用于该单元的命令，它使用2 \| s \|步骤进行状态算法。 由于在确定所有命令后由环境同时执​​行命令，因此累积奖励不依赖于我们选择单元的顺序。 更进一步，我们可以让贪婪的MDP中的环境选择下一个单元，例如，在剩余单元中随机统一选择。于是状态集可以定义为：
 
-![](../../.gitbook/assets/image%20%2856%29.png)
+![](../../.gitbook/assets/image%20%2859%29.png)
 
 其中s为输入状态，a为动作（由c、a组成），u为单位，c为单位执行的命令
 
 状态转移概率为：
 
-![](../../.gitbook/assets/image%20%2851%29.png)
+![](../../.gitbook/assets/image%20%2854%29.png)
 
 最后，使用与上述相同的符号，表示算法的中间步骤的状态之间的奖励是0，并且最后一个单元接收奖励：
 
-![](../../.gitbook/assets/image%20%28141%29.png)
+![](../../.gitbook/assets/image%20%28149%29.png)
 
 ### Normalized cumulative rewards
 
@@ -34,11 +34,11 @@
 
 我们提出了一种简单的方法，在每个状态的基础上标准化即时奖励，假设一个比例因子 $$z(s)$$ 对学习者可用，它可以是简单的单位数量。
 
-![](../../.gitbook/assets/image%20%28111%29.png)
+![](../../.gitbook/assets/image%20%28117%29.png)
 
 将其应用于Bellman方程\(1\)，得到
 
-![](../../.gitbook/assets/image%20%2852%29.png)
+![](../../.gitbook/assets/image%20%2855%29.png)
 
 ### Raw state information and featurization
 
@@ -62,7 +62,7 @@ Scoring with respect to action type
 
 现在，我们提出了在离散动作空间中探索确定性策略的算法，该算法基于由深度神经网络参数化的策略。该算法可以看作是一种启发式算法。我们的策略可以表示为：
 
-![](../../.gitbook/assets/image%20%2842%29.png)
+![](../../.gitbook/assets/image%20%2845%29.png)
 
 为了在一集中以一致的方式探索策略空间，我们在单位球面上均匀地采样一个向量 $$ u$$ ，并运行策略 $$\pi_{w}+\delta u, \theta$$ ，其中 $$δ> 0$$ 是一个超参数。除了在政策空间中实施本地随机搜索之外，随机化的动机来自随机无梯度优化。梯度可以表示为：
 
@@ -70,11 +70,11 @@ Scoring with respect to action type
 
 算法可以表示为
 
-![](../../.gitbook/assets/image%20%2850%29.png)
+![](../../.gitbook/assets/image%20%2853%29.png)
 
 ## 实验
 
  
 
-![](../../.gitbook/assets/image%20%2885%29.png)
+![](../../.gitbook/assets/image%20%2890%29.png)
 

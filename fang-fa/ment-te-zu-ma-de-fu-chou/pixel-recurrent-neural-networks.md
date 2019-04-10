@@ -44,11 +44,11 @@ $$
 
 Row LSTM是一个单向层，可以从上到下逐行处理图像，同时计算整行; 计算是用一维卷积进行的。 对于像素，该层捕获像素上方的大致三角形上下文，如图4（中心）所示。一维卷积的形状为 $$k \times 1$$ ，卷积中的权重共享确保沿每行的计算特征的平移不变性。
 
-![](../../.gitbook/assets/image%20%2828%29.png)
+![](../../.gitbook/assets/image%20%2829%29.png)
 
 LSTM的计算方法如下：
 
-![](../../.gitbook/assets/image%20%2846%29.png)
+![](../../.gitbook/assets/image%20%2849%29.png)
 
 $$\mathbf{x}_{i}$$ 的形状为 $$h \times n \times 1$$ ，是输入特征图的一行。圆圈里面的星号表示卷积，圆圈里面的点表示逐元素点乘。 $$\mathbf{K}^{s s} \text { and } \mathbf{K}^{i s}$$ 分别是state-to-state和input-to-state的权重参数。 $$\mathbf{o}_{i}, \mathbf{f}_{i}, \mathbf{i}_{i}, \mathbf{g}_{i}$$ 分别是输出门，遗忘门，输入门和输入内容。因为Row LSTM有一个三角形感受域\(图4 \)，所以它不能捕获整个可用的上下文。
 
@@ -56,7 +56,7 @@ $$\mathbf{x}_{i}$$ 的形状为 $$h \times n \times 1$$ ，是输入特征图的
 
 Diagonal BiLSTM旨在实现计算的并行化并捕获整个可用的上下文图像大小。层的两个方向中的每一个以对角线方式对图像进行扫描，从顶部的角度开始并到达底部的对角。 计算中的每个步骤一次计算沿图像中对角线的LSTM状态。 图4（右）说明了计算和得到的感受野。
 
-![](../../.gitbook/assets/image%20%2875%29.png)
+![](../../.gitbook/assets/image%20%2880%29.png)
 
 我们首先将输入图倾斜到一个空间，使其易于沿对角线应用卷积。倾斜操作相对于前一行将输入图的每一行偏移一个位置，如图3所示。此时，我们可以计算Diagonal BiLSTM的state-to-state和input-to-state的组件。或两个方向中的每一个，input-to-state组件是简单的1×1卷积，并贡献于LSTM核心中的四个门；该操作产生 $$4 h \times n \times n$$ 的张量。然后使用2×1的逐列的核 $$K^{s s}$$ 来计算state-to-state组件。该步骤采用先前的隐藏状态和单元状态，组合输入到状态分量的分量，并产生下一个隐藏状态和单元状态，如等式3中定义的。然后，通过移除偏移位置，输出图被倾斜回n×n。这种计算在两个方向上都重复进行。给定两个输出图，为了防止图层看到未来的像素，然后将right输出图向下移动一行并添加到左输出图上。
 
@@ -64,7 +64,7 @@ Diagonal BiLSTM旨在实现计算的并行化并捕获整个可用的上下文�
 
 为了处理深层网络，我们还考虑加入残差连接
 
-![](../../.gitbook/assets/image%20%2866%29.png)
+![](../../.gitbook/assets/image%20%2870%29.png)
 
 #### Masked Convolution
 
@@ -84,13 +84,13 @@ Diagonal BiLSTM旨在实现计算的并行化并捕获整个可用的上下文�
 
 网络设置
 
-![](../../.gitbook/assets/image%20%28118%29.png)
+![](../../.gitbook/assets/image%20%28125%29.png)
 
 我们所有的模型都是根据来自离散分布的对数似然损失函数进行训练和评估的。
 
 评价指标为归一化的负的对数似然损失。
 
-![](../../.gitbook/assets/image%20%28128%29.png)
+![](../../.gitbook/assets/image%20%28136%29.png)
 
 
 

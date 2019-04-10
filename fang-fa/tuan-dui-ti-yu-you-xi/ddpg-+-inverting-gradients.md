@@ -14,17 +14,17 @@ RoboCup是一项国际机器人足球比赛，旨在促进人工智能和机器�
 
 该代理使用一个低级别，以自我为中心的观点，使用58个连续值特征进行编码。这些特征是通过Helios-Agent2D（Akiyama，2010）世界模型得出的，并提供与各种重要现场对象（如球， 目标，以及其他球员。
 
-![](../../.gitbook/assets/image%20%2839%29.png)
+![](../../.gitbook/assets/image%20%2842%29.png)
 
 Half Field Offense具有低级参数化动作空间。 有四种相互排斥的离散动作：Dash，Turn，Tackle和Kick。 在每个时间步，代理必须选择这四个中的一个来执行。每个动作都有1-2个连续值参数，这些参数也必须指定。 代理必须选择它希望执行的离散动作以及该动作所需的连续值参数。
 
 HFO领域的真正奖励来自赢得完整的比赛。 然而，这种奖励信号对于学习代理人获得牵引力来说太过稀疏。相反，我们引入了一个手工制作的奖励信号，其中包含四个部分：Move To Ball Reward提供与代理和balld之间距离变化成比例的标量奖励 $$d(a, b)$$ 。Kick To Goal Reward与球和球门中心之间的距离变化成比例 $$d(b, g)$$ 。 为进球而得分的额外奖励。
 
-![](../../.gitbook/assets/image%20%28121%29.png)
+![](../../.gitbook/assets/image%20%28129%29.png)
 
 ### Actor-Critic architecture
 
-![](../../.gitbook/assets/image%20%2891%29.png)
+![](../../.gitbook/assets/image%20%2897%29.png)
 
 ### PARAMETERIZED ACTION SPACE ARCHITECTURE
 
@@ -62,11 +62,11 @@ $$
 
 这种方法捕获了归零和挤压梯度的最佳方面，同时最大限度地减少了缺点。当参数接近其范围的边界时，梯度会缩减，如果参数超出值范围，则会反转。这样可以在避免饱和问题的同时将参数保持在界限范围内。
 
-![](../../.gitbook/assets/image%20%28105%29.png)
+![](../../.gitbook/assets/image%20%28111%29.png)
 
 ## 实验
 
-![](../../.gitbook/assets/image%20%2835%29.png)
+![](../../.gitbook/assets/image%20%2838%29.png)
 
 
 
