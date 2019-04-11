@@ -19,7 +19,7 @@ SC2LE \[15\]是由DeepMind和Blizzard联合开发的平台。 暴雪提供的游
 
 #### A Macro Action Based Reinforcement Learning Agent
 
-![](../../.gitbook/assets/image%20%2810%29.png)
+![](../../.gitbook/assets/image%20%2811%29.png)
 
 #### Macro Actions
 
@@ -28,7 +28,7 @@ SC2LE \[15\]是由DeepMind和Blizzard联合开发的平台。 暴雪提供的游
 1. 仅使用试错法对游戏的内在规则进行编码，这些规则难以学习
 2. 通过硬编码决策隐藏学习算法中的不重要决策
 
-![](../../.gitbook/assets/image%20%2813%29.png)
+![](../../.gitbook/assets/image%20%2814%29.png)
 
 #### Observations and Rewards
 
@@ -53,7 +53,7 @@ SC2LE \[15\]是由DeepMind和Blizzard联合开发的平台。 暴雪提供的游
 
 为了提高灵活性，我们创建了一组不同的动作，如图3所示。我们既包括宏观行动，也包括微观行动，组织在两层结构中。
 
-![](../../.gitbook/assets/image%20%28134%29.png)
+![](../../.gitbook/assets/image%20%28140%29.png)
 
 这种层次结构有两个优点。 1）每个控制器都有自己的观察/动作空间，这样就可以更容易地过滤出无关信息;在对子任务Q头进行建模时，\[32\]也采用并讨论了这一点。 2）层次结构更好地捕获游戏的动作结构，同时来自不同控制器的动作。
 
@@ -61,7 +61,7 @@ SC2LE \[15\]是由DeepMind和Blizzard联合开发的平台。 暴雪提供的游
 
 如图4所示，每个控制器代表一个模块，以类似于UrbertaBot的方式组织。 第一层模块（CombatStrategy，ProductionStrategy）仅发出高级命令（宏操作），而第二层模块（Combat，Scout，Resourceand Building）发出低级命令（微动作）。
 
-![](../../.gitbook/assets/image%20%2811%29.png)
+![](../../.gitbook/assets/image%20%2812%29.png)
 
 #### Data Context
 
@@ -108,7 +108,7 @@ DataContext模块用作模块交换信息的“黑板”。 DataContext中包含
 
 ## 实验
 
-![](../../.gitbook/assets/image%20%2833%29.png)
+![](../../.gitbook/assets/image%20%2836%29.png)
 
 
 

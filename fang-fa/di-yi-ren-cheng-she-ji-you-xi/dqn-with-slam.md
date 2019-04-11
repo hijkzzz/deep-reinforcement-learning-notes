@@ -32,7 +32,7 @@ SLAM（Simultaneous Localization and Mapping），同步定位与地图构建，
 
 
 
-![](../../.gitbook/assets/image%20%288%29.png)
+![](../../.gitbook/assets/image%20%289%29.png)
 
 当探测器探索环境时，我们同时估计探测器和障碍物（例如墙壁）的定位，以便从每个帧的第一人称视角构建周围3D环境的地图。 同时，我们检测场景中的重要物体，如武器和弹药。 并且由于我们希望最小化增强代表的维度以允许更有效的学习，我们将所有语义信息投影到具有固定大小的单个公共2D地图上。 基本上是一个“平面图”，其中包含对象和代理的位置。 这是通过以热图的形式通过不同的灰度值对不同的性质进行编码来实现的。
 
@@ -40,13 +40,13 @@ SLAM（Simultaneous Localization and Mapping），同步定位与地图构建，
 
 ### Recognition and Reconstruction
 
-![](../../.gitbook/assets/image%20%28132%29.png)
+![](../../.gitbook/assets/image%20%28138%29.png)
 
 一旦我们有了相机姿势和一个物体蒙版深度图，我们就可以在地图上投影当前帧。
 
 ## 测试
 
-![](../../.gitbook/assets/image%20%28133%29.png)
+![](../../.gitbook/assets/image%20%28139%29.png)
 
 
 

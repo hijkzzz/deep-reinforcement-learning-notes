@@ -16,7 +16,7 @@
 
 为了适应我们假设的同步移动游戏的Puppet Search搜索框架，我们修改了ABCD搜索，它考虑了Puppet移动序列，并考虑到在任何时间点两个玩家都执行Puppet 移动。第9行，最大搜索深度假设为偶数，这允许两个玩家选择一个Puppet 向前移动。在第4行，生成当前玩家的移动。它们包含选择点决策以及移动它的玩家。之后，如果从上一个递归调用\(第5行\)没有传递任何移动，当前玩家的 $$m_{2}$$ 将被传递到下一个PUPPETABCD调用在第6行。否则，两个玩家的动作都将应用到状态\(第9行\)。应用移动的确切机制是特定于域的。我们稍后将给出一个特定于RTS游戏的示例（算法2）。
 
-![](../../.gitbook/assets/image%20%2814%29.png)
+![](../../.gitbook/assets/image%20%2815%29.png)
 
 ### Puppet Search in RTS Games
 
@@ -36,7 +36,7 @@
 
 每次我们需要应用移动时，脚本都会运行，并返回要构建的有序建筑物列表（第3,4行）。在第8行，状态被转发，直到满足列表中下一个建筑的先决条件\(资源和其他建筑\)。然后，该建筑被添加到BOSS 建造队列\(第9行\)，以便下次经济受到保护时，其建设将开始。然后，在第10行，小队移动和战斗被转发到相同数量的帧外。然后将查询脚本以检查它们是否已经到达未定的选择点，在这种情况下转发停止。这个循环一直持续到构建列表变空、游戏结束或者达到给定的帧限制。为简单起见，我们在第2行将该帧限制显示为常数。
 
-![](../../.gitbook/assets/image%20%28156%29.png)
+![](../../.gitbook/assets/image%20%28162%29.png)
 
 #### Search
 
@@ -54,13 +54,13 @@
 
 实验使用12个VirtualBox虚拟机（VM）进行，每个虚拟机配备2个运行速度为2.5GHz的IntelXeon E5420 CPU核心和2GB RAM。客户操作系统是Microsoft Windows XPSP3。The StarCraft AI Tournament Manager用来协调比赛。默认的锦标赛超时策略已被更改，允许我们的机器人在构建队列每2000帧用完时花费6秒的搜索时间。
 
-![](../../.gitbook/assets/image%20%2856%29.png)
+![](../../.gitbook/assets/image%20%2859%29.png)
 
-![](../../.gitbook/assets/image%20%28116%29.png)
+![](../../.gitbook/assets/image%20%28122%29.png)
 
-![](../../.gitbook/assets/image%20%2894%29.png)
+![](../../.gitbook/assets/image%20%2899%29.png)
 
-![](../../.gitbook/assets/image%20%2882%29.png)
+![](../../.gitbook/assets/image%20%2887%29.png)
 
 
 

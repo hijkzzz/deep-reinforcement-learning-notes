@@ -10,19 +10,19 @@
 
 ### 时间差分和蒙特卡洛的关系
 
-![](../../.gitbook/assets/image%20%2831%29.png)
+![](../../.gitbook/assets/image%20%2834%29.png)
 
-![](../../.gitbook/assets/image%20%2893%29.png)
+![](../../.gitbook/assets/image%20%2898%29.png)
 
-![](../../.gitbook/assets/image%20%2875%29.png)
+![](../../.gitbook/assets/image%20%2880%29.png)
 
 ### Computing On-Policy MC Targets
 
-![](../../.gitbook/assets/image%20%2862%29.png)
+![](../../.gitbook/assets/image%20%2865%29.png)
 
 ### Mixing Update Targets
 
-![](../../.gitbook/assets/image%20%2830%29.png)
+![](../../.gitbook/assets/image%20%2833%29.png)
 
 ## 实验
 
@@ -30,7 +30,7 @@
 
 DQN架构\[8\]使用深度神经网络和1步Q-Learning更新来估计每个离散行为的Q值。 使用Arcade学习环境\[2\]，我们评估混合更新对Beam Rider，Breakout，Pong，QBert和Space Invaders的Atari游戏的影响。
 
-![](../../.gitbook/assets/image%20%28119%29.png)
+![](../../.gitbook/assets/image%20%28125%29.png)
 
 ### Results: DDPG
 
@@ -38,9 +38,9 @@ Half Field Offense Domain
 
 回报函数
 
-![](../../.gitbook/assets/image%20%28157%29.png)
+![](../../.gitbook/assets/image%20%28164%29.png)
 
-![](../../.gitbook/assets/image%20%28128%29.png)
+![](../../.gitbook/assets/image%20%28134%29.png)
 
 
 
