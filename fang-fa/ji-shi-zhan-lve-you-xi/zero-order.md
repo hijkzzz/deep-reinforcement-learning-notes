@@ -26,7 +26,7 @@
 
 最后，使用与上述相同的符号，表示算法的中间步骤的状态之间的奖励是0，并且最后一个单元接收奖励：
 
-![](../../.gitbook/assets/image%20%28156%29.png)
+![](../../.gitbook/assets/image%20%28159%29.png)
 
 ### Normalized cumulative rewards
 
@@ -34,7 +34,7 @@
 
 我们提出了一种简单的方法，在每个状态的基础上标准化即时奖励，假设一个比例因子 $$z(s)$$ 对学习者可用，它可以是简单的单位数量。
 
-![](../../.gitbook/assets/image%20%28123%29.png)
+![](../../.gitbook/assets/image%20%28126%29.png)
 
 将其应用于Bellman方程\(1\)，得到
 
@@ -76,5 +76,5 @@ Scoring with respect to action type
 
  
 
-![](../../.gitbook/assets/image%20%2895%29.png)
+![](../../.gitbook/assets/image%20%2897%29.png)
 
