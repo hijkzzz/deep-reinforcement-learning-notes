@@ -2,7 +2,7 @@
 
 ## 介绍
 
-> [Action elimination with deep reinforcement learning](http://scholar.google.com/scholar?q=Action+elimination+with+deep+reinforcement+learning&hl=zh-CN&as_sdt=0&as_vis=1&oi=scholart)
+> [Learn What Not to Learn: Action Elimination with Deep Reinforcement Learning](https://arxiv.org/abs/1809.02121)
 
 
 

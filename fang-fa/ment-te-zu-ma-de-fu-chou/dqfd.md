@@ -32,15 +32,15 @@ $$J(Q)=J_{D Q}(Q)+\lambda_{1} J_{n}(Q)+\lambda_{2} J_{E}(Q)+\lambda_{3} J_{L 2}(
 
 ### 伪代码
 
-![](../../.gitbook/assets/image%20%2860%29.png)
+![](../../.gitbook/assets/image%20%2862%29.png)
 
 ## 实验
 
-![](../../.gitbook/assets/image%20%2891%29.png)
+![](../../.gitbook/assets/image%20%2895%29.png)
 
-![](../../.gitbook/assets/image%20%28107%29.png)
+![](../../.gitbook/assets/image%20%28111%29.png)
 
-![](../../.gitbook/assets/image%20%28150%29.png)
+![](../../.gitbook/assets/image%20%28157%29.png)
 
 
 
