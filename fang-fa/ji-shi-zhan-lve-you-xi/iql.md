@@ -26,7 +26,7 @@
 
 下面讨论部分可观察的情况，定义可观察状态为 $$\hat{s}=\left\{s, \tau_{-a}\right\} \in \hat{S}=S \times T^{n-1}$$ ，即s与其它代理观察状态的并集。在此基础上，我们可以定义部分可观察的回报函数、状态转移方程：
 
-![](../../.gitbook/assets/image%20%28163%29.png)
+![](../../.gitbook/assets/image%20%28164%29.png)
 
 ![](../../.gitbook/assets/image%20%286%29.png)
 

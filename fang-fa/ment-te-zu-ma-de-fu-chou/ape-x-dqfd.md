@@ -26,7 +26,7 @@ $$
 
 新的损失函数可写为：
 
-![](../../.gitbook/assets/image%20%28159%29.png)
+![](../../.gitbook/assets/image%20%28160%29.png)
 
 ### Temporal consistency \(TC\) loss
 

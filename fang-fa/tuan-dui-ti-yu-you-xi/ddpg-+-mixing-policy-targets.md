@@ -38,7 +38,7 @@ Half Field Offense Domain
 
 回报函数
 
-![](../../.gitbook/assets/image%20%28164%29.png)
+![](../../.gitbook/assets/image%20%28166%29.png)
 
 ![](../../.gitbook/assets/image%20%28134%29.png)
 

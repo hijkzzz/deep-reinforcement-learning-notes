@@ -26,7 +26,7 @@
 
 最后，使用与上述相同的符号，表示算法的中间步骤的状态之间的奖励是0，并且最后一个单元接收奖励：
 
-![](../../.gitbook/assets/image%20%28155%29.png)
+![](../../.gitbook/assets/image%20%28156%29.png)
 
 ### Normalized cumulative rewards
 

@@ -12,7 +12,7 @@
 
 我们的分层架构如图1所示。有两种类型的策略运行无关紧要的时间尺度。 控制器决定基于当前观察的每个长时间间隔选择子策略，并且子策略在每个短时间间隔内选择宏动作。
 
-![](../../.gitbook/assets/image%20%28152%29.png)
+![](../../.gitbook/assets/image%20%28153%29.png)
 
 Controller根据观察状态选择子策略： $$a_{t_{c}}^{c}=\Pi\left(s_{t_{c}}^{c}\right), \quad s_{t_{c}}^{c} \in S_{c}$$ ，子策略选择宏动作 $$a_{t_{i}}^{i}=\pi_{i}\left(s_{t_{i}}^{i}\right)$$ ，回报函数为一个周期内子策略的总回报 $$r_{t_{c}}^{c}=r_{t_{i}}^{i}+r_{t_{i}+1}^{i}+\ldots+r_{t_{i}+K-1}^{i}$$ 。由于控制网络每个固定时间间隔K调用子网，因此高级网络的总执行步长变为T / K step。
 
@@ -20,7 +20,7 @@ Controller根据观察状态选择子策略： $$a_{t_{c}}^{c}=\Pi\left(s_{t_{c}
 
 我们通过专家轨迹的数据挖掘获得宏观行动空间。
 
-![](../../.gitbook/assets/image%20%28160%29.png)
+![](../../.gitbook/assets/image%20%28161%29.png)
 
 ### Training Algorithm
 

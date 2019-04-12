@@ -74,7 +74,7 @@ $$
 
 这里的Deep Skill Module即多技能网络，通过多个Teacher网络指导一个Student学习多种技能。
 
-![](../../.gitbook/assets/image%20%28171%29.png)
+![](../../.gitbook/assets/image%20%28174%29.png)
 
 
 

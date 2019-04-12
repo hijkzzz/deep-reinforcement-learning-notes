@@ -10,7 +10,7 @@
 
 ![](../../.gitbook/assets/image%20%2891%29.png)
 
-![](../../.gitbook/assets/image%20%28168%29.png)
+![](../../.gitbook/assets/image%20%28171%29.png)
 
 ### Agents
 
@@ -30,7 +30,7 @@ controller
 
 meta-controller
 
-![](../../.gitbook/assets/image%20%28151%29.png)
+![](../../.gitbook/assets/image%20%28152%29.png)
 
 然后用类似TD的算法学习
 

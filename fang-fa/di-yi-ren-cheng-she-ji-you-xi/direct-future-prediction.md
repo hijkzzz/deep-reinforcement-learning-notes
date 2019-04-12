@@ -47,7 +47,7 @@ $$
 
 ### ARCHITECTURE
 
-![](../../.gitbook/assets/image%20%28167%29.png)
+![](../../.gitbook/assets/image%20%28170%29.png)
 
 这里使用了类似于Dueling的网络结构，首先通过卷积网络、全连接网络得到 $$s, m, g$$ 。然后预测一个 $$E$$ 
 
