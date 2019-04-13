@@ -48,7 +48,7 @@ $$c_{i}$$ 类似于"trace cutting"系数， $$c_{s} \ldots c_{t-1}$$ 的乘积�
 
 #### Actor-Critic algorithm
 
-_策略梯度\(Policy Gradient\)_
+**策略梯度\(Policy Gradient\)**
 
 在on-policy的情况下，价值函数关于策略 $$μ$$ 的参数的梯度为
 
@@ -58,17 +58,19 @@ $$\nabla V^{\mu}\left(x_{0}\right)=\mathbb{E}_{\mu}\left[\sum_{s \geq 0} \gamma^
 
 现在考虑off-policy的情况，我们可以重要性权重来更新策略参数：
 
-$$\mathbb{E}_{a_{s} \sim \mu(\cdot | x_{s})}\left[\frac{\pi_{\overline{\rho}}\left(a_{s} | x_{s}\right)}{\mu\left(a_{s} | x_{s}\right)} \nabla \log \pi_{\overline{\rho}}\left(a_{s} | x_{s}\right) q_{s} | x_{s}\right]$$
+$$\mathbb{E}_{a_{s} \sim \mu(\cdot | x_{s})}\left[\frac{\pi_{\overline{\rho}}\left(a_{s} | x_{s}\right)}{\mu\left(a_{s} | x_{s}\right)} \nabla \log \pi_{\overline{\rho}}\left(a_{s} | x_{s}\right) q_{s} | x_{s}\right] \ \ (4)$$
 
 其中： $$q_{s} \stackrel{\mathrm{def}}{=} r_{s}+\gamma v_{s+1}$$ _，_最后为了减少方差，我们减去了一个强化学习中的基数 $$V\left(x_{s}\right)$$
 
-_扩展到Actor-Critic_
+最后注意\(4\)估计 $$\pi_{\overline{\rho}}$$ 的策略梯度，这是使用截断级别 $$\overline{\rho}$$ 的V-trace算法评估的策略。
+
+**扩展到Actor-Critic**
 
 critic梯度
 
 $$\left(v_{s}-V_{\theta}\left(x_{s}\right)\right) \nabla_{\theta} V_{\theta}\left(x_{s}\right)$$ 
 
-_actor梯度_
+actor梯度
 
 $$\rho_{s} \nabla_{\omega} \log \pi_{\omega}\left(a_{s} | x_{s}\right)\left(r_{s}+\gamma v_{s+1}-V_{\theta}\left(x_{s}\right)\right)$$ 
 
