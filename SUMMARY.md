@@ -5,7 +5,6 @@
 ## 前言
 
 * [神经网络](qian-yan/shen-jing-wang-luo-mo-xing.md)
-* [学习算法](qian-yan/shen-jing-wang-luo-xue-xi-suan-fa.md)
 * [推荐书籍](qian-yan/xiang-guan-shu-ji.md)
 * [研究平台](qian-yan/yan-jiu-ping-tai/README.md)
   * [街机游戏](qian-yan/yan-jiu-ping-tai/jie-ji-you-xi.md)
