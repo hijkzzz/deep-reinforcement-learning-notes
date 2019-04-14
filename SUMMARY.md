@@ -4,8 +4,9 @@
 
 ## 前言
 
-* [神经网络模型](qian-yan/shen-jing-wang-luo-mo-xing.md)
-* [神经网络学习算法](qian-yan/shen-jing-wang-luo-xue-xi-suan-fa.md)
+* [神经网络](qian-yan/shen-jing-wang-luo-mo-xing.md)
+* [学习算法](qian-yan/shen-jing-wang-luo-xue-xi-suan-fa.md)
+* [推荐书籍](qian-yan/xiang-guan-shu-ji.md)
 * [研究平台](qian-yan/yan-jiu-ping-tai/README.md)
   * [街机游戏](qian-yan/yan-jiu-ping-tai/jie-ji-you-xi.md)
   * [竞速游戏](qian-yan/yan-jiu-ping-tai/jing-su-you-xi.md)
@@ -15,7 +16,6 @@
   * [团队体育游戏](qian-yan/yan-jiu-ping-tai/tuan-dui-ti-yu-you-xi.md)
   * [文字冒险游戏](qian-yan/yan-jiu-ping-tai/wen-zi-mao-xian-you-xi.md)
   * [OpenAI Gym & Universe](qian-yan/yan-jiu-ping-tai/openai-gym-and-universe.md)
-* [经典书籍](qian-yan/xiang-guan-shu-ji.md)
 
 ## 方法
 
