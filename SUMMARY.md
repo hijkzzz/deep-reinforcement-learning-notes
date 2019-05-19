@@ -27,18 +27,18 @@
   * [Dueling DQN](fang-fa/jie-ji-you-xi/dueling-deep-q-network.md)
   * [Bootstrapped DQN](fang-fa/jie-ji-you-xi/bootstrapped-deep-q-network.md)
   * [Multiagent DQN](fang-fa/jie-ji-you-xi/multiagent-deep-q-network.md)
+  * [Progressive  Neural Networks](fang-fa/jie-ji-you-xi/progressive-neural-networks.md)
   * [Advantage Estimation](fang-fa/jie-ji-you-xi/advantage-estimation.md)
   * [A3C](fang-fa/jie-ji-you-xi/asynchronous-deep-reinforcement-learning.md)
   * [Off-Policy Actor-Critic](fang-fa/jie-ji-you-xi/off-policy-actor-critic.md)
   * [Retrace\(λ\)](fang-fa/jie-ji-you-xi/retrace-l.md)
   * [ACER](fang-fa/jie-ji-you-xi/actor-critic-with-experience-replay.md)
-  * [Progressive  Neural Networks](fang-fa/jie-ji-you-xi/progressive-neural-networks.md)
   * [ACKTR](fang-fa/jie-ji-you-xi/actor-critic-using-kronecker-factored-trust-region.md)
   * [TRPO](fang-fa/jie-ji-you-xi/trust-region-policy-optimization.md)
   * [PPO](fang-fa/jie-ji-you-xi/proximal-policy-optimization.md)
   * [Soft Actor-Critic](fang-fa/jie-ji-you-xi/soft-actor-critic.md)
-  * [IMPALA](fang-fa/jie-ji-you-xi/impala.md)
   * [UNREAL](fang-fa/jie-ji-you-xi/unreal.md)
+  * [IMPALA](fang-fa/jie-ji-you-xi/impala.md)
   * [Distributional DQN](fang-fa/jie-ji-you-xi/distributional-dqn.md)
   * [Noisy-Net](fang-fa/jie-ji-you-xi/noisy-network.md)
   * [Rainbow](fang-fa/jie-ji-you-xi/rainbow.md)
@@ -109,4 +109,11 @@
 * [创造新的游戏](kai-fang-tiao-zhan/chuang-zao-xin-de-you-xi.md)
 * [学习游戏的模型](kai-fang-tiao-zhan/xue-xi-you-xi-de-mo-xing.md)
 * [计算资源](kai-fang-tiao-zhan/ji-suan-zi-yuan.md)
+
+## 附录
+
+* [Model-Based RL](fu-lu/model-based-rl/README.md)
+  * [MBMF](fu-lu/model-based-rl/mbmf.md)
+  * [MBVE](fu-lu/model-based-rl/mbve.md)
+  * [World Models](fu-lu/model-based-rl/world-models.md)
 
