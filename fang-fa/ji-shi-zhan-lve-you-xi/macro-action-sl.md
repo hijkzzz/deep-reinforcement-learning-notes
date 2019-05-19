@@ -12,11 +12,11 @@
 
 重放文件是二进制格式，需要预处理才能提取知识。本文中使用的数据集是从现有数据集中提取的。辛纳伊夫等人。通过清理三个星际争霸社区网站GosuGamers、ICCupand TeamLiquid，收集了7649次回放，这些网站主要是为包括专业人士\[27\]在内的高技能玩家提供的。罗伯逊等人从存储库中提取了大量信息并存储在一个数据库中。\[22\]。这个数据库包含游戏中每24帧的状态变化，包括单位属性。我们的数据集是从这个数据库中提取的，预处理步骤的另一个视图如图所示：
 
-![](../../.gitbook/assets/image%20%28159%29.png)
+![](../../.gitbook/assets/image%20%28160%29.png)
 
 ### Network Architecture
 
-![](../../.gitbook/assets/image%20%2896%29.png)
+![](../../.gitbook/assets/image%20%2897%29.png)
 
 ### Training
 
@@ -30,7 +30,7 @@
 
 ## 实验
 
-![](../../.gitbook/assets/image%20%2878%29.png)
+![](../../.gitbook/assets/image%20%2879%29.png)
 
 ![](../../.gitbook/assets/image%20%281%29.png)
 

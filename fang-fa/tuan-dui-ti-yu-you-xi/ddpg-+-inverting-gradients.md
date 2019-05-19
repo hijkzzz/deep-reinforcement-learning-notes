@@ -20,11 +20,11 @@ Half Field Offense具有低级参数化动作空间。 有四种相互排斥的�
 
 HFO领域的真正奖励来自赢得完整的比赛。 然而，这种奖励信号对于学习代理人获得牵引力来说太过稀疏。相反，我们引入了一个手工制作的奖励信号，其中包含四个部分：Move To Ball Reward提供与代理和balld之间距离变化成比例的标量奖励 $$d(a, b)$$ 。Kick To Goal Reward与球和球门中心之间的距离变化成比例 $$d(b, g)$$ 。 为进球而得分的额外奖励。
 
-![](../../.gitbook/assets/image%20%28144%29.png)
+![](../../.gitbook/assets/image%20%28145%29.png)
 
 ### Actor-Critic architecture
 
-![](../../.gitbook/assets/image%20%28108%29.png)
+![](../../.gitbook/assets/image%20%28109%29.png)
 
 ### PARAMETERIZED ACTION SPACE ARCHITECTURE
 
@@ -62,7 +62,7 @@ $$
 
 这种方法捕获了归零和挤压梯度的最佳方面，同时最大限度地减少了缺点。当参数接近其范围的边界时，梯度会缩减，如果参数超出值范围，则会反转。这样可以在避免饱和问题的同时将参数保持在界限范围内。
 
-![](../../.gitbook/assets/image%20%28126%29.png)
+![](../../.gitbook/assets/image%20%28127%29.png)
 
 ## 实验
 

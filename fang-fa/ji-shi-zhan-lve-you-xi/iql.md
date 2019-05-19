@@ -18,7 +18,7 @@
 
 我们可以通过为多智能体设置开发重要性采样方案来解决IQL中存在的非平稳性问题。如RL代理可以使用重要性抽样来从其自身策略不同时收集的数据中学习策略，同样也可以从off-environment中收集的数据中学习环境（Ciosek＆Whiteson，2017）。由于IQL将其他代理的策略视为环境的一部分，因此可以使用非环境重要性采样来稳定体验重放。我们首先考虑一个完全可观察的多代理设置。 如果Q函数可以直接关注真实状态，我们可以根据所有其他代理的策略为单个代理编写Bellman optimality等式：
 
-![](../../.gitbook/assets/image%20%28120%29.png)
+![](../../.gitbook/assets/image%20%28121%29.png)
 
 其中 $$\pi_{-a}\left(\mathbf{u}_{-a} | s\right)=\Pi_{i \in-a \pi_{i}}\left(u_{i} | s\right)$$ ，重要性采样损失可表示为：
 
@@ -26,7 +26,7 @@
 
 下面讨论部分可观察的情况，定义可观察状态为 $$\hat{s}=\left\{s, \tau_{-a}\right\} \in \hat{S}=S \times T^{n-1}$$ ，即s与其它代理观察状态的并集。在此基础上，我们可以定义部分可观察的回报函数、状态转移方程：
 
-![](../../.gitbook/assets/image%20%28177%29.png)
+![](../../.gitbook/assets/image%20%28178%29.png)
 
 ![](../../.gitbook/assets/image%20%286%29.png)
 
@@ -34,7 +34,7 @@
 
 ![](../../.gitbook/assets/image%20%2826%29.png)
 
-![](../../.gitbook/assets/image%20%2874%29.png)
+![](../../.gitbook/assets/image%20%2875%29.png)
 
 然而，与完全可观察到的情况不同，右手边包含其他几个间接依赖于其他代理的策略的术语，据我们所知，这些术语是难以处理的。所以部分可观察情况下的重要性采样系数为近似值。
 
@@ -54,7 +54,7 @@ hyper Q-learning的实际困难在于它增加了Q函数的维数，使其学习
 
 ## 实验
 
-![](../../.gitbook/assets/image%20%2882%29.png)
+![](../../.gitbook/assets/image%20%2883%29.png)
 
 
 

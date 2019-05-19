@@ -20,13 +20,13 @@ $$
 \left(\mathcal{T}_{h} Q\right)(x, a) :=\mathbb{E}_{x^{\prime} \sim P(\cdot | x, a)}\left[h\left(R(x, a)+\gamma \max _{a^{\prime} \in \mathcal{A}} h^{-1}\left(Q\left(x^{\prime}, a^{\prime}\right)\right)\right)\right], \quad \forall(x, a) \in \mathcal{X} \times \mathcal{A}
 $$
 
-![](../../.gitbook/assets/image%20%28161%29.png)
+![](../../.gitbook/assets/image%20%28162%29.png)
 
 上述定理说明了新的Q函数的收敛性，我们的算法中使用 $$h : z \mapsto \operatorname{sign}(z)(\sqrt{|z|+1}-1)+\varepsilon z \text { with } \varepsilon=10^{-2}$$ 。
 
 新的损失函数可写为：
 
-![](../../.gitbook/assets/image%20%28172%29.png)
+![](../../.gitbook/assets/image%20%28173%29.png)
 
 ### Temporal consistency \(TC\) loss
 
@@ -58,7 +58,7 @@ $$
 L\left(\theta ;\left(t_{i}\right)_{i=1}^{N},\left(p_{i}\right)_{i=1}^{N}, \theta^{(k-1)}\right) :=\left(L_{\mathrm{TD}}+L_{\mathrm{TC}}+L_{\mathrm{IM}}\right)\left(\theta ;\left(t_{i}\right)_{i=1}^{N},\left(p_{i}\right)_{i=1}^{N}, \theta^{(k-1)}\right)
 $$
 
-![](../../.gitbook/assets/image%20%2899%29.png)
+![](../../.gitbook/assets/image%20%28100%29.png)
 
 ## 测试
 

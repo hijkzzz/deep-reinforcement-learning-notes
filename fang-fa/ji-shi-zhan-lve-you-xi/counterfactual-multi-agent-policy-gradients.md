@@ -62,7 +62,7 @@ $$
 
 以下引理确定了COMA与局部最优策略的收敛性：
 
-![](../../.gitbook/assets/image%20%28155%29.png)
+![](../../.gitbook/assets/image%20%28156%29.png)
 
 证明请参考原论文
 
