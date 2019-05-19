@@ -27,7 +27,7 @@
   * [Dueling DQN](fang-fa/jie-ji-you-xi/dueling-deep-q-network.md)
   * [Bootstrapped DQN](fang-fa/jie-ji-you-xi/bootstrapped-deep-q-network.md)
   * [Multiagent DQN](fang-fa/jie-ji-you-xi/multiagent-deep-q-network.md)
-  * [ADVANTAGE ESTIMATION](fang-fa/jie-ji-you-xi/advantage-estimation.md)
+  * [Advantage Estimation](fang-fa/jie-ji-you-xi/advantage-estimation.md)
   * [A3C](fang-fa/jie-ji-you-xi/asynchronous-deep-reinforcement-learning.md)
   * [Off-Policy Actor-Critic](fang-fa/jie-ji-you-xi/off-policy-actor-critic.md)
   * [Retrace\(λ\)](fang-fa/jie-ji-you-xi/retrace-l.md)
