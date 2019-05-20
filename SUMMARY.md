@@ -28,7 +28,7 @@
   * [Bootstrapped DQN](fang-fa/jie-ji-you-xi/bootstrapped-deep-q-network.md)
   * [Multiagent DQN](fang-fa/jie-ji-you-xi/multiagent-deep-q-network.md)
   * [Progressive  Neural Networks](fang-fa/jie-ji-you-xi/progressive-neural-networks.md)
-  * [Advantage Estimation](fang-fa/jie-ji-you-xi/advantage-estimation.md)
+  * [Generalized Advantage Estimation](fang-fa/jie-ji-you-xi/advantage-estimation.md)
   * [A3C](fang-fa/jie-ji-you-xi/asynchronous-deep-reinforcement-learning.md)
   * [Off-Policy Actor-Critic](fang-fa/jie-ji-you-xi/off-policy-actor-critic.md)
   * [Retrace\(λ\)](fang-fa/jie-ji-you-xi/retrace-l.md)

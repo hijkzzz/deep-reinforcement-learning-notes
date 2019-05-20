@@ -1,4 +1,4 @@
-# Advantage Estimation
+# Generalized Advantage Estimation
 
 ## 介绍
 
