@@ -1,6 +1,6 @@
 # Direct Perception
 
-## 介绍
+
 
 > [DeepDriving: Learning Affordance for Direct Perception in Autonomous Driving](https://arxiv.org/pdf/1505.00256.pdf)
 

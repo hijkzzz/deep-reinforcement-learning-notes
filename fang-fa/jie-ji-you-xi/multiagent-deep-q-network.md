@@ -1,12 +1,12 @@
 # Multiagent DQN
 
-## 介绍
+
 
 > [Multiagent Cooperation and Competition with Deep Reinforcement Learning](https://arxiv.org/pdf/1511.08779v1.pdf)
 
 多代理系统出现在大多数社会、经济和政治环境中。在目前的工作中，我们将Google DeepMind提出的深度Q-Learning网络架构扩展到多代理环境，并研究由独立的深度Q-Networks控制的两个代理如何在经典视频游戏Pong中交互。通过操纵经典的Pong奖励计划，我们展示了竞争和合作行为是如何出现的。竞争代理人能有效地学习比赛和得分。在合作奖励计划下训练的代理人找到了一个最佳策略来尽可能长时间地保持球在游戏中。我们还描述了从竞争行为到协作行为的发展。目前的工作表明，深度Q-Networks可以成为研究生活在高度复杂环境中的多智能体系统分散学习的实用工具。
 
-## 算法
+## 方法
 
 ### Pong
 

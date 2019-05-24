@@ -1,6 +1,6 @@
 # Distributional DQN
 
-## 介绍
+
 
 > [A Distributional Perspective on Reinforcement Learning](https://arxiv.org/pdf/1707.06887.pdf)
 
@@ -8,7 +8,7 @@
 
 从算法的角度来看，学习近似分布而不是近似期望有很多好处。 分布式Bellman算子在有价值分布中保留多模态，我们相信这会导致更稳定的学习。 近似完整分布也减轻了从不稳定的学习的影响。
 
-## 算法
+## 方法
 
 贝尔曼等式
 

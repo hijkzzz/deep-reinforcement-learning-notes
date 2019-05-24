@@ -1,12 +1,12 @@
 # IMPALA
 
-## 介绍
+
 
 > [IMPALA: Scalable Distributed Deep-RL with Importance Weighted Actor-Learner Architectures](https://arxiv.org/pdf/1802.01561.pdf)
 
 在这项工作中，我们的目标是使用单个强化学习代理来解决大量任务。 一个关键的挑战是处理增加的数据量和延长的培训时间。 我们开发了一种新的分布式代理IMPALA（Importance Weighted Actor-Learner Architectures），它不仅可以在单机训练中更有效地使用资源，而且可以扩展到数千台机器而不会牺牲数据效率或资源利用率。 通过将解耦的行为学习与一种称为V-trace的校正方法相结合，我们实现了稳定的高吞吐学习。 我们展示了IMPALA在DMLab-30和Atari-57中的多任务强化学习的有效性。 我们的结果表明，IMPALA能够在数据较少的情况下取得比以前的代理更好的性能，并且由于其多任务处理方式，在任务之间表现出了正向的迁移。
 
-## 算法
+## 方法
 
 ### IMPALA
 

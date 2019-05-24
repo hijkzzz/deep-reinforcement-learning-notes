@@ -1,6 +1,6 @@
 # Direct Future Prediction
 
-## 介绍
+
 
 > [LEARNING TOACT BYPREDICTING THEFUTURE](https://arxiv.org/pdf/1611.01779.pdf)
 

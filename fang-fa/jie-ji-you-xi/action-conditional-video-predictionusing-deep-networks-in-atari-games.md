@@ -1,12 +1,12 @@
 # Action-Conditional Video Predictionusing Deep Networks in Atari Games
 
-## 算法
+## 方法
 
 > [Action-Conditional Video Predictionusing Deep Networks in Atari Games](http://papers.nips.cc/paper/5859-action-conditional-video-prediction-using-deep-networks-in-atari-games.pdf)
 
 受基于视觉的强化学习问题\(特别是最近基准 ALE 中的Atari游戏\)的驱动，我们考虑未来图像帧依赖于控制变量或动作以及先前帧的时空预测问题。虽然雅达利游戏中的画面不是由自然场景构成的，但它在尺寸上是高维的，可以包含数十个物体，其中一个或多个物体被动作直接控制，许多其他物体受到间接影响，可能涉及物体的进入和分离，也可能涉及深度部分可观察性。我们提出并评估了两种基于卷积神经网络和递归神经网络的深层神经网络结构，包括编码层、动作条件变换层和解码层。实验结果表明，所提出的体系结构能够生成视觉上真实的帧，这些帧对于在某些游戏中控制大约100步动作条件预期也是有用的。据我们所知，本文是第一个对控制输入条件下的高维视频进行长期预测和评估的论文。
 
-## 算法
+## 方法
 
 ![](../../.gitbook/assets/image-14.png)
 

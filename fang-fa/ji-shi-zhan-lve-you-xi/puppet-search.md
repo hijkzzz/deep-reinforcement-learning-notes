@@ -1,6 +1,6 @@
 # Puppet Search
 
-## 介绍
+
 
 > [Puppet Search: Enhancing Scripted Behavior by Look-Ahead Search with Applications to Real-Time Strategy Games](https://pdfs.semanticscholar.org/3902/521ee719f296423c33e79f99949af1c7445b.pdf)
 

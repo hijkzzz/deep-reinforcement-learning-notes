@@ -1,12 +1,12 @@
 # UCTtoClassification
 
-## 介绍
+
 
 > [Deep Learning for Real-Time Atari Game Play Using Offline Monte-Carlo Tree Search Planning](https://web.eecs.umich.edu/~baveja/Papers/UCTtoCNNsAtariGames-FinalVersion.pdf)
 
 现代强化学习和深度学习方法的结合有望在挑战性应用方面取得重大进展，这些应用需要丰富的认知和政策选择。街机学习环境\( ALE \)提供了一套雅达利游戏，代表了一套有用的这类应用的基准点。最近在将无模型强化学习与深度学习相结合方面的突破，被称为DQN，实现了迄今为止最好的实时代理。基于规划的方法比最好的无模型方法得分高得多，但是它们利用了人类玩家无法获得的信息，并且比实时播放所需的速度慢几个数量级。我们这项工作的主要目标是建立一个比DQN更好的实时雅达利游戏玩家。中心思想是使用基于缓慢规划的代理为能够实时的深度学习架构提供训练数据。我们基于这一想法提出了新的代理，并表明它们的性能优于DQN。
 
-## 算法
+## 方法
 
 ### Planning Agents for Atari Games based on UCT
 

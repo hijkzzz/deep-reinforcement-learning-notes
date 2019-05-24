@@ -1,6 +1,6 @@
 # H-DRLN
 
-## 介绍
+
 
 > [A Deep Hierarchical Approach to Lifelong Learning in Minecraft](https://arxiv.org/pdf/1604.07255.pdf)
 

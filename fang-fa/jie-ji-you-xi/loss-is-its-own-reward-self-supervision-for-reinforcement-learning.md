@@ -1,12 +1,12 @@
 # Loss is its own Reward: Self-Supervision for Reinforcement Learning
 
-## 算法
+## 方法
 
 > [Loss is its own Reward:Self-Supervision for Reinforcement Learning](https://arxiv.org/abs/1612.07307)
 
 强化学习优化了预期累积奖励的策略。但监督需要这么窄吗？对于许多任务来说，奖励是延迟和稀疏的，这使它成为端到端优化的一个困难和重要的信号。为了奖励，我们考虑一系列自我监督的任务，包括状态、行为和后继者，以提供辅助损失。这些损失为表征学习提供了无处不在的即时超视野，甚至在奖赏的意义上。虽然当前的结果表明仅从奖励中学习是可行的，但是纯增强学习方法受到计算和数据效率问题的限制，这些问题可以通过辅助损失来弥补。自我监督预训练和联合优化提高了端到端强化学习的数据效率和策略回报。
 
-## 算法
+## 方法
 
 ### Self-Supervision
 

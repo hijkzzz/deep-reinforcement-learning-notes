@@ -1,6 +1,6 @@
 # SLAM-Augmented DQN
 
-## 介绍
+
 
 > [Playing Doom with SLAM-Augmented Deep Reinforcement Learning](https://arxiv.org/pdf/1612.00380.pdf)
 

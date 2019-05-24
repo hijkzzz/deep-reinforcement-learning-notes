@@ -1,6 +1,6 @@
 # Policy Distillation
 
-## 介绍
+
 
 > [POLICY DISTILLATION](https://arxiv.org/pdf/1511.06295.pdf)
 
@@ -8,7 +8,7 @@
 
 在本文中，我们介绍了将一个或多个动作策略从q网络转移到未训练网络的策略Distillation。该方法具有多种优点:网络大小可以被压缩多达15倍，而不会降低性能；多个专家策略可以组合成一个单一的多任务策略，其性能优于原始专家；最后，它可以作为一个实时的在线学习过程，通过不断提取最佳策略到目标网络，从而有效地跟踪不断发展的问题学习策略。这项工作的贡献是描述和讨论策略Distillation方法，并展示\( a \)单一游戏Distillation，\( b \)具有高度压缩模型的单游戏Distillation，\( c \)多游戏Distillation，和\( d \)在线Distillation的结果。
 
-## 算法
+## 方法
 
 ### Deep Q-Learning
 

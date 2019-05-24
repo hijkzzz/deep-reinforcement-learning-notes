@@ -1,6 +1,6 @@
 # Actor-Mimic
 
-## 介绍
+
 
 > [Actor-Mimic: Deep Multitask and Transfer Reinforcement Learning](https://arxiv.org/pdf/1511.06342.pdf)
 
@@ -8,7 +8,7 @@
 
 本算法和Policy Distillation类似，均为用学生网络提取多个专用网络的策略，实现多任务学习。
 
-## 算法
+## 方法
 
 ### POLICY REGRESSION OBJECTIVE
 

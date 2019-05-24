@@ -1,12 +1,12 @@
 # DQN-PixelCNN
 
-## 介绍
+
 
 > [Count-Based Exploration with Neural Density Models](https://arxiv.org/pdf/1703.01310.pdf)
 
 Bellmare等人\( 2016 \)。引入了从密度模型导出的伪计数的概念，将基于计数的探索推广到非表格强化学习。这个伪计数被用来为DQN代理生成一个探测奖励，并与蒙特卡洛更新相结合，足以在Atari 2600游戏Montezuma的复仇中达到最先进的水平。我们认为他们的工作揭示了两个问题:第一，密度模型的质量对勘探有多重要？第二，蒙特卡罗更新在探索中扮演什么角色？我们通过演示PixelCNN的使用来回答第一个问题，PixelCCNN是一种先进的图像神经密度模型，用于支持伪计数。特别是，当对模型的假设进行违反时，我们研究了调整Bellemare等人的方法所面临的内在困难。结果是更实用和一般的算法，不需要特殊设备。 我们将PixelCNN伪计数与不同的体系结构相结合，以显着改善几个硬Atari游戏的艺术状态。 令人惊讶的发现是混合的蒙特卡洛更新在最稀疏的环境中是一个强大的探索促进者，包括Montezuma的复仇。
 
-## 算法
+## 方法
 
 ### Pseudo-Count and Prediction Gain
 

@@ -1,12 +1,12 @@
 # ACER
 
-## 介绍
+
 
 > [SAMPLE EFFICIENT ACTOR-CRITIC WITH EXPERIENCE REPLAY](https://arxiv.org/pdf/1611.01224.pdf)
 
 本文提出了一个Actor-Critic深度强化学习代理，具有经验重放，稳定，样本效率高的特点，并且在具有挑战性的环境中表现非常好，包括57个离散的Atari游戏和几个连续的控制问题。 为此，本文介绍了几种创新，包括具有偏差校正的截断重要性采样，随机推导网络架构和新的信任域策略优化方法。
 
-## 算法
+## 方法
 
 ### DISCRETE ACTOR-CRITIC WITH EXPERIENCE REPLAY
 

@@ -16,7 +16,7 @@
   * [文字冒险游戏](qian-yan/yan-jiu-ping-tai/wen-zi-mao-xian-you-xi.md)
   * [OpenAI Gym & Universe](qian-yan/yan-jiu-ping-tai/openai-gym-and-universe.md)
 
-## 算法
+## 方法
 
 * [街机游戏](fang-fa/jie-ji-you-xi/README.md)
   * [DQN](fang-fa/jie-ji-you-xi/deep-q-network.md)

@@ -1,6 +1,6 @@
 # ES
 
-## 介绍
+
 
 > [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/pdf/1703.03864.pdf)
 
@@ -14,7 +14,7 @@
 4. 我们发现ES表现出比像TRPO这样的策略梯度方法更好的探索行为:在MuJoCo人形机器人任务中，ES已经能够学习各种各样的步态\(比如侧向行走或者向后行走\)。TRPO从未观察到这些不寻常的步态，这表明了一种本质上不同的勘探行为
 5. 我们发现进化策略方法是稳健的:对于所有Atari环境，我们使用固定超参数实现了上述结果，对于所有MuJoCo环境，我们使用了一组不同的固定超参数\(一个二元超参数除外，它在不同的MuJoCo环境中并不保持恒定\)
 
-## 算法
+## 方法
 
 ### 进化策略
 

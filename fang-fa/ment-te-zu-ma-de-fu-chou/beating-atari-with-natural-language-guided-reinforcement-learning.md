@@ -1,6 +1,6 @@
 # Beating Atari with Natural Language Guided Reinforcement Learning
 
-## 介绍
+
 
 > [Beating Atari with Natural Language Guided Reinforcement Learning](https://arxiv.org/pdf/1704.05539.pdf)
 
