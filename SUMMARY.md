@@ -112,6 +112,7 @@
   * [Off-Policy Actor-Critic](fu-lu/policy-gradient/off-policy-actor-critic.md)
   * [Generalized Advantage Estimation](fu-lu/policy-gradient/advantage-estimation.md)
   * [Soft Actor-Critic](fu-lu/policy-gradient/soft-actor-critic.md)
+  * [PPO-Penalty](fu-lu/policy-gradient/ppo-penalty.md)
 * [Model-Based RL](fu-lu/model-based-rl/README.md)
   * [MBMF](fu-lu/model-based-rl/mbmf.md)
   * [MBVE](fu-lu/model-based-rl/mbve.md)
