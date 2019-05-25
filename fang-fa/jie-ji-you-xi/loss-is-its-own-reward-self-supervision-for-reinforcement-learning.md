@@ -1,4 +1,4 @@
-# Loss is its own Reward: Self-Supervision for Reinforcement Learning
+# Self-Supervision
 
 ## 方法
 

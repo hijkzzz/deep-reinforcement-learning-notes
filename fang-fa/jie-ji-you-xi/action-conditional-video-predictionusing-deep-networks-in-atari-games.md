@@ -1,4 +1,4 @@
-# Action-Conditional Video Predictionusing Deep Networks in Atari Games
+# Action-Conditional Video Prediction
 
 ## 方法
 

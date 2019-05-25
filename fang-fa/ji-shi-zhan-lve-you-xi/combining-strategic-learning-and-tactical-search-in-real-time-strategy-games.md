@@ -1,4 +1,4 @@
-# Combining strategic learning and tactical search in real-time strategy games
+# Combined Strategic and Tacticals
 
 > [Combining strategic learning and tactical search in real-time strategy games](https://arxiv.org/abs/1709.03480)
 
