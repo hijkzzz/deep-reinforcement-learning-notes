@@ -1,7 +1,5 @@
 # DDPG + Inverting Gradients
 
-
-
 > [Deep reinforcement learning in parameterized action space](https://arxiv.org/abs/1511.04143)
 
 最近的研究表明，深度神经网络能够逼近以连续状态和动作空间为特征的强化学习领域中的价值函数和策略。然而，据我们所知，在结构化的\(参数化的\)连续动作空间中，还没有先前的工作成功地使用深度神经网络。为了填补这一空白，本文重点研究模拟RoboCup足球领域的学习，其中包含一小组离散动作类型，每个类型都用连续变量参数化。 最好的代理人可以比2012年RoboCup冠军更可靠地进球。 因此，本文将深度强化学习成功扩展到参数化动作空间MDP类。
@@ -67,6 +65,4 @@ $$
 ## 实验
 
 ![](../../.gitbook/assets/image%20%2843%29.png)
-
-
 

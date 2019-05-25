@@ -1,7 +1,5 @@
 # Beating Atari with Natural Language Guided Reinforcement Learning
 
-
-
 > [Beating Atari with Natural Language Guided Reinforcement Learning](https://arxiv.org/pdf/1704.05539.pdf)
 
 我们介绍了第一个借助自然语言指导学会击败Atari游戏的深层强化学习代理。 代理人使用环境观察和自然语言之间的多模态嵌入来通过英语指令列表自我监控进度，除了增加游戏分数之外，还为补充指令提供奖励。 我们的代理显着优于Deep Q-Networks（DQN），异步优势演员 - 评论家（A3C）代理，以及最佳代理发布到OpenAI Gym \[4\]，其中被认为是最困难的Atari 2600环境\[2\]：MONTEZUMA' SREVENGE。
@@ -71,8 +69,4 @@
 ## 最终结果
 
 ![](../../.gitbook/assets/image%20%28166%29.png)
-
-
-
-
 

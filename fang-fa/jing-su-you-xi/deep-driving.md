@@ -1,7 +1,5 @@
 # Direct Perception
 
-
-
 > [DeepDriving: Learning Affordance for Direct Perception in Autonomous Driving](https://arxiv.org/pdf/1505.00256.pdf)
 
 今天，基于视觉的自主驾驶系统有两种主要范例：间接感知方法，解析整个场景以制定驾驶决策，行为反射方法直接将输入图像映射到回归者的驾驶行为。 在本文中，我们提出了第三种范式：直接感知方法来估计驾驶能力。
@@ -49,12 +47,4 @@
 ![](../../.gitbook/assets/image%20%28116%29.png)
 
 我们的系统可以在TORCS中很好地驾驶，没有任何碰撞。在某些车道变换的情况下，控制器可能会稍微过冲，但它会很快恢复到目标车道中心的所需位置。
-
-
-
-
-
-
-
-
 

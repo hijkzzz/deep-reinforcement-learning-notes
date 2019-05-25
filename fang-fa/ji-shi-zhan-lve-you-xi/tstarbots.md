@@ -1,7 +1,5 @@
 # Macro-action PPO
 
-
-
 > [TStarBots: Defeating the Cheating Level Builtin AI in StarCraft II in the Full Game](https://arxiv.org/pdf/1809.07193)
 
 星际争霸2\(SC2\)被广泛认为是最具挑战性的即时战略游戏游戏。潜在的挑战包括巨大的观察空间，巨大的\(连续的和无限的\)行动空间，部分观察，所有玩家同时移动，以及长期的延迟对当地决策的奖励。为了推动人工智能研究的前沿，Deepmind和Blizzard联合开发了星际争霸II学习环境（SC2LE）作为复杂决策系统的测试平台。SC2LE提供了一些迷你游戏，如MOToBeacon，CollectMineralShards和DefeatRoaches，其中一些AI代理已经达到了人类职业玩家的性能水平。然而，对于完整的游戏，当前的AI代理仍然远未达到人类专业水平的表现。对于bridgethis差距，我们在本文中提出了两个完整的游戏AI代理 - AI TStarBot1基于对平面动作结构的深度强化学习，AI TStarBot2基于分层动作结构上的硬编码规则。THtarBot1和TStarBot2能够在完整游戏中击败内置AI代理从1级到10级（AbyssalReef地图上的1v1Zerg-vs-Zerggame），注意到8级，9级和10级作弊代理具有不公平的优势，如 整个地图的全景和资源收获提升1。据我们所知，这是第一个调查可以在星际争霸II完整游戏中击败内置AI的AI代理的公开工作。
@@ -109,14 +107,4 @@ DataContext模块用作模块交换信息的“黑板”。 DataContext中包含
 ## 实验
 
 ![](../../.gitbook/assets/image%20%2838%29.png)
-
-
-
-
-
-
-
-
-
-
 

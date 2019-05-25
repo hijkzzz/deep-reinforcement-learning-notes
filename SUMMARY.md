@@ -28,15 +28,12 @@
   * [Bootstrapped DQN](fang-fa/jie-ji-you-xi/bootstrapped-deep-q-network.md)
   * [Multiagent DQN](fang-fa/jie-ji-you-xi/multiagent-deep-q-network.md)
   * [Progressive  Neural Networks](fang-fa/jie-ji-you-xi/progressive-neural-networks.md)
-  * [Generalized Advantage Estimation](fang-fa/jie-ji-you-xi/advantage-estimation.md)
   * [A3C](fang-fa/jie-ji-you-xi/asynchronous-deep-reinforcement-learning.md)
-  * [Off-Policy Actor-Critic](fang-fa/jie-ji-you-xi/off-policy-actor-critic.md)
-  * [Retrace\(λ\)](fang-fa/jie-ji-you-xi/retrace-l.md)
   * [ACER](fang-fa/jie-ji-you-xi/actor-critic-with-experience-replay.md)
+  * [Retrace\(λ\)](fang-fa/jie-ji-you-xi/retrace-l.md)
   * [ACKTR](fang-fa/jie-ji-you-xi/actor-critic-using-kronecker-factored-trust-region.md)
   * [TRPO](fang-fa/jie-ji-you-xi/trust-region-policy-optimization.md)
   * [PPO](fang-fa/jie-ji-you-xi/proximal-policy-optimization.md)
-  * [Soft Actor-Critic](fang-fa/jie-ji-you-xi/soft-actor-critic.md)
   * [UNREAL](fang-fa/jie-ji-you-xi/unreal.md)
   * [IMPALA](fang-fa/jie-ji-you-xi/impala.md)
   * [Distributional DQN](fang-fa/jie-ji-you-xi/distributional-dqn.md)
@@ -112,6 +109,10 @@
 
 ## 附录
 
+* [Policy Gradient](fu-lu/policy-gradient/README.md)
+  * [Off-Policy Actor-Critic](fu-lu/policy-gradient/off-policy-actor-critic.md)
+  * [Generalized Advantage Estimation](fu-lu/policy-gradient/advantage-estimation.md)
+  * [Soft Actor-Critic](fu-lu/policy-gradient/soft-actor-critic.md)
 * [Model-Based RL](fu-lu/model-based-rl/README.md)
   * [MBMF](fu-lu/model-based-rl/mbmf.md)
   * [MBVE](fu-lu/model-based-rl/mbve.md)

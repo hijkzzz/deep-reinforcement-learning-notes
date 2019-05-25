@@ -1,6 +1,4 @@
 # Generalized Advantage Estimation
 
-
-
 > [HIGH-DIMENSIONAL CONTINUOUS CONTROL USING GENERALIZED ADVANTAGE ESTIMATION](https://arxiv.org/pdf/1506.02438.pdf)
 

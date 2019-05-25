@@ -1,7 +1,5 @@
 # Feedback Recurrent Memory Q-Network
 
-
-
 > [Control of Memory, Active Perception, and Action in Minecraft](https://arxiv.org/pdf/1605.09128.pdf)
 
 本文介绍了《我的世界》\(一个可扩展的三维世界\)的一套新的强化学习任务。然后，我们使用这些任务系统地比较和对比现有的深度强化学习结构和我们新的基于记忆的深度强化学习结构。这些任务旨在以可控的方式强调对人工呼吸方法构成挑战的问题，包括部分观察能力\(由于第一人称视觉观察\)、延迟奖励、高维视觉观察以及正确使用主动感知以在任务中表现良好的需要。虽然这些任务在概念上很容易描述，但由于同时具有所有这些挑战，它们对于当前的DRL架构来说是困难的。此外，我们还评估了在训练期间未使用的环境中的结构的泛化性能。实验结果表明，我们的新体系结构比现有的DRL所有体系结构更好地推广到未知环境。
@@ -19,8 +17,6 @@ Graves等人（2014）提出了神经图灵机（NTM），一种可微分的外�
 ![](../../.gitbook/assets/image%20%28107%29.png)
 
 我们提出的架构（图3c-e）包括用于从图像中提取高级特征的卷积网络（§4.1），一个保留最近观察历史的记忆（§4.2），以及用于两者的上下文向量。 记忆检索和（部分）行动价值估计（§4.3）。根据上下文向量的构造方式，我们获得三种新架构：Memory Q-Network（MQN），Recurrent Memory Q-Network（RMQN）和Feedback Recurrent Memory Q-Network（FRMQN）。
-
-
 
 ![](../../.gitbook/assets/image%20%2840%29.png)
 

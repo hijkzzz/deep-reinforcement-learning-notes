@@ -1,7 +1,5 @@
 # Off-Policy Actor-Critic
 
-
-
 > [Off-Policy Actor-Critic](https://arxiv.org/pdf/1205.4839.pdf)
 
 本文提出了第一个off-policy强化学习的actor-critic算法。我们的算法是在线的和增量的，并且每个时间步长的复杂度与学习的权重数量成线性比例。前期的actor-critic算法的局限于on-policy环境，没有利用off-policy的时间差分梯度的优势。off-policy技术，如Greedy-GQ，能够在跟踪和从另一个\(行为\)策略获取数据的同时学习目标策略。对于许多问题，无论如何，actor-critic方法更实用，因为它们清晰的代表了策略；因此，该策略可以是是随机的，并且可利用大的动作空间。本文阐述了如何将off-policy学习的通用性和学习潜力与actor-critic方法在行动选择中的灵活性相结合，这种灵活性是由actor-critic的方法决定的。我们导出了一个包含资格迹的线性时间和空间复杂度的算法，证明了在类似于以前的off-policy算法的假设下的收敛性，并且在标准强化学习基准问题上，实验显示了比现有算法更好或的性能。

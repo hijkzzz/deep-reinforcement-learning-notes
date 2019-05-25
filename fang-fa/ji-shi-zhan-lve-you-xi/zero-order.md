@@ -1,12 +1,10 @@
 # Zero Order
 
-
-
 > [Episodic exploration for deep deterministic policies: An application to starcraft micromanagement tasks](https://arxiv.org/abs/1609.02993)
 
 我们将实时战略游戏“星际争霸”中的场景视为强化学习算法的新基准。我们提出微观管理任务，即军队成员在战斗中的短期，低级别控制问题。从强化学习的角度来看，这些场景具有挑战性，因为状态-动作空间非常大，并且因为状态-动作评估函数没有明显的特征表示。我们描述了用深度神经网络控制器从游戏引擎给出的原始状态特性中解决微观管理问题的方法。此外，我们还提出了一种启发式强化学习算法，该算法结合了策略空间的直接探索和反向传播。这种算法允许使用确定性策略收集学习轨迹，这似乎比greedy探索更有效。实验表明，利用该算法，我们成功地学习了15个智能体组成的军队场景中的非平凡策略，在这些场景中，问题学习和强化都在进行斗争。
 
-## 方法 
+## 方法
 
 ### The MDP for greedy inference
 
@@ -64,7 +62,7 @@ Scoring with respect to action type
 
 ![](../../.gitbook/assets/image%20%2850%29.png)
 
-为了在一集中以一致的方式探索策略空间，我们在单位球面上均匀地采样一个向量 $$ u$$ ，并运行策略 $$\pi_{w}+\delta u, \theta$$ ，其中 $$δ> 0$$ 是一个超参数。除了在政策空间中实施本地随机搜索之外，随机化的动机来自随机无梯度优化。梯度可以表示为：
+为了在一集中以一致的方式探索策略空间，我们在单位球面上均匀地采样一个向量 $$u$$ ，并运行策略 $$\pi_{w}+\delta u, \theta$$ ，其中 $$δ> 0$$ 是一个超参数。除了在政策空间中实施本地随机搜索之外，随机化的动机来自随机无梯度优化。梯度可以表示为：
 
 ![](../../.gitbook/assets/image%20%2817%29.png)
 
@@ -73,8 +71,6 @@ Scoring with respect to action type
 ![](../../.gitbook/assets/image%20%2858%29.png)
 
 ## 实验
-
- 
 
 ![](../../.gitbook/assets/image%20%28102%29.png)
 

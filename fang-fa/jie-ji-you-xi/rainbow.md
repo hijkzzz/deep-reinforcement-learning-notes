@@ -1,7 +1,5 @@
 # Rainbow
 
-
-
 > [Rainbow: Combining Improvements in Deep Reinforcement Learning](https://arxiv.org/pdf/1710.02298.pdf)
 
 深度强化学习社区已经对DQN算法进行了几项独立的改进。 但是，目前还不清楚哪些扩展是互补的，可以有效地结合起来。 本文考察了DQN算法的扩展和经验研究的组合。 我们的实验表明，在数据效率和最终性能方面，这种组合在Atari 2600基准测试中提供了最先进的性能。 我们还提供了详细消融研究的结果，该研究显示了每个组成部分对整体表现的贡献。

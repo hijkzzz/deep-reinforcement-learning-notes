@@ -1,7 +1,5 @@
 # Combining strategic learning and tactical search in real-time strategy games
 
-
-
 > [Combining strategic learning and tactical search in real-time strategy games](https://arxiv.org/abs/1709.03480)
 
 在实时策略（RTS）游戏中管理AI复杂性的常用技术是使用动作和/或状态抽象。高层次的抽象通常会导致良好的战略决策，但战术决策质量可能会因细节丢失而受损。一种竞争性的方法是对搜索空间进行采样，这通常会在简单的场景中带来良好的战术性能，但高层规划较差。
@@ -51,12 +49,4 @@ Puppet Search需要一个正向模型来检查不同动作的结果，然后选�
 ![](../../.gitbook/assets/image%20%28139%29.png)
 
 ![](../../.gitbook/assets/image%20%28114%29.png)
-
-
-
-
-
-
-
-
 

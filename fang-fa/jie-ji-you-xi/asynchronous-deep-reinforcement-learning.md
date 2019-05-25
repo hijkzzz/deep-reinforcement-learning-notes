@@ -1,7 +1,5 @@
 # A3C
 
-
-
 > [Asynchronous methods for deep reinforcement learning](https://arxiv.org/pdf/1602.01783.pdf)
 
 我们为深度强化学习提出了一个概念上简单的轻量级框架，它使用异步梯度下降来优化深度神经网络控制器。我们提出了标准强化学习算法的异步变体，并表明并行Actor-Critic对训练有着不稳定的影响，允许所有四种方法成功训练神经网络控制器。最佳性能方法是Actor-Critic的同步变体，它超过了Atari领域的最新水平，同时在单个多核CPU而不是GPU上训练了一半时间。此外，我们还表明异步Actor-Critic成功地解决了各种各样的连续电机控制问题，以及使用视觉输入导航随机3D迷宫的新任务。
