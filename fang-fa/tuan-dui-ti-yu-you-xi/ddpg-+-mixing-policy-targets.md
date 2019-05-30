@@ -10,9 +10,9 @@
 
 ![](../../.gitbook/assets/image%20%2836%29.png)
 
-![](../../.gitbook/assets/image%20%28105%29.png)
+![](../../.gitbook/assets/image%20%28106%29.png)
 
-![](../../.gitbook/assets/image%20%2886%29.png)
+![](../../.gitbook/assets/image%20%2887%29.png)
 
 ### Computing On-Policy MC Targets
 
@@ -28,7 +28,7 @@
 
 DQN架构\[8\]使用深度神经网络和1步Q-Learning更新来估计每个离散行为的Q值。 使用Arcade学习环境\[2\]，我们评估混合更新对Beam Rider，Breakout，Pong，QBert和Space Invaders的Atari游戏的影响。
 
-![](../../.gitbook/assets/image%20%28135%29.png)
+![](../../.gitbook/assets/image%20%28136%29.png)
 
 ### Results: DDPG
 
@@ -36,7 +36,7 @@ Half Field Offense Domain
 
 回报函数
 
-![](../../.gitbook/assets/image%20%28180%29.png)
+![](../../.gitbook/assets/image%20%28181%29.png)
 
-![](../../.gitbook/assets/image%20%28144%29.png)
+![](../../.gitbook/assets/image%20%28145%29.png)
 

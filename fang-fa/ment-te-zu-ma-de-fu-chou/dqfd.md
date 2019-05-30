@@ -34,9 +34,9 @@ $$J(Q)=J_{D Q}(Q)+\lambda_{1} J_{n}(Q)+\lambda_{2} J_{E}(Q)+\lambda_{3} J_{L 2}(
 
 ## 实验
 
-![](../../.gitbook/assets/image%20%2896%29.png)
+![](../../.gitbook/assets/image%20%2897%29.png)
 
-![](../../.gitbook/assets/image%20%28112%29.png)
+![](../../.gitbook/assets/image%20%28113%29.png)
 
-![](../../.gitbook/assets/image%20%28158%29.png)
+![](../../.gitbook/assets/image%20%28159%29.png)
 

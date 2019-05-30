@@ -64,7 +64,7 @@ $$D_{\mathrm{TV}}^{\max }(\pi, \tilde{\pi})=\max _{s} D_{T V}(\pi(\cdot | s) \| 
 
 注意到其与KL散度的关系 $$D_{T V}(p \| q)^{2} \leq D_{\mathrm{KL}}(p \| q)$$ ，定理可写为
 
-![](../../.gitbook/assets/image%20%2881%29.png)
+![](../../.gitbook/assets/image%20%2882%29.png)
 
 于是有如下算法，可以保证策略的单调递增
 

@@ -24,3 +24,5 @@ $$
 
 然后把带噪声的网络应用于Deep Q-Network或者A3C中的critic即可
 
+![](../../.gitbook/assets/image%20%2872%29.png)
+

@@ -10,21 +10,21 @@
 
 回报函数可以定义为我方平均血量和对方平均血量的差
 
-![](../../.gitbook/assets/image%20%2873%29.png)
+![](../../.gitbook/assets/image%20%2874%29.png)
 
 于是求解Q函数可以定义为一个极大极小问题
 
-![](../../.gitbook/assets/image%20%28176%29.png)
+![](../../.gitbook/assets/image%20%28177%29.png)
 
 为了简化问题，我们只考虑极大
 
-![](../../.gitbook/assets/image%20%2891%29.png)
+![](../../.gitbook/assets/image%20%2892%29.png)
 
 ### Local, Individual Rewards
 
 只考虑整体的回报显然无法有效分配信用，所以考虑每个单位自己的回报，即与该单位接触的top-k个单位的血量之差
 
-![](../../.gitbook/assets/image%20%28123%29.png)
+![](../../.gitbook/assets/image%20%28124%29.png)
 
 ### Communication w/ Bidirectional Backpropagation
 
@@ -46,15 +46,15 @@
 
 接下来，我们将一个多智能体引入确定性策略梯度定理：
 
-![](../../.gitbook/assets/image%20%28187%29.png)
+![](../../.gitbook/assets/image%20%28188%29.png)
 
 为了确保充分的探索，我们应用Ornstein-Uhlenbeck过程在每个时间步骤中增加行动网络输出的噪声。在这里，我们进一步考虑了off-policy确定性的行动者-批评者算法\(Lillicrap等人\)来降低方差。在训练Critic时，我们使用平方损失的总和并对参数化的Critic$$Q^{\xi}(\mathbf{s}, \mathbf{a})$$具有以下梯度 。
 
-![](../../.gitbook/assets/image%20%28167%29.png)
+![](../../.gitbook/assets/image%20%28168%29.png)
 
 BiCNet与贪婪的MDP明显不同，代理的依赖性嵌入在潜在的层面，而不是直接在行动中。
 
 ## 实验
 
-![](../../.gitbook/assets/image%20%28118%29.png)
+![](../../.gitbook/assets/image%20%28119%29.png)
 
