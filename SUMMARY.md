@@ -108,13 +108,20 @@
 
 ## 附录
 
+* [Distributional RL](fu-lu/distributional-rl/README.md)
+  * [QR-DQN](fu-lu/distributional-rl/qr-dqn.md)
 * [Policy Gradient](fu-lu/policy-gradient/README.md)
   * [Off-Policy Actor-Critic](fu-lu/policy-gradient/off-policy-actor-critic.md)
   * [Generalized Advantage Estimation](fu-lu/policy-gradient/advantage-estimation.md)
   * [Soft Actor-Critic](fu-lu/policy-gradient/soft-actor-critic.md)
   * [PPO-Penalty](fu-lu/policy-gradient/ppo-penalty.md)
 * [Model-Based RL](fu-lu/model-based-rl/README.md)
+  * [I2A](fu-lu/model-based-rl/i2a.md)
   * [MBMF](fu-lu/model-based-rl/mbmf.md)
   * [MBVE](fu-lu/model-based-rl/mbve.md)
   * [World Models](fu-lu/model-based-rl/world-models.md)
+* [Imitation Learning and Inverse Reinforcement Learning](fu-lu/imitation-learning-and-inverse-reinforcement-learning/README.md)
+  * [GAIL](fu-lu/imitation-learning-and-inverse-reinforcement-learning/gail.md)
+* [Transfer and Multitask RL](fu-lu/transfer-and-multitask-rl/README.md)
+  * [HER](fu-lu/transfer-and-multitask-rl/her.md)
 
