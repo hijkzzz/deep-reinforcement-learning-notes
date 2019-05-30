@@ -90,21 +90,19 @@
   * [Affordance Based Action Selection](fang-fa/wen-zi-mao-xian-you-xi/affordance-based-action-selection.md)
   * [Golovin](fang-fa/wen-zi-mao-xian-you-xi/golovin.md)
   * [AE-DQN](fang-fa/wen-zi-mao-xian-you-xi/ae-dqn.md)
-
-## 开放挑战
-
-* [游戏通用性](kai-fang-tiao-zhan/you-xi-tong-yong-xing.md)
-* [稀疏、延迟、欺骗性的回报](kai-fang-tiao-zhan/xi-shu-3001-yan-chi-3001-qi-pian-xing-de-hui-bao.md)
-* [多智能体](kai-fang-tiao-zhan/duo-zhi-neng-ti.md)
-* [终身适应](kai-fang-tiao-zhan/kuai-su-shi-ying.md)
-* [像人类一样玩游戏](kai-fang-tiao-zhan/xiang-ren-lei-yi-yang-wan-you-xi.md)
-* [可调节的性能等级](kai-fang-tiao-zhan/ke-diao-jie-de-xing-neng-deng-ji.md)
-* [处理巨大的状态空间](kai-fang-tiao-zhan/chu-li-ju-da-de-zhuang-tai-kong-jian.md)
-* [工业界应用](kai-fang-tiao-zhan/gong-ye-jie-ying-yong.md)
-* [游戏开发的交互式工具](kai-fang-tiao-zhan/jiao-hu-shi-you-xi-kai-fa.md)
-* [创造新的游戏](kai-fang-tiao-zhan/chuang-zao-xin-de-you-xi.md)
-* [学习游戏的模型](kai-fang-tiao-zhan/xue-xi-you-xi-de-mo-xing.md)
-* [计算资源](kai-fang-tiao-zhan/ji-suan-zi-yuan.md)
+* [开放的挑战](fang-fa/kai-fang-de-tiao-zhan/README.md)
+  * [游戏通用性](fang-fa/kai-fang-de-tiao-zhan/you-xi-tong-yong-xing.md)
+  * [稀疏、延迟、欺骗性的回报](fang-fa/kai-fang-de-tiao-zhan/xi-shu-3001-yan-chi-3001-qi-pian-xing-de-hui-bao.md)
+  * [多智能体](fang-fa/kai-fang-de-tiao-zhan/duo-zhi-neng-ti.md)
+  * [终身适应](fang-fa/kai-fang-de-tiao-zhan/kuai-su-shi-ying.md)
+  * [像人类一样玩游戏](fang-fa/kai-fang-de-tiao-zhan/xiang-ren-lei-yi-yang-wan-you-xi.md)
+  * [可调节的性能等级](fang-fa/kai-fang-de-tiao-zhan/ke-diao-jie-de-xing-neng-deng-ji.md)
+  * [处理巨大的状态空间](fang-fa/kai-fang-de-tiao-zhan/chu-li-ju-da-de-zhuang-tai-kong-jian.md)
+  * [工业界应用](fang-fa/kai-fang-de-tiao-zhan/gong-ye-jie-ying-yong.md)
+  * [游戏开发的交互式工具](fang-fa/kai-fang-de-tiao-zhan/jiao-hu-shi-you-xi-kai-fa.md)
+  * [创造新的游戏](fang-fa/kai-fang-de-tiao-zhan/chuang-zao-xin-de-you-xi.md)
+  * [学习游戏的模型](fang-fa/kai-fang-de-tiao-zhan/xue-xi-you-xi-de-mo-xing.md)
+  * [计算资源](fang-fa/kai-fang-de-tiao-zhan/ji-suan-zi-yuan.md)
 
 ## 附录
 
